@@ -5,8 +5,10 @@ Lunii is a French company that made an interactive box for kids to customize sto
 Even if you don't, children will 😁**
 
 # Sections
-1. [Firmware analysis](ANALYSIS.md)
-2. [Ciphering reverser](CIPHERING.md)
+
+1. [Hardware](HARDWARE.md)
+2. [Firmware analysis](ANALYSIS.md)
+3. [Ciphering reverse](CIPHERING.md)
 
 # Similar repos
 * [(Hackday) Tsukuyomi Hacking Lunii](https://hackaday.io/project/167629-tsukuyomi)
