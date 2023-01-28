@@ -8,6 +8,7 @@
   - [SNU location](#snu-location)
 - [Security study](#security-study)
   - [Firmware CRC](#firmware-crc)
+  - [Flashing it's own firmware](#flashing-its-own-firmware)
   - [Ghidra Project](#ghidra-project)
     - [How to import](#how-to-import)
   - [Thoughts](#thoughts)
@@ -67,6 +68,10 @@ A short mini firmware ! might be located at `0x8000 0000`
 ## Firmware CRC
 1. compute fw size by looking for FFFF partern
 2. computes CRC32 on size - 4 (reference CRC included at the end)
+
+## Flashing it's own firmware
+to output internal values ?
+to decipher files on uart ?
 
 ## Ghidra Project
 
