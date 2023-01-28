@@ -38,20 +38,24 @@ TBD : boot process & steps + jump to main at `0x9000 0000`
 2. in case firmware is corrupted, copy backup firmware to main
 3. boot main firmware
 
-This FW contains FatFs (different config) for SD access and performs read/write to QSPI flash though commands
+This FW contains FatFs (different config) for SD access and performs read/write to QSPI flash though commands   
+**TODO** : review addresses for Backup & Main FW around checks and restore
 
 ## Main Firmware
-The full firmware ! might be located at `0x9000 0000`   
+The full firmware ! might be located at `0x9000 0000` (TBC)   
 **Version =** 2.22
 
 ## Backup firmware
-A short mini firmware ! might be located at `0x8000 0000`   
+A short mini firmware ! might be located at `0x8000 0000` (TBC)   
 **Version =** 2.16
 **Objective =** make sure that an USB mass storage is accessible for MainFW reload
 
 ## SNU location
 
-8 bytes for SNU located at : `0x0800 C000 - 0x0800 C007` (internal flash)
+8 bytes for SNU located at : `0x0800 C000 - 0x0800 C007` (internal flash)   
+All around .md file that is recreated if not there.
+How and when is it inserted into firmware ?   
+Updates push to storyteller might be generic, for all boxes. Lunii store might be injecting SNU + recomputing CRC (To be confirmed)
 
 # Security study
 

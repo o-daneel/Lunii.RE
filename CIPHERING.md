@@ -1,3 +1,4 @@
+- [Summary](#summary)
 - [Target function](#target-function)
   - [Ghidra decompiled](#ghidra-decompiled)
   - [IDA Pro decompiled](#ida-pro-decompiled)
@@ -5,8 +6,37 @@
   - [Official version](#official-version)
 
 
+# Summary
+My bad, I was expecting only one key, however during decompiling process, I realized that two keys are used.   
+A first one is hardcoded in binary
+
+.md file might be the one that contains everything about the box. Key B and SNU ?
+
+* Key A is made from 0x90013324 value   
+  ```
+  K[0]    91BD7A0A
+  K[1]    91BD7A0A + 0x1596c69f = A75440A9
+  K[2]    91BD7A0A + 0x2a172362 = BBD49D6C
+  K[3]    E0DCC0E3
+  Key_A = 91BD7A0A A75440A9 BBD49D6C E0DCC0E3
+  ```
+  This code is available in event_loop at 0x90013200
+
+* Key B is make of deciphering .md file from 0x08 to 0x18.   
+  Those four **UINT** make Key_B[0] Key_B[1] Key_B[2] Key_B[3]
+
+  The section from 0x08 to 0x18 is made of
+  * 2 Bytes : 0x1600
+  * 8 Bytes : SNU
+  * 4 Bytes : 83 04 41 A3 (static)
+  * 2 Bytes : NS (static)
+  
+  Thus Key_B is made of SNU & Key_A
+
+
 # Target function
 ```
+crypto_tea_config	                  0x9000f788	  Function	  Global	User Defined	  13	0
 HAL_FS_decipher                     0x9000efe4    Function    Global  User Defined    3   0
 crypto_decipher?                    0x9000eb34    Function    Global  User Defined    2   0
 ```
@@ -175,4 +205,4 @@ K[2]    91BD7A0A + 0x2a172362 = BBD49D6C
 K[3]    E0DCC0E3
 ```
 
-**SecretKey** = ``91BD7A0A A75440A9 BBD49D6C E0DCC0E3``
+**Secret Key A** = ``91BD7A0A A75440A9 BBD49D6C E0DCC0E3``
