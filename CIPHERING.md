@@ -1,4 +1,4 @@
-- [Summary](#summary)
+- [TL;DR](#tldr)
 - [Target function](#target-function)
   - [Ghidra decompiled](#ghidra-decompiled)
   - [IDA Pro decompiled](#ida-pro-decompiled)
@@ -6,7 +6,7 @@
   - [Official version](#official-version)
 
 
-# Summary
+# TL;DR
 My bad, I was expecting only one key, however during decompiling process, I realized that two keys are used.   
 A first one is hardcoded in binary
 
@@ -36,7 +36,7 @@ A first one is hardcoded in binary
 
 # Target function
 ```
-crypto_tea_config	                  0x9000f788	  Function	  Global	User Defined	  13	0
+crypto_tea_config	                  0x9000f788    Function    Global  User Defined    13	0
 HAL_FS_decipher                     0x9000efe4    Function    Global  User Defined    3   0
 crypto_decipher?                    0x9000eb34    Function    Global  User Defined    2   0
 ```

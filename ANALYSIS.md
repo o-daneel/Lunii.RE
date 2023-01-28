@@ -3,7 +3,8 @@
 - [Memory layout](#memory-layout)
   - [Bootloader Firmware](#bootloader-firmware)
   - [Main Firmware](#main-firmware)
-  - [Backup firmware](#backup-firmware)
+    - [Mapping](#mapping)
+  - [Backup Firmware](#backup-firmware)
   - [SNU location](#snu-location)
 - [Security study](#security-study)
   - [Ghidra Project](#ghidra-project)
@@ -18,6 +19,9 @@
 - [Symbols](#symbols)
 - [Resources](#resources)
   - [SD structure \& Files](#sd-structure--files)
+  - [Files Format](#files-format)
+    - [.pi](#pi)
+    - [.cfg](#cfg)
   - [Bitmaps](#bitmaps)
 - [Links](#links)
 
@@ -26,33 +30,59 @@
 <img src="resources/mem_map.png" width="400">
 
 Three of them are of interest:
-1. QuadSPI external flash from `0x8000 0000 - 0x9FFF FFFF`   
+1. QuadSPI external flash from `0x80000000_0x9FFFFFFF`   
    512KB are split in two 256KB parts. One for current firmware, and another for backup.
-2. Internal flash from `0x0800 0000 - 0x0800 FFFF`
-3. Internal RAM from `0x2000 0000 - 0x2003 FFFF`
+    * 1st 256K pane : Firmware A in `0x90000000_0x9003FFFF`   
+    * 2nd 256K pane : Firmware B in `0x9003FFFF_0x9007FFFF`   
+2. Internal flash from `0x08000000_0x0800FFFF`
+3. Internal RAM from `0x20000000_0x2003FFFF`
 
 ## Bootloader Firmware
-TBD : boot process & steps + jump to main at `0x9000 0000`
 
-1. checks CRC of main firmware
-2. in case firmware is corrupted, copy backup firmware to main
-3. boot main firmware
+1. Initialize many peripheral (FPU, RCC, GPIOF/C/A/D, ADC3, UART4, CRC, QSPI)
+2. Check that batt level not critical (or abort)
+3. Check for Firmware update
+   1. only if USB is plugged
+   2. preapre SDMMC2
+   3. mount sdcard
+   4. Try to open `fa.bin`
+   5. if exists, read crc and check update crc
+   6. if CRC ok : erase sectors and write main firmware
+   7. Close, remove update file, umount SD
+4. Read main FW CRC and check it
+5. if failed, backup FW
+   1. Read backup FW CRC and check it
+   2. if CRC ok : erase sectors and write backup firmware to main 
+   3. if any error, dead loop
+7. Init QPSI (if not done yet)
+8. Switch to main FW
 
 This FW contains FatFs (different config) for SD access and performs read/write to QSPI flash though commands   
-**TODO** : review addresses for Backup & Main FW around checks and restore
+It also contains storyteller identification data :
+* `0x0800C000_0x0800C007` - SNU  
+* `0x0800C008_0x0800C088` - Extra data ciphered ? (including second Key)  
+
+**TODO** : 
+- <s>review addresses for Backup & Main FW around checks and restore<s>
 
 ## Main Firmware
-The full firmware ! might be located at `0x9000 0000` (TBC)   
+The full firmware ! might be located at `0x90000000`  
 **Version =** 2.22
 
-## Backup firmware
-A short mini firmware ! might be located at `0x8000 0000` (TBC)   
+### Mapping
+
+Few interesting offsets :
+* `0x90000000` - 0x1E0 Bytes : VectorTable
+* `0x90000400` - 4 Bytes : Firmware CRC offset
+
+## Backup Firmware
+A short mini firmware ! might be located at `0x90040000`     
 **Version =** 2.16
 **Objective =** make sure that an USB mass storage is accessible for MainFW reload
 
 ## SNU location
 
-8 bytes for SNU located at : `0x0800 C000 - 0x0800 C007` (internal flash)   
+8 bytes for SNU located at : `0x0800C000_0x0800C007` (internal flash)   
 All around .md file that is recreated if not there.
 How and when is it inserted into firmware ?   
 Updates push to storyteller might be generic, for all boxes. Lunii store might be injecting SNU + recomputing CRC (To be confirmed)
@@ -166,20 +196,46 @@ To check with root files, like .md
 # Resources
 
 ## SD structure & Files 
-`sd:0:\.pi`   
-`sd:0:\.cfg`   
-`sd:0:\.md` - MetaData   
-`sd:0:\version` - contains a simple date      
-`sd:0:\.content\XXXXXXXX\bt`   
-`sd:0:\.content\XXXXXXXX\li`   
-`sd:0:\.content\XXXXXXXX\ni`   
-`sd:0:\.content\XXXXXXXX\nm`   
-`sd:0:\.content\XXXXXXXX\ri` - Resource Index ?   
-`sd:0:\.content\XXXXXXXX\si` - Song Index ?   
-`sd:0:\.content\XXXXXXXX\rf\` - Resource Folder ?   
-`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` - Resources (BMP, others ?)  
-`sd:0:\.content\XXXXXXXX\sf\` - Song Folder ?   
-`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY` - Songs, story part (MP3 ?)
+| File | Key | Contents|
+|-|-|-|
+|`sd:0:\.pi` | None || recreated by main FW
+|`sd:0:\.cfg` | None ||
+|`sd:0:\.md` | ?? | MetaData<br> (contents from internal flash ? including SNU)
+|`sd:0:\version` | None | contains a simple date      
+|`sd:0:\.content\XXXXXXXX\bt` | Key_B ||
+|`sd:0:\.content\XXXXXXXX\li` | Key_A ||
+|`sd:0:\.content\XXXXXXXX\ni` | None ||
+|`sd:0:\.content\XXXXXXXX\nm` | Key_A ||
+|`sd:0:\.content\XXXXXXXX\ri` | Key_A | Resource Index ?   
+|`sd:0:\.content\XXXXXXXX\si` | Key_A | Song Index ?   
+|`sd:0:\.content\XXXXXXXX\rf\` | N/A | Resource ? Folder 
+|`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` || Resources (BMP, others ?)  
+|`sd:0:\.content\XXXXXXXX\sf\` | N/A | Song ? Folder
+|`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY` || Songs, story part (MP3 ?)
+
+## Files Format
+### .pi
+### .cfg
+This is a config file. Fixed size of 38 Bytes, no ciphering applied on it.   
+File is made of 8 tags :   
+```
+0100
+  XXXX YYYY (TAG_00 VALUE_00)
+  XXXX YYYY (TAG_01 VALUE_01)
+  ...
+  XXXX YYYY (TAG_08 VALUE_08)
+```
+| ID | Tag Len | Value Len | Role |
+|-|-|-|-|
+| 0 | WORD | WORD | Read time before sleep mode ? |
+| 1 | WORD | WORD | Current story time position ? |
+| 2 | WORD | WORD | Time to display Low battery message |
+| 3 | WORD | WORD | TBD |
+| 4 | WORD | WORD | TBD |
+| 5 | WORD | WORD | TBD |
+| 6 | WORD | WORD | Boolean related to 05<br>If True => (uint)CFG_TAG_04) / (CFG_TAG_05 - 1) |
+| 7 | WORD | WORD | TBD |
+| 8 | WORD | WORD | Request to recreate `.nm` file |
 
 ## Bitmaps
 

@@ -22,6 +22,7 @@
 * GPIOE - display ?
 * GPIOB - audio chip ?
 
+Check for pin mapping (UART4)
 
 # Pictures
 
