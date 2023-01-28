@@ -1,0 +1,1381 @@
+.
+total 64
+drwxr-xr-x    1 User  Group           0 Jan  1  1980 .
+dr-xr-xr-x    1 User  Group           0 Jan 22 13:14 ..
+-rw-r--r--    1 User  Group          38 Dec  8  2021 .cfg
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 .content
+-rw-r--r--    1 User  Group         512 Jan  1  1970 .md
+-rw-r--r--    1 User  Group         256 Aug 28 20:29 .pi
+drwxr-xr-x    1 User  Group           0 Sep 10  2021 System Volume Information
+-rw-r--r--    1 User  Group          20 Nov 27  2020 version
+./.content
+total 0
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 .
+drwxr-xr-x    1 User  Group           0 Jan  1  1980 ..
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 1362862A
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 1BBA473C
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 2643948D
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 4058B612
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 46DD33A2
+drwxr-xr-x    1 User  Group           0 Sep 15  2020 4CDF38C6
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 58139FE6
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 6C8D9CF1
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 77175114
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 8ECE8475
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 908EB595
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 9A2D7E89
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 B4D11DC9
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 DA75B9D7
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 DD2E29B7
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 FFB5D68A
+./.content/4CDF38C6
+total 80
+drwxr-xr-x    1 User  Group           0 Sep 15  2020 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Nov  4  2021 bt
+-rw-r--r--    1 User  Group         664 Jul 27  2020 li
+-rw-r--r--    1 User  Group        7860 Jul 27  2020 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 rf
+-rw-r--r--    1 User  Group         516 Jul 27  2020 ri
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 sf
+-rw-r--r--    1 User  Group        1152 Jul 27  2020 si
+./.content/4CDF38C6/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 .
+drwxr-xr-x    1 User  Group           0 Sep 15  2020 ..
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 000
+./.content/4CDF38C6/rf/000
+total 688
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 .
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 ..
+-rw-r--r--    1 User  Group        5252 Jul 27  2020 07BECADA
+-rw-r--r--    1 User  Group        3476 Jul 27  2020 0A4E3F17
+-rw-r--r--    1 User  Group        3100 Jul 27  2020 0EE9C18B
+-rw-r--r--    1 User  Group        4234 Jul 27  2020 219C0EDA
+-rw-r--r--    1 User  Group        4122 Jul 27  2020 26D97CEC
+-rw-r--r--    1 User  Group        5282 Jul 27  2020 2D36667A
+-rw-r--r--    1 User  Group        4052 Jul 27  2020 3250F3D2
+-rw-r--r--    1 User  Group        2986 Jul 27  2020 362E1EFD
+-rw-r--r--    1 User  Group        5482 Jul 27  2020 3DDC7A68
+-rw-r--r--    1 User  Group        5662 Jul 27  2020 41385E8E
+-rw-r--r--    1 User  Group        6856 Jul 27  2020 483D476A
+-rw-r--r--    1 User  Group        4650 Jul 27  2020 4A52DCB1
+-rw-r--r--    1 User  Group        4106 Jul 27  2020 4C4AD8EA
+-rw-r--r--    1 User  Group        5254 Jul 27  2020 4D764C6D
+-rw-r--r--    1 User  Group        4538 Jul 27  2020 545D272A
+-rw-r--r--    1 User  Group        5322 Jul 27  2020 67D3DD0C
+-rw-r--r--    1 User  Group        4890 Jul 27  2020 6EB92A5C
+-rw-r--r--    1 User  Group        4570 Jul 27  2020 756F6BAA
+-rw-r--r--    1 User  Group        4054 Jul 27  2020 7A86729E
+-rw-r--r--    1 User  Group        4224 Jul 27  2020 7BBD8142
+-rw-r--r--    1 User  Group        4702 Jul 27  2020 7E0D66C8
+-rw-r--r--    1 User  Group        5032 Jul 27  2020 7FAE8977
+-rw-r--r--    1 User  Group        5298 Jul 27  2020 8F231C9D
+-rw-r--r--    1 User  Group        5176 Jul 27  2020 9427A665
+-rw-r--r--    1 User  Group        3946 Jul 27  2020 94A68AE3
+-rw-r--r--    1 User  Group        3168 Jul 27  2020 9AB7D3B9
+-rw-r--r--    1 User  Group        2898 Jul 27  2020 9EDF3035
+-rw-r--r--    1 User  Group        5360 Jul 27  2020 A5C08400
+-rw-r--r--    1 User  Group        3326 Jul 27  2020 AD251A4D
+-rw-r--r--    1 User  Group        6866 Jul 27  2020 B437BB13
+-rw-r--r--    1 User  Group        3960 Jul 27  2020 B5F5E90A
+-rw-r--r--    1 User  Group        4420 Jul 27  2020 B6E28081
+-rw-r--r--    1 User  Group        3798 Jul 27  2020 C0E983C1
+-rw-r--r--    1 User  Group        7902 Jul 27  2020 C1F159BB
+-rw-r--r--    1 User  Group        5184 Jul 27  2020 C94C78AC
+-rw-r--r--    1 User  Group        5188 Jul 27  2020 CB666C79
+-rw-r--r--    1 User  Group        9998 Jul 27  2020 CF3AFD3D
+-rw-r--r--    1 User  Group        3598 Jul 27  2020 DD3C204E
+-rw-r--r--    1 User  Group        4688 Jul 27  2020 DD969591
+-rw-r--r--    1 User  Group        4734 Jul 27  2020 E0B79B0D
+-rw-r--r--    1 User  Group        4040 Jul 27  2020 E2F4DFDC
+-rw-r--r--    1 User  Group        4032 Jul 27  2020 F777D400
+-rw-r--r--    1 User  Group        6892 Jul 27  2020 FB97E9D6
+./.content/4CDF38C6/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 .
+drwxr-xr-x    1 User  Group           0 Sep 15  2020 ..
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 000
+./.content/4CDF38C6/sf/000
+total 62512
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 .
+drwxr-xr-x    1 User  Group           0 Jul 27  2020 ..
+-rw-r--r--    1 User  Group       14098 Jul 27  2020 087010B1
+-rw-r--r--    1 User  Group     2975049 Jul 27  2020 0B91C6A2
+-rw-r--r--    1 User  Group     3092025 Jul 27  2020 10A8087D
+-rw-r--r--    1 User  Group       13083 Jul 27  2020 11C1DA98
+-rw-r--r--    1 User  Group     3695738 Jul 27  2020 12ED7912
+-rw-r--r--    1 User  Group       10084 Jul 27  2020 15119AE9
+-rw-r--r--    1 User  Group       15245 Jul 27  2020 15610BF3
+-rw-r--r--    1 User  Group     3353522 Jul 27  2020 174D399F
+-rw-r--r--    1 User  Group       13184 Jul 27  2020 19CAAD60
+-rw-r--r--    1 User  Group     3269980 Jul 27  2020 1ACCD94C
+-rw-r--r--    1 User  Group     1933475 Jul 27  2020 1B701F43
+-rw-r--r--    1 User  Group       13212 Jul 27  2020 1CBDF85D
+-rw-r--r--    1 User  Group     2850001 Jul 27  2020 1E4EB4EC
+-rw-r--r--    1 User  Group       14990 Jul 27  2020 1E7351A4
+-rw-r--r--    1 User  Group       10288 Jul 27  2020 20C7B6F9
+-rw-r--r--    1 User  Group     1633304 Jul 27  2020 22FBD775
+-rw-r--r--    1 User  Group       13211 Jul 27  2020 29A8D87C
+-rw-r--r--    1 User  Group     2851475 Jul 27  2020 2BB02659
+-rw-r--r--    1 User  Group       20096 Jul 27  2020 2C88B171
+-rw-r--r--    1 User  Group       20543 Jul 27  2020 2CE89FE2
+-rw-r--r--    1 User  Group     1683440 Jul 27  2020 30CBA3EA
+-rw-r--r--    1 User  Group       13918 Jul 27  2020 31B65BAC
+-rw-r--r--    1 User  Group       11204 Jul 27  2020 326F1689
+-rw-r--r--    1 User  Group        9822 Jul 27  2020 33AEECB3
+-rw-r--r--    1 User  Group     2659038 Jul 27  2020 33DF6BD8
+-rw-r--r--    1 User  Group       12793 Jul 27  2020 3A443ED3
+-rw-r--r--    1 User  Group     2325802 Jul 27  2020 3E05C2E0
+-rw-r--r--    1 User  Group       15922 Jul 27  2020 3F8EDCA6
+-rw-r--r--    1 User  Group       12555 Jul 27  2020 465AE533
+-rw-r--r--    1 User  Group     2468079 Jul 27  2020 47682C0E
+-rw-r--r--    1 User  Group     2297090 Jul 27  2020 4FF1B758
+-rw-r--r--    1 User  Group        9740 Jul 27  2020 518E8B6C
+-rw-r--r--    1 User  Group       17099 Jul 27  2020 51C9EBD8
+-rw-r--r--    1 User  Group       14750 Jul 27  2020 51CF37F8
+-rw-r--r--    1 User  Group     3409706 Jul 27  2020 540EBEFA
+-rw-r--r--    1 User  Group     1931308 Jul 27  2020 584B9E46
+-rw-r--r--    1 User  Group       16210 Jul 27  2020 5A6CC0EB
+-rw-r--r--    1 User  Group       13889 Jul 27  2020 5DAC0748
+-rw-r--r--    1 User  Group       15375 Jul 27  2020 5F5E5C82
+-rw-r--r--    1 User  Group       11985 Jul 27  2020 67798113
+-rw-r--r--    1 User  Group        9742 Jul 27  2020 6815AB7B
+-rw-r--r--    1 User  Group     3457956 Jul 27  2020 68768C8F
+-rw-r--r--    1 User  Group       13965 Jul 27  2020 699EA002
+-rw-r--r--    1 User  Group       15584 Jul 27  2020 6AD6AD7B
+-rw-r--r--    1 User  Group     2612655 Jul 27  2020 6B55D3D6
+-rw-r--r--    1 User  Group     1486111 Jul 27  2020 6B957CEC
+-rw-r--r--    1 User  Group       13002 Jul 27  2020 6E6C4FFB
+-rw-r--r--    1 User  Group       12166 Jul 27  2020 6F9BE886
+-rw-r--r--    1 User  Group     3448769 Jul 27  2020 762691A5
+-rw-r--r--    1 User  Group       13027 Jul 27  2020 774F4BE8
+-rw-r--r--    1 User  Group     1507264 Jul 27  2020 795353A3
+-rw-r--r--    1 User  Group       25001 Jul 27  2020 79D6F392
+-rw-r--r--    1 User  Group     2403907 Jul 27  2020 7B253965
+-rw-r--r--    1 User  Group     3067106 Jul 27  2020 81ECC394
+-rw-r--r--    1 User  Group       21691 Jul 27  2020 8344E2ED
+-rw-r--r--    1 User  Group       19292 Jul 27  2020 8A2A5486
+-rw-r--r--    1 User  Group     2144461 Jul 27  2020 8BFD6863
+-rw-r--r--    1 User  Group       33818 Jul 27  2020 8D5854B9
+-rw-r--r--    1 User  Group       13187 Jul 27  2020 8E06EE4F
+-rw-r--r--    1 User  Group     2115072 Jul 27  2020 967BF0FA
+-rw-r--r--    1 User  Group     2257933 Jul 27  2020 96D294F5
+-rw-r--r--    1 User  Group     2606663 Jul 27  2020 98C09D4D
+-rw-r--r--    1 User  Group     2979248 Jul 27  2020 9DC90CF6
+-rw-r--r--    1 User  Group     2192384 Jul 27  2020 9E5A4B08
+-rw-r--r--    1 User  Group       14230 Jul 27  2020 9E7DC07F
+-rw-r--r--    1 User  Group     2319290 Jul 27  2020 A00F2A65
+-rw-r--r--    1 User  Group     3164566 Jul 27  2020 A13D19C2
+-rw-r--r--    1 User  Group       10892 Jul 27  2020 A2FC0E9B
+-rw-r--r--    1 User  Group     1670093 Jul 27  2020 A352848F
+-rw-r--r--    1 User  Group     1832191 Jul 27  2020 A5CD8DB9
+-rw-r--r--    1 User  Group       14882 Jul 27  2020 A8A7FDC9
+-rw-r--r--    1 User  Group       12948 Jul 27  2020 A9491BF1
+-rw-r--r--    1 User  Group     3085094 Jul 27  2020 B0515F15
+-rw-r--r--    1 User  Group       21610 Jul 27  2020 B5618249
+-rw-r--r--    1 User  Group       31339 Jul 27  2020 B7B59660
+-rw-r--r--    1 User  Group       15764 Jul 27  2020 B8C35835
+-rw-r--r--    1 User  Group     2910089 Jul 27  2020 BC493C30
+-rw-r--r--    1 User  Group     3376858 Jul 27  2020 BD7F8A75
+-rw-r--r--    1 User  Group     2911919 Jul 27  2020 C9157C9A
+-rw-r--r--    1 User  Group     3945044 Jul 27  2020 CEF477EF
+-rw-r--r--    1 User  Group       14776 Jul 27  2020 CFA1B1C3
+-rw-r--r--    1 User  Group     2460733 Jul 27  2020 D42A1AFA
+-rw-r--r--    1 User  Group     1553123 Jul 27  2020 D58AC42C
+-rw-r--r--    1 User  Group     2062873 Jul 27  2020 E0009438
+-rw-r--r--    1 User  Group     2033957 Jul 27  2020 E284FD09
+-rw-r--r--    1 User  Group       15396 Jul 27  2020 E6ED920A
+-rw-r--r--    1 User  Group       11774 Jul 27  2020 ED2A26A4
+-rw-r--r--    1 User  Group       10500 Jul 27  2020 EEACEC8A
+-rw-r--r--    1 User  Group     2271063 Jul 27  2020 F204F4EA
+-rw-r--r--    1 User  Group     3405895 Jul 27  2020 F3DB7199
+-rw-r--r--    1 User  Group     2085194 Jul 27  2020 F5F18D7F
+-rw-r--r--    1 User  Group     2297432 Jul 27  2020 F8431586
+-rw-r--r--    1 User  Group     4153709 Jul 27  2020 FA2FF9BE
+-rw-r--r--    1 User  Group     3445902 Jul 27  2020 FD1684D3
+-rw-r--r--    1 User  Group        9507 Jul 27  2020 FDBB4D17
+-rw-r--r--    1 User  Group       11702 Jul 27  2020 FE1E9587
+./.content/77175114
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         360 Dec  8  2021 li
+-rw-r--r--    1 User  Group        4516 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         480 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         828 Dec  8  2021 si
+./.content/77175114/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/77175114/rf/000
+total 640
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        7402 Dec  8  2021 04C18916
+-rw-r--r--    1 User  Group       13700 Dec  8  2021 08F44080
+-rw-r--r--    1 User  Group       12322 Dec  8  2021 0CFB16A2
+-rw-r--r--    1 User  Group        7224 Dec  8  2021 12ABCABB
+-rw-r--r--    1 User  Group        8558 Dec  8  2021 241717F2
+-rw-r--r--    1 User  Group       11732 Dec  8  2021 2954753A
+-rw-r--r--    1 User  Group       10636 Dec  8  2021 2B086D5F
+-rw-r--r--    1 User  Group        7214 Dec  8  2021 2F55DEBD
+-rw-r--r--    1 User  Group        7826 Dec  8  2021 35DB5D10
+-rw-r--r--    1 User  Group        8566 Dec  8  2021 3AA30ED1
+-rw-r--r--    1 User  Group        7636 Dec  8  2021 3CBE8D44
+-rw-r--r--    1 User  Group        8558 Dec  8  2021 3EDE4A94
+-rw-r--r--    1 User  Group        5860 Dec  8  2021 475384D0
+-rw-r--r--    1 User  Group        6036 Dec  8  2021 47739BDC
+-rw-r--r--    1 User  Group        6424 Dec  8  2021 4B839642
+-rw-r--r--    1 User  Group       11780 Dec  8  2021 4D3FE03A
+-rw-r--r--    1 User  Group        7634 Dec  8  2021 4D8E460D
+-rw-r--r--    1 User  Group        5090 Dec  8  2021 61567B5D
+-rw-r--r--    1 User  Group        8006 Dec  8  2021 6172CD0B
+-rw-r--r--    1 User  Group        5522 Dec  8  2021 63B9ABCE
+-rw-r--r--    1 User  Group       13112 Dec  8  2021 70E8EC98
+-rw-r--r--    1 User  Group        9478 Dec  8  2021 7F745872
+-rw-r--r--    1 User  Group       13436 Dec  8  2021 87755FAB
+-rw-r--r--    1 User  Group        7592 Dec  8  2021 8B5BD66A
+-rw-r--r--    1 User  Group        9312 Dec  8  2021 9C014FEC
+-rw-r--r--    1 User  Group       13538 Dec  8  2021 9DBA096E
+-rw-r--r--    1 User  Group        7190 Dec  8  2021 A53D5726
+-rw-r--r--    1 User  Group        5918 Dec  8  2021 B2A41FCC
+-rw-r--r--    1 User  Group        6742 Dec  8  2021 B66907A7
+-rw-r--r--    1 User  Group        6782 Dec  8  2021 B88703BA
+-rw-r--r--    1 User  Group        8062 Dec  8  2021 BAAAE4BA
+-rw-r--r--    1 User  Group       11484 Dec  8  2021 BAF16E2B
+-rw-r--r--    1 User  Group        9774 Dec  8  2021 BB8E781A
+-rw-r--r--    1 User  Group       13396 Dec  8  2021 C4A0CEBE
+-rw-r--r--    1 User  Group        8548 Dec  8  2021 D1C7646A
+-rw-r--r--    1 User  Group        8258 Dec  8  2021 D1D1CB0D
+-rw-r--r--    1 User  Group       13116 Dec  8  2021 E41DFD52
+-rw-r--r--    1 User  Group        7102 Dec  8  2021 E9454F54
+-rw-r--r--    1 User  Group        4574 Dec  8  2021 F6234F62
+-rw-r--r--    1 User  Group        6828 Dec  8  2021 F81B6D51
+./.content/77175114/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/77175114/sf/000
+total 36560
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group       28912 Dec  8  2021 009D5B18
+-rw-r--r--    1 User  Group     2528725 Dec  8  2021 026D263B
+-rw-r--r--    1 User  Group       13499 Dec  8  2021 079AC21A
+-rw-r--r--    1 User  Group     2659366 Dec  8  2021 08B78B24
+-rw-r--r--    1 User  Group       38107 Dec  8  2021 0A4B48C3
+-rw-r--r--    1 User  Group       23541 Dec  8  2021 1159CD9C
+-rw-r--r--    1 User  Group       14562 Dec  8  2021 12DA26B8
+-rw-r--r--    1 User  Group       14253 Dec  8  2021 138625F8
+-rw-r--r--    1 User  Group     2574494 Dec  8  2021 1747F682
+-rw-r--r--    1 User  Group       18140 Dec  8  2021 2218C7B8
+-rw-r--r--    1 User  Group       19102 Dec  8  2021 23A0441F
+-rw-r--r--    1 User  Group       22988 Dec  8  2021 24ED3A6F
+-rw-r--r--    1 User  Group     3901206 Dec  8  2021 2707D202
+-rw-r--r--    1 User  Group       14386 Dec  8  2021 27B46493
+-rw-r--r--    1 User  Group       15744 Dec  8  2021 2B2F32BB
+-rw-r--r--    1 User  Group       10760 Dec  8  2021 2DC31BC4
+-rw-r--r--    1 User  Group     2983982 Dec  8  2021 34AFC00F
+-rw-r--r--    1 User  Group     3044708 Dec  8  2021 358149E9
+-rw-r--r--    1 User  Group       15664 Dec  8  2021 3685C97E
+-rw-r--r--    1 User  Group       23045 Dec  8  2021 3B889404
+-rw-r--r--    1 User  Group       15561 Dec  8  2021 4418E7DB
+-rw-r--r--    1 User  Group       18534 Dec  8  2021 4A3A94AF
+-rw-r--r--    1 User  Group       12533 Dec  8  2021 4E6FA80D
+-rw-r--r--    1 User  Group       14202 Dec  8  2021 4EF91488
+-rw-r--r--    1 User  Group     3489329 Dec  8  2021 4F60E221
+-rw-r--r--    1 User  Group     3185911 Dec  8  2021 5F92DEDC
+-rw-r--r--    1 User  Group       16807 Dec  8  2021 6156188B
+-rw-r--r--    1 User  Group       19028 Dec  8  2021 6A950AC0
+-rw-r--r--    1 User  Group       16105 Dec  8  2021 6E01F8E2
+-rw-r--r--    1 User  Group       24083 Dec  8  2021 706B9462
+-rw-r--r--    1 User  Group     3151696 Dec  8  2021 726ACD1C
+-rw-r--r--    1 User  Group       19131 Dec  8  2021 73CA6C76
+-rw-r--r--    1 User  Group       13001 Dec  8  2021 785A6FDB
+-rw-r--r--    1 User  Group       14413 Dec  8  2021 78C5D631
+-rw-r--r--    1 User  Group     3514895 Dec  8  2021 7B4F9AB1
+-rw-r--r--    1 User  Group       35850 Dec  8  2021 7D85D7B5
+-rw-r--r--    1 User  Group       16628 Dec  8  2021 82C63271
+-rw-r--r--    1 User  Group       26824 Dec  8  2021 841107B1
+-rw-r--r--    1 User  Group       31698 Dec  8  2021 849F71BC
+-rw-r--r--    1 User  Group       32121 Dec  8  2021 874DC803
+-rw-r--r--    1 User  Group     3394845 Dec  8  2021 89BCEC31
+-rw-r--r--    1 User  Group       11596 Dec  8  2021 8F3D938F
+-rw-r--r--    1 User  Group     2771465 Dec  8  2021 942770C8
+-rw-r--r--    1 User  Group       18844 Dec  8  2021 A5B77D4C
+-rw-r--r--    1 User  Group       12429 Dec  8  2021 A77D5879
+-rw-r--r--    1 User  Group       14177 Dec  8  2021 ABD83B6A
+-rw-r--r--    1 User  Group     3511143 Dec  8  2021 AD781C2A
+-rw-r--r--    1 User  Group       13862 Dec  8  2021 B0026A58
+-rw-r--r--    1 User  Group     2820502 Dec  8  2021 B3618337
+-rw-r--r--    1 User  Group       26588 Dec  8  2021 B3EA9A64
+-rw-r--r--    1 User  Group     2875832 Dec  8  2021 B3F1760B
+-rw-r--r--    1 User  Group       11384 Dec  8  2021 C1BF9F8F
+-rw-r--r--    1 User  Group       13788 Dec  8  2021 C42D102D
+-rw-r--r--    1 User  Group       26382 Dec  8  2021 C456A3CA
+-rw-r--r--    1 User  Group     2857862 Dec  8  2021 CA47AD52
+-rw-r--r--    1 User  Group       22027 Dec  8  2021 CE1C5D1F
+-rw-r--r--    1 User  Group     2701783 Dec  8  2021 D0F0678D
+-rw-r--r--    1 User  Group     2988314 Dec  8  2021 D2430A84
+-rw-r--r--    1 User  Group       12692 Dec  8  2021 D8A90082
+-rw-r--r--    1 User  Group       16081 Dec  8  2021 DB0FED92
+-rw-r--r--    1 User  Group     2890925 Dec  8  2021 DDE2BB71
+-rw-r--r--    1 User  Group     3339751 Dec  8  2021 E11EFC2B
+-rw-r--r--    1 User  Group     2794587 Dec  8  2021 F181135F
+-rw-r--r--    1 User  Group       14905 Dec  8  2021 F263B725
+-rw-r--r--    1 User  Group     3639364 Dec  8  2021 F73F39B9
+-rw-r--r--    1 User  Group     2698876 Dec  8  2021 FDBE9E12
+-rw-r--r--    1 User  Group     2522949 Dec  8  2021 FF0237DC
+-rw-r--r--    1 User  Group       16366 Dec  8  2021 FF3BE313
+-rw-r--r--    1 User  Group       16652 Dec  8  2021 FF9B9A71
+./.content/4058B612
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         216 Dec  8  2021 li
+-rw-r--r--    1 User  Group        2932 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         216 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         480 Dec  8  2021 si
+./.content/4058B612/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/4058B612/rf/000
+total 288
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        4288 Dec  8  2021 03759707
+-rw-r--r--    1 User  Group        5928 Dec  8  2021 25B72329
+-rw-r--r--    1 User  Group        4028 Dec  8  2021 2B4B5F65
+-rw-r--r--    1 User  Group        6736 Dec  8  2021 3998EECB
+-rw-r--r--    1 User  Group        3600 Dec  8  2021 3B181D06
+-rw-r--r--    1 User  Group        3180 Dec  8  2021 40DCD62A
+-rw-r--r--    1 User  Group        3334 Dec  8  2021 56209FDA
+-rw-r--r--    1 User  Group        2982 Dec  8  2021 58F347E6
+-rw-r--r--    1 User  Group        3146 Dec  8  2021 5F0C5D68
+-rw-r--r--    1 User  Group        4076 Dec  8  2021 603438CE
+-rw-r--r--    1 User  Group        3918 Dec  8  2021 696EB0D1
+-rw-r--r--    1 User  Group        5044 Dec  8  2021 7DB4EDDA
+-rw-r--r--    1 User  Group        4202 Dec  8  2021 811579D1
+-rw-r--r--    1 User  Group        3412 Dec  8  2021 8BDB3BAE
+-rw-r--r--    1 User  Group        3698 Dec  8  2021 AFDF3194
+-rw-r--r--    1 User  Group        7468 Dec  8  2021 BC6732EA
+-rw-r--r--    1 User  Group        3342 Dec  8  2021 C74503B4
+-rw-r--r--    1 User  Group        3916 Dec  8  2021 C9F2CB4C
+./.content/4058B612/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/4058B612/sf/000
+total 28096
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group     2789877 Dec  8  2021 04BF984C
+-rw-r--r--    1 User  Group       21422 Dec  8  2021 0CA6A7DB
+-rw-r--r--    1 User  Group       27430 Dec  8  2021 0EF6D361
+-rw-r--r--    1 User  Group     3437638 Dec  8  2021 17E18365
+-rw-r--r--    1 User  Group     3351456 Dec  8  2021 1A42E62D
+-rw-r--r--    1 User  Group     2771196 Dec  8  2021 22F6D3D5
+-rw-r--r--    1 User  Group     3650116 Dec  8  2021 238AED20
+-rw-r--r--    1 User  Group     3244526 Dec  8  2021 27FAE7CD
+-rw-r--r--    1 User  Group       11123 Dec  8  2021 28FFBFE9
+-rw-r--r--    1 User  Group       19678 Dec  8  2021 3166FEEE
+-rw-r--r--    1 User  Group       16364 Dec  8  2021 367D86CE
+-rw-r--r--    1 User  Group     3310231 Dec  8  2021 36A273B4
+-rw-r--r--    1 User  Group       18817 Dec  8  2021 3EC448D6
+-rw-r--r--    1 User  Group       16132 Dec  8  2021 433F8774
+-rw-r--r--    1 User  Group       12949 Dec  8  2021 4ECB0A85
+-rw-r--r--    1 User  Group     3300462 Dec  8  2021 51C9EBF2
+-rw-r--r--    1 User  Group       20589 Dec  8  2021 6C62341D
+-rw-r--r--    1 User  Group       27631 Dec  8  2021 6EF12346
+-rw-r--r--    1 User  Group     3369287 Dec  8  2021 77ED68A1
+-rw-r--r--    1 User  Group     3043586 Dec  8  2021 7D2BE5EF
+-rw-r--r--    1 User  Group       12245 Dec  8  2021 82C7C149
+-rw-r--r--    1 User  Group       20328 Dec  8  2021 90BF70E9
+-rw-r--r--    1 User  Group     3236001 Dec  8  2021 99195CC0
+-rw-r--r--    1 User  Group       29618 Dec  8  2021 99A93D3A
+-rw-r--r--    1 User  Group     2537904 Dec  8  2021 9C4C8FCD
+-rw-r--r--    1 User  Group       22304 Dec  8  2021 9DB606FB
+-rw-r--r--    1 User  Group       29781 Dec  8  2021 A128D602
+-rw-r--r--    1 User  Group       15765 Dec  8  2021 A3EAF930
+-rw-r--r--    1 User  Group       19336 Dec  8  2021 C42A1983
+-rw-r--r--    1 User  Group     2852187 Dec  8  2021 C43ED698
+-rw-r--r--    1 User  Group     2554689 Dec  8  2021 CDE67385
+-rw-r--r--    1 User  Group       17224 Dec  8  2021 CFFBECE0
+-rw-r--r--    1 User  Group     4104509 Dec  8  2021 D0878B21
+-rw-r--r--    1 User  Group     3248998 Dec  8  2021 D2A10B12
+-rw-r--r--    1 User  Group       19625 Dec  8  2021 E3E92B46
+-rw-r--r--    1 User  Group       22176 Dec  8  2021 E6FCD89E
+-rw-r--r--    1 User  Group       18140 Dec  8  2021 EC68B88F
+-rw-r--r--    1 User  Group     2987418 Dec  8  2021 F3C32CBF
+-rw-r--r--    1 User  Group       20326 Dec  8  2021 FAC1A6D7
+-rw-r--r--    1 User  Group     2703635 Dec  8  2021 FBFA9C4E
+./.content/B4D11DC9
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         168 Dec  8  2021 li
+-rw-r--r--    1 User  Group        2404 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         252 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         444 Dec  8  2021 si
+./.content/B4D11DC9/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/B4D11DC9/rf/000
+total 336
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        3826 Dec  8  2021 0FC4DBEA
+-rw-r--r--    1 User  Group        5652 Dec  8  2021 452EA8C5
+-rw-r--r--    1 User  Group        3706 Dec  8  2021 48B3E1A7
+-rw-r--r--    1 User  Group        4618 Dec  8  2021 4A625D03
+-rw-r--r--    1 User  Group        7852 Dec  8  2021 53ED7916
+-rw-r--r--    1 User  Group        9270 Dec  8  2021 5770D441
+-rw-r--r--    1 User  Group        5880 Dec  8  2021 5BDD7E12
+-rw-r--r--    1 User  Group        9132 Dec  8  2021 721A7728
+-rw-r--r--    1 User  Group        6542 Dec  8  2021 75619502
+-rw-r--r--    1 User  Group        6036 Dec  8  2021 768B4971
+-rw-r--r--    1 User  Group        5022 Dec  8  2021 7B1D64E5
+-rw-r--r--    1 User  Group        5292 Dec  8  2021 83BF5532
+-rw-r--r--    1 User  Group        8686 Dec  8  2021 8DF50FB0
+-rw-r--r--    1 User  Group        4344 Dec  8  2021 8E590B0B
+-rw-r--r--    1 User  Group        4144 Dec  8  2021 A18F3784
+-rw-r--r--    1 User  Group        2934 Dec  8  2021 A7A0207F
+-rw-r--r--    1 User  Group        6054 Dec  8  2021 C28D80C3
+-rw-r--r--    1 User  Group       14638 Dec  8  2021 C4AE07C1
+-rw-r--r--    1 User  Group        3572 Dec  8  2021 D68258DD
+-rw-r--r--    1 User  Group        5474 Dec  8  2021 DFDE4606
+-rw-r--r--    1 User  Group        3562 Dec  8  2021 F1AA27B3
+./.content/B4D11DC9/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/B4D11DC9/sf/000
+total 30336
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group       18656 Dec  8  2021 0D832066
+-rw-r--r--    1 User  Group     5600433 Dec  8  2021 1B3C6A7B
+-rw-r--r--    1 User  Group       23818 Dec  8  2021 1C3BE898
+-rw-r--r--    1 User  Group       19677 Dec  8  2021 1E768769
+-rw-r--r--    1 User  Group     5560800 Dec  8  2021 2E0C74D7
+-rw-r--r--    1 User  Group     4843518 Dec  8  2021 2F03CD19
+-rw-r--r--    1 User  Group       20067 Dec  8  2021 3430B465
+-rw-r--r--    1 User  Group       21343 Dec  8  2021 350CD30F
+-rw-r--r--    1 User  Group       23852 Dec  8  2021 37F9A946
+-rw-r--r--    1 User  Group       20459 Dec  8  2021 4D92FE6C
+-rw-r--r--    1 User  Group       17584 Dec  8  2021 5C689FC9
+-rw-r--r--    1 User  Group       22181 Dec  8  2021 67C2A4FC
+-rw-r--r--    1 User  Group       24060 Dec  8  2021 697329F2
+-rw-r--r--    1 User  Group     6034587 Dec  8  2021 6D749365
+-rw-r--r--    1 User  Group     5221823 Dec  8  2021 6DE26D8E
+-rw-r--r--    1 User  Group     4896424 Dec  8  2021 7B5A4DCD
+-rw-r--r--    1 User  Group       19757 Dec  8  2021 7F1C2C19
+-rw-r--r--    1 User  Group       21792 Dec  8  2021 85453A9D
+-rw-r--r--    1 User  Group     4386084 Dec  8  2021 8A0E6FDC
+-rw-r--r--    1 User  Group     5204543 Dec  8  2021 8B7FB621
+-rw-r--r--    1 User  Group     4830844 Dec  8  2021 93BB21A3
+-rw-r--r--    1 User  Group       21112 Dec  8  2021 9C9C9A2E
+-rw-r--r--    1 User  Group       30287 Dec  8  2021 9D8E2323
+-rw-r--r--    1 User  Group       18659 Dec  8  2021 A360CA73
+-rw-r--r--    1 User  Group       22444 Dec  8  2021 A78F5AD2
+-rw-r--r--    1 User  Group       20018 Dec  8  2021 A8DAEB2B
+-rw-r--r--    1 User  Group       36862 Dec  8  2021 AB15318F
+-rw-r--r--    1 User  Group     4603376 Dec  8  2021 C30F6AFD
+-rw-r--r--    1 User  Group     4694828 Dec  8  2021 D12A2823
+-rw-r--r--    1 User  Group       19624 Dec  8  2021 D1C2781F
+-rw-r--r--    1 User  Group       24764 Dec  8  2021 D886A413
+-rw-r--r--    1 User  Group       20300 Dec  8  2021 E5A7EE2E
+-rw-r--r--    1 User  Group       30886 Dec  8  2021 E71D3DF7
+-rw-r--r--    1 User  Group     5231452 Dec  8  2021 E8201A79
+-rw-r--r--    1 User  Group       22571 Dec  8  2021 EB159A0A
+-rw-r--r--    1 User  Group       19154 Dec  8  2021 F0715A62
+-rw-r--r--    1 User  Group       21034 Dec  8  2021 F2B39E50
+./.content/6C8D9CF1
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         176 Dec  8  2021 li
+-rw-r--r--    1 User  Group        2492 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         264 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         456 Dec  8  2021 si
+./.content/6C8D9CF1/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/6C8D9CF1/rf/000
+total 352
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        4336 Dec  8  2021 1475EA27
+-rw-r--r--    1 User  Group        4320 Dec  8  2021 37C4E3FC
+-rw-r--r--    1 User  Group        5010 Dec  8  2021 3A1C6759
+-rw-r--r--    1 User  Group        4460 Dec  8  2021 434A590C
+-rw-r--r--    1 User  Group        7224 Dec  8  2021 4BEBA6C5
+-rw-r--r--    1 User  Group        4612 Dec  8  2021 5A68C32A
+-rw-r--r--    1 User  Group        4426 Dec  8  2021 5FE235A8
+-rw-r--r--    1 User  Group        6816 Dec  8  2021 6D28707E
+-rw-r--r--    1 User  Group        3826 Dec  8  2021 6E746FB5
+-rw-r--r--    1 User  Group        3840 Dec  8  2021 6EBAF4D7
+-rw-r--r--    1 User  Group        4650 Dec  8  2021 7725D167
+-rw-r--r--    1 User  Group        9554 Dec  8  2021 814A7550
+-rw-r--r--    1 User  Group        6384 Dec  8  2021 A185519A
+-rw-r--r--    1 User  Group        6374 Dec  8  2021 B0AF2EF2
+-rw-r--r--    1 User  Group        4414 Dec  8  2021 B786F86F
+-rw-r--r--    1 User  Group        6642 Dec  8  2021 C4279A96
+-rw-r--r--    1 User  Group        4856 Dec  8  2021 C609A611
+-rw-r--r--    1 User  Group        9228 Dec  8  2021 C8F244BE
+-rw-r--r--    1 User  Group        8254 Dec  8  2021 CB650249
+-rw-r--r--    1 User  Group        6628 Dec  8  2021 D5EDBCE7
+-rw-r--r--    1 User  Group        4314 Dec  8  2021 DAE052F4
+-rw-r--r--    1 User  Group        4836 Dec  8  2021 FEC1A9E8
+./.content/6C8D9CF1/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/6C8D9CF1/sf/000
+total 22736
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group     3010257 Dec  8  2021 03903132
+-rw-r--r--    1 User  Group       25699 Dec  8  2021 07F34AF0
+-rw-r--r--    1 User  Group     3670208 Dec  8  2021 0CF5B0A3
+-rw-r--r--    1 User  Group       19286 Dec  8  2021 12952D18
+-rw-r--r--    1 User  Group     3579944 Dec  8  2021 22399C4B
+-rw-r--r--    1 User  Group       12297 Dec  8  2021 22510230
+-rw-r--r--    1 User  Group     3868394 Dec  8  2021 2B462749
+-rw-r--r--    1 User  Group       12456 Dec  8  2021 2BCACC5B
+-rw-r--r--    1 User  Group       14410 Dec  8  2021 348612D2
+-rw-r--r--    1 User  Group     4482466 Dec  8  2021 36F74CC1
+-rw-r--r--    1 User  Group     4153985 Dec  8  2021 39D7AEDD
+-rw-r--r--    1 User  Group       15612 Dec  8  2021 3C491588
+-rw-r--r--    1 User  Group     3174802 Dec  8  2021 3CAB1CEC
+-rw-r--r--    1 User  Group     4113505 Dec  8  2021 449760D5
+-rw-r--r--    1 User  Group       20308 Dec  8  2021 4692920B
+-rw-r--r--    1 User  Group       14177 Dec  8  2021 5220FDDE
+-rw-r--r--    1 User  Group       17043 Dec  8  2021 56D0BC13
+-rw-r--r--    1 User  Group       13132 Dec  8  2021 5B0000FF
+-rw-r--r--    1 User  Group     4093343 Dec  8  2021 658293D8
+-rw-r--r--    1 User  Group       15271 Dec  8  2021 66BE9E22
+-rw-r--r--    1 User  Group       19157 Dec  8  2021 69D5B7F5
+-rw-r--r--    1 User  Group       14020 Dec  8  2021 6A5A5540
+-rw-r--r--    1 User  Group     3338016 Dec  8  2021 876850C6
+-rw-r--r--    1 User  Group       25881 Dec  8  2021 9006BA2D
+-rw-r--r--    1 User  Group       15089 Dec  8  2021 90B6024D
+-rw-r--r--    1 User  Group       13291 Dec  8  2021 921A5B3F
+-rw-r--r--    1 User  Group       21041 Dec  8  2021 98BE297D
+-rw-r--r--    1 User  Group       18795 Dec  8  2021 9CD426D6
+-rw-r--r--    1 User  Group       15061 Dec  8  2021 A617DB5C
+-rw-r--r--    1 User  Group       17798 Dec  8  2021 A99D8036
+-rw-r--r--    1 User  Group       17615 Dec  8  2021 B29746BA
+-rw-r--r--    1 User  Group       25472 Dec  8  2021 D26EDC6F
+-rw-r--r--    1 User  Group     3840422 Dec  8  2021 D6ED8374
+-rw-r--r--    1 User  Group       19211 Dec  8  2021 D7908863
+-rw-r--r--    1 User  Group       25761 Dec  8  2021 D985BF7C
+-rw-r--r--    1 User  Group       12090 Dec  8  2021 E3AE0647
+-rw-r--r--    1 User  Group       14750 Dec  8  2021 ED02276A
+-rw-r--r--    1 User  Group     4206923 Dec  8  2021 EEB90E25
+./.content/1BBA473C
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         168 Dec  8  2021 li
+-rw-r--r--    1 User  Group        2404 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         252 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         444 Dec  8  2021 si
+./.content/1BBA473C/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/1BBA473C/rf/000
+total 336
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group       11222 Dec  8  2021 0A6EE009
+-rw-r--r--    1 User  Group        6674 Dec  8  2021 2C3123BB
+-rw-r--r--    1 User  Group        7598 Dec  8  2021 2C4E1D9A
+-rw-r--r--    1 User  Group        5200 Dec  8  2021 34A34816
+-rw-r--r--    1 User  Group        7776 Dec  8  2021 36AA9BC0
+-rw-r--r--    1 User  Group        5882 Dec  8  2021 42254092
+-rw-r--r--    1 User  Group        9518 Dec  8  2021 4AB943FC
+-rw-r--r--    1 User  Group       11204 Dec  8  2021 56584EFF
+-rw-r--r--    1 User  Group       10136 Dec  8  2021 6DAD8929
+-rw-r--r--    1 User  Group        7410 Dec  8  2021 6F6F9ED0
+-rw-r--r--    1 User  Group        8862 Dec  8  2021 93CC5626
+-rw-r--r--    1 User  Group        6568 Dec  8  2021 960212B8
+-rw-r--r--    1 User  Group        6620 Dec  8  2021 A16F6089
+-rw-r--r--    1 User  Group        7242 Dec  8  2021 B58F442E
+-rw-r--r--    1 User  Group        9010 Dec  8  2021 B5CA530E
+-rw-r--r--    1 User  Group        9586 Dec  8  2021 CADB7923
+-rw-r--r--    1 User  Group       10906 Dec  8  2021 D764061A
+-rw-r--r--    1 User  Group        7838 Dec  8  2021 E25B8859
+-rw-r--r--    1 User  Group       10732 Dec  8  2021 EADED7D1
+-rw-r--r--    1 User  Group        8374 Dec  8  2021 EB3A4E49
+-rw-r--r--    1 User  Group        7466 Dec  8  2021 F9074507
+./.content/1BBA473C/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/1BBA473C/sf/000
+total 20384
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group       14935 Dec  8  2021 0835BAD5
+-rw-r--r--    1 User  Group       27657 Dec  8  2021 084914C4
+-rw-r--r--    1 User  Group     3157461 Dec  8  2021 181084B7
+-rw-r--r--    1 User  Group       25962 Dec  8  2021 2126A59A
+-rw-r--r--    1 User  Group       11309 Dec  8  2021 26691132
+-rw-r--r--    1 User  Group       15011 Dec  8  2021 325FAA93
+-rw-r--r--    1 User  Group       15897 Dec  8  2021 32651BE2
+-rw-r--r--    1 User  Group       16887 Dec  8  2021 3546720A
+-rw-r--r--    1 User  Group     3401765 Dec  8  2021 3D52BAE0
+-rw-r--r--    1 User  Group     3017639 Dec  8  2021 3E5678E6
+-rw-r--r--    1 User  Group       14466 Dec  8  2021 54D459B2
+-rw-r--r--    1 User  Group     3010410 Dec  8  2021 5809D5B5
+-rw-r--r--    1 User  Group     3974296 Dec  8  2021 6831AC3B
+-rw-r--r--    1 User  Group       11755 Dec  8  2021 69768DE7
+-rw-r--r--    1 User  Group     3310232 Dec  8  2021 6C476BFB
+-rw-r--r--    1 User  Group       28626 Dec  8  2021 6CBA9EAA
+-rw-r--r--    1 User  Group       19154 Dec  8  2021 71959303
+-rw-r--r--    1 User  Group       23461 Dec  8  2021 7437DC4C
+-rw-r--r--    1 User  Group     3356824 Dec  8  2021 8161C897
+-rw-r--r--    1 User  Group     3243231 Dec  8  2021 83293DF8
+-rw-r--r--    1 User  Group       17521 Dec  8  2021 87AFC00D
+-rw-r--r--    1 User  Group       18639 Dec  8  2021 892C2F2C
+-rw-r--r--    1 User  Group       21269 Dec  8  2021 8954103D
+-rw-r--r--    1 User  Group       13080 Dec  8  2021 99E214FC
+-rw-r--r--    1 User  Group       34910 Dec  8  2021 A0F4CBC1
+-rw-r--r--    1 User  Group       22365 Dec  8  2021 A81117A3
+-rw-r--r--    1 User  Group       29881 Dec  8  2021 C27BD523
+-rw-r--r--    1 User  Group       18066 Dec  8  2021 C2E73E00
+-rw-r--r--    1 User  Group     3102530 Dec  8  2021 C346AA82
+-rw-r--r--    1 User  Group       12401 Dec  8  2021 C82369BC
+-rw-r--r--    1 User  Group       17772 Dec  8  2021 CD1FFCE2
+-rw-r--r--    1 User  Group       21321 Dec  8  2021 D23E7A4F
+-rw-r--r--    1 User  Group     3213764 Dec  8  2021 D9E94D37
+-rw-r--r--    1 User  Group       17623 Dec  8  2021 D9E98314
+-rw-r--r--    1 User  Group       11440 Dec  8  2021 F456F115
+-rw-r--r--    1 User  Group     4026094 Dec  8  2021 F5A67D52
+-rw-r--r--    1 User  Group     3889424 Dec  8  2021 FCCBC2BE
+./.content/9A2D7E89
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         216 Dec  8  2021 li
+-rw-r--r--    1 User  Group        2932 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         228 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         492 Dec  8  2021 si
+./.content/9A2D7E89/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/9A2D7E89/rf/000
+total 304
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        4380 Dec  8  2021 15EB8E6D
+-rw-r--r--    1 User  Group        5596 Dec  8  2021 1BEB225D
+-rw-r--r--    1 User  Group        4306 Dec  8  2021 2C81ECC7
+-rw-r--r--    1 User  Group        5874 Dec  8  2021 31CBE28B
+-rw-r--r--    1 User  Group        6910 Dec  8  2021 35F3536E
+-rw-r--r--    1 User  Group        3822 Dec  8  2021 5721E0C7
+-rw-r--r--    1 User  Group        4602 Dec  8  2021 6D4BB93F
+-rw-r--r--    1 User  Group        6044 Dec  8  2021 792B94D7
+-rw-r--r--    1 User  Group        5982 Dec  8  2021 85F83B9D
+-rw-r--r--    1 User  Group        6054 Dec  8  2021 950049E1
+-rw-r--r--    1 User  Group        7150 Dec  8  2021 AC6EDC7C
+-rw-r--r--    1 User  Group        7172 Dec  8  2021 B4A68F60
+-rw-r--r--    1 User  Group        5644 Dec  8  2021 CCCF0BD6
+-rw-r--r--    1 User  Group        5050 Dec  8  2021 CE285BA0
+-rw-r--r--    1 User  Group        4968 Dec  8  2021 E33A1E17
+-rw-r--r--    1 User  Group        7298 Dec  8  2021 E73FC78D
+-rw-r--r--    1 User  Group        6396 Dec  8  2021 E828DF6E
+-rw-r--r--    1 User  Group        4222 Dec  8  2021 F7CB3C40
+-rw-r--r--    1 User  Group        2998 Dec  8  2021 FCABFD22
+./.content/9A2D7E89/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/9A2D7E89/sf/000
+total 29440
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group     2788466 Dec  8  2021 01BA19EF
+-rw-r--r--    1 User  Group     3336868 Dec  8  2021 066FCEB0
+-rw-r--r--    1 User  Group       18480 Dec  8  2021 06835589
+-rw-r--r--    1 User  Group       21063 Dec  8  2021 0A82B98F
+-rw-r--r--    1 User  Group     2817063 Dec  8  2021 0FFA72DB
+-rw-r--r--    1 User  Group     3759707 Dec  8  2021 102974EF
+-rw-r--r--    1 User  Group       16081 Dec  8  2021 13AA7BEF
+-rw-r--r--    1 User  Group       14331 Dec  8  2021 158A044F
+-rw-r--r--    1 User  Group       15190 Dec  8  2021 1B78173E
+-rw-r--r--    1 User  Group       12608 Dec  8  2021 211E5A0A
+-rw-r--r--    1 User  Group       17304 Dec  8  2021 2155C66B
+-rw-r--r--    1 User  Group     3356785 Dec  8  2021 21B127F4
+-rw-r--r--    1 User  Group     2904654 Dec  8  2021 39DC79BF
+-rw-r--r--    1 User  Group       16678 Dec  8  2021 3CCC24EC
+-rw-r--r--    1 User  Group       14959 Dec  8  2021 46BFC092
+-rw-r--r--    1 User  Group       12821 Dec  8  2021 4E9A0634
+-rw-r--r--    1 User  Group     3342998 Dec  8  2021 53ABCE36
+-rw-r--r--    1 User  Group       17383 Dec  8  2021 637986EC
+-rw-r--r--    1 User  Group     3629164 Dec  8  2021 6C5656E4
+-rw-r--r--    1 User  Group       17565 Dec  8  2021 75E24C1E
+-rw-r--r--    1 User  Group       15636 Dec  8  2021 79396471
+-rw-r--r--    1 User  Group     3656723 Dec  8  2021 7CA3B0C8
+-rw-r--r--    1 User  Group       20282 Dec  8  2021 82E23973
+-rw-r--r--    1 User  Group     3529924 Dec  8  2021 8FCCC318
+-rw-r--r--    1 User  Group     3296165 Dec  8  2021 957822B7
+-rw-r--r--    1 User  Group       15297 Dec  8  2021 97ADEB79
+-rw-r--r--    1 User  Group     2538552 Dec  8  2021 9B231702
+-rw-r--r--    1 User  Group       15481 Dec  8  2021 9D2EF35A
+-rw-r--r--    1 User  Group       23381 Dec  8  2021 9D77BE1B
+-rw-r--r--    1 User  Group     3645333 Dec  8  2021 A41655A2
+-rw-r--r--    1 User  Group     3024848 Dec  8  2021 A6675941
+-rw-r--r--    1 User  Group     3129013 Dec  8  2021 C8335D47
+-rw-r--r--    1 User  Group     2980507 Dec  8  2021 CE67E860
+-rw-r--r--    1 User  Group       21350 Dec  8  2021 D5176A18
+-rw-r--r--    1 User  Group     3648487 Dec  8  2021 D5AF7DD0
+-rw-r--r--    1 User  Group       18508 Dec  8  2021 D91D05DC
+-rw-r--r--    1 User  Group       16392 Dec  8  2021 DB011F08
+-rw-r--r--    1 User  Group       12504 Dec  8  2021 DC268C1F
+-rw-r--r--    1 User  Group     3894257 Dec  8  2021 DDF71906
+-rw-r--r--    1 User  Group       25393 Dec  8  2021 E15DAB1E
+-rw-r--r--    1 User  Group       13759 Dec  8  2021 EAC43510
+./.content/FFB5D68A
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         216 Dec  8  2021 li
+-rw-r--r--    1 User  Group        2932 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         324 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         588 Dec  8  2021 si
+./.content/FFB5D68A/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/FFB5D68A/rf/000
+total 432
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        3050 Dec  8  2021 50945227
+-rw-r--r--    1 User  Group        2686 Dec  8  2021 638F93F4
+-rw-r--r--    1 User  Group        3624 Dec  8  2021 6D5290EF
+-rw-r--r--    1 User  Group        3974 Dec  8  2021 6F49E55D
+-rw-r--r--    1 User  Group        5886 Dec  8  2021 753BA3B0
+-rw-r--r--    1 User  Group        4834 Dec  8  2021 7BD833B1
+-rw-r--r--    1 User  Group        3498 Dec  8  2021 80523974
+-rw-r--r--    1 User  Group        3116 Dec  8  2021 87521CE6
+-rw-r--r--    1 User  Group        7362 Dec  8  2021 8F7AF04B
+-rw-r--r--    1 User  Group        4396 Dec  8  2021 921C68B6
+-rw-r--r--    1 User  Group        3050 Dec  8  2021 96FAB5E7
+-rw-r--r--    1 User  Group        3896 Dec  8  2021 972DAE92
+-rw-r--r--    1 User  Group        2588 Dec  8  2021 A161B28A
+-rw-r--r--    1 User  Group        5302 Dec  8  2021 A3B73CB4
+-rw-r--r--    1 User  Group        3388 Dec  8  2021 A7CF1E54
+-rw-r--r--    1 User  Group        2450 Dec  8  2021 B18112CB
+-rw-r--r--    1 User  Group        3322 Dec  8  2021 BA357130
+-rw-r--r--    1 User  Group        3562 Dec  8  2021 C3773ACB
+-rw-r--r--    1 User  Group        4248 Dec  8  2021 C4D806CC
+-rw-r--r--    1 User  Group       10594 Dec  8  2021 CFBC4D0A
+-rw-r--r--    1 User  Group        5216 Dec  8  2021 D9FE7B43
+-rw-r--r--    1 User  Group        2752 Dec  8  2021 E4C50FC0
+-rw-r--r--    1 User  Group        5732 Dec  8  2021 E58C6310
+-rw-r--r--    1 User  Group        1964 Dec  8  2021 E760CE86
+-rw-r--r--    1 User  Group        4656 Dec  8  2021 EDA468DF
+-rw-r--r--    1 User  Group        4696 Dec  8  2021 EE6A044C
+-rw-r--r--    1 User  Group        4260 Dec  8  2021 F4835456
+./.content/FFB5D68A/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/FFB5D68A/sf/000
+total 30000
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group     3480326 Dec  8  2021 0220E6A7
+-rw-r--r--    1 User  Group     3199472 Dec  8  2021 030F5308
+-rw-r--r--    1 User  Group     3768388 Dec  8  2021 06B4DADF
+-rw-r--r--    1 User  Group       13312 Dec  8  2021 08D158CE
+-rw-r--r--    1 User  Group       15132 Dec  8  2021 0A2272BF
+-rw-r--r--    1 User  Group       13963 Dec  8  2021 1D6FAA7D
+-rw-r--r--    1 User  Group       18503 Dec  8  2021 2E5B7228
+-rw-r--r--    1 User  Group       32239 Dec  8  2021 3221BB05
+-rw-r--r--    1 User  Group       17566 Dec  8  2021 327B5B44
+-rw-r--r--    1 User  Group       24370 Dec  8  2021 349CA1EB
+-rw-r--r--    1 User  Group       14749 Dec  8  2021 37F0C2A9
+-rw-r--r--    1 User  Group     3545038 Dec  8  2021 3996E8D6
+-rw-r--r--    1 User  Group     3755592 Dec  8  2021 3A4A4214
+-rw-r--r--    1 User  Group     2706584 Dec  8  2021 3CBE282A
+-rw-r--r--    1 User  Group       18709 Dec  8  2021 3E3389FF
+-rw-r--r--    1 User  Group     3987784 Dec  8  2021 427F0F6D
+-rw-r--r--    1 User  Group     3336118 Dec  8  2021 4816EDA2
+-rw-r--r--    1 User  Group       10443 Dec  8  2021 4DFA49D3
+-rw-r--r--    1 User  Group       22835 Dec  8  2021 4FFB8C5C
+-rw-r--r--    1 User  Group       15818 Dec  8  2021 55F813FB
+-rw-r--r--    1 User  Group       12221 Dec  8  2021 70539FBA
+-rw-r--r--    1 User  Group     2675785 Dec  8  2021 762B1DEC
+-rw-r--r--    1 User  Group     3505207 Dec  8  2021 79ACD494
+-rw-r--r--    1 User  Group     3761219 Dec  8  2021 8ABD12A1
+-rw-r--r--    1 User  Group     3674649 Dec  8  2021 8F7E72F0
+-rw-r--r--    1 User  Group       25889 Dec  8  2021 900CB273
+-rw-r--r--    1 User  Group       19625 Dec  8  2021 93D49927
+-rw-r--r--    1 User  Group       13207 Dec  8  2021 96077F54
+-rw-r--r--    1 User  Group       12658 Dec  8  2021 97BC17AF
+-rw-r--r--    1 User  Group     3438153 Dec  8  2021 A40CDB13
+-rw-r--r--    1 User  Group       18999 Dec  8  2021 A4DAC4E9
+-rw-r--r--    1 User  Group     2985085 Dec  8  2021 AA23D626
+-rw-r--r--    1 User  Group       12529 Dec  8  2021 B0B5C2BE
+-rw-r--r--    1 User  Group       26566 Dec  8  2021 B77CD2EC
+-rw-r--r--    1 User  Group       11486 Dec  8  2021 BD2A83D3
+-rw-r--r--    1 User  Group     3803255 Dec  8  2021 BFABED56
+-rw-r--r--    1 User  Group       16412 Dec  8  2021 C10D9631
+-rw-r--r--    1 User  Group       13102 Dec  8  2021 C4AAF42A
+-rw-r--r--    1 User  Group       13185 Dec  8  2021 C68AA59D
+-rw-r--r--    1 User  Group       15135 Dec  8  2021 CDC96A19
+-rw-r--r--    1 User  Group       26662 Dec  8  2021 D270E797
+-rw-r--r--    1 User  Group       13182 Dec  8  2021 E40EE488
+-rw-r--r--    1 User  Group     3300349 Dec  8  2021 EAC4A5A3
+-rw-r--r--    1 User  Group     2486850 Dec  8  2021 ED1FAC01
+-rw-r--r--    1 User  Group       18239 Dec  8  2021 F169CDB3
+-rw-r--r--    1 User  Group     2723755 Dec  8  2021 F1E4156B
+-rw-r--r--    1 User  Group       10994 Dec  8  2021 F23F53FF
+-rw-r--r--    1 User  Group       21580 Dec  8  2021 FAA34C70
+-rw-r--r--    1 User  Group       28784 Dec  8  2021 FC9905BB
+./.content/2643948D
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group          60 Dec  8  2021 li
+-rw-r--r--    1 User  Group        1260 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         108 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         192 Dec  8  2021 si
+./.content/2643948D/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/2643948D/rf/000
+total 144
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        3030 Dec  8  2021 0FD297FA
+-rw-r--r--    1 User  Group        9458 Dec  8  2021 1174AAC8
+-rw-r--r--    1 User  Group       11402 Dec  8  2021 15DDBEB4
+-rw-r--r--    1 User  Group       10512 Dec  8  2021 279A98FF
+-rw-r--r--    1 User  Group        3108 Dec  8  2021 6850C6E9
+-rw-r--r--    1 User  Group        7942 Dec  8  2021 6E225F1B
+-rw-r--r--    1 User  Group        9240 Dec  8  2021 754FA78D
+-rw-r--r--    1 User  Group       10672 Dec  8  2021 83E2E31F
+-rw-r--r--    1 User  Group        9996 Dec  8  2021 D906F75D
+./.content/2643948D/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/2643948D/sf/000
+total 7632
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group     2043821 Dec  8  2021 0E41AD07
+-rw-r--r--    1 User  Group       29059 Dec  8  2021 122D35E6
+-rw-r--r--    1 User  Group       14670 Dec  8  2021 1EC8E84A
+-rw-r--r--    1 User  Group       14126 Dec  8  2021 3D8889FA
+-rw-r--r--    1 User  Group     2723274 Dec  8  2021 50AD673D
+-rw-r--r--    1 User  Group       21141 Dec  8  2021 64C2844E
+-rw-r--r--    1 User  Group       20382 Dec  8  2021 90637B6A
+-rw-r--r--    1 User  Group     1455862 Dec  8  2021 96DA944F
+-rw-r--r--    1 User  Group       12875 Dec  8  2021 99AFD9CD
+-rw-r--r--    1 User  Group        9689 Dec  8  2021 AB3EC2FD
+-rw-r--r--    1 User  Group     2711684 Dec  8  2021 B035F39F
+-rw-r--r--    1 User  Group       13865 Dec  8  2021 B179D5D8
+-rw-r--r--    1 User  Group     2364848 Dec  8  2021 B2F2B72E
+-rw-r--r--    1 User  Group       29739 Dec  8  2021 C082FA2E
+-rw-r--r--    1 User  Group       21507 Dec  8  2021 D464684E
+-rw-r--r--    1 User  Group     3869347 Dec  8  2021 F1AF4908
+./.content/DD2E29B7
+total 80
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Dec  8  2021 bt
+-rw-r--r--    1 User  Group         168 Dec  8  2021 li
+-rw-r--r--    1 User  Group        2404 Dec  8  2021 ni
+-rw-r--r--    1 User  Group           0 Dec  8  2021 nm
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 rf
+-rw-r--r--    1 User  Group         252 Dec  8  2021 ri
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 sf
+-rw-r--r--    1 User  Group         444 Dec  8  2021 si
+./.content/DD2E29B7/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/DD2E29B7/rf/000
+total 336
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group        6490 Dec  8  2021 09D9CD75
+-rw-r--r--    1 User  Group        8062 Dec  8  2021 147DE60E
+-rw-r--r--    1 User  Group        2992 Dec  8  2021 3110F4F1
+-rw-r--r--    1 User  Group        6382 Dec  8  2021 383D6E6D
+-rw-r--r--    1 User  Group        5462 Dec  8  2021 397E5A49
+-rw-r--r--    1 User  Group        5642 Dec  8  2021 4143CF43
+-rw-r--r--    1 User  Group        6390 Dec  8  2021 416698CD
+-rw-r--r--    1 User  Group        4210 Dec  8  2021 5140065D
+-rw-r--r--    1 User  Group        7750 Dec  8  2021 6A6F5D6D
+-rw-r--r--    1 User  Group        4512 Dec  8  2021 7AA2F57A
+-rw-r--r--    1 User  Group        8290 Dec  8  2021 8EA3D936
+-rw-r--r--    1 User  Group       11028 Dec  8  2021 8ED5F577
+-rw-r--r--    1 User  Group        4404 Dec  8  2021 9614910B
+-rw-r--r--    1 User  Group        5844 Dec  8  2021 9CEC19D3
+-rw-r--r--    1 User  Group        3728 Dec  8  2021 9EC84777
+-rw-r--r--    1 User  Group        7750 Dec  8  2021 B36C251C
+-rw-r--r--    1 User  Group        3612 Dec  8  2021 B409B169
+-rw-r--r--    1 User  Group        5546 Dec  8  2021 B59459C2
+-rw-r--r--    1 User  Group        9224 Dec  8  2021 C38EF6E7
+-rw-r--r--    1 User  Group        8384 Dec  8  2021 D3BB9D4A
+-rw-r--r--    1 User  Group        6276 Dec  8  2021 EE2AA8BC
+./.content/DD2E29B7/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 000
+./.content/DD2E29B7/sf/000
+total 31808
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 .
+drwxr-xr-x    1 User  Group           0 Dec  8  2021 ..
+-rw-r--r--    1 User  Group       27765 Dec  8  2021 046E3CB3
+-rw-r--r--    1 User  Group       18038 Dec  8  2021 08FCB731
+-rw-r--r--    1 User  Group       36749 Dec  8  2021 0AD4A559
+-rw-r--r--    1 User  Group     5332420 Dec  8  2021 0F8D448A
+-rw-r--r--    1 User  Group     6218449 Dec  8  2021 0FB95A64
+-rw-r--r--    1 User  Group       40438 Dec  8  2021 1897BBA6
+-rw-r--r--    1 User  Group       27741 Dec  8  2021 2053D01D
+-rw-r--r--    1 User  Group     6608754 Dec  8  2021 208DA39E
+-rw-r--r--    1 User  Group       20988 Dec  8  2021 23645EEF
+-rw-r--r--    1 User  Group       53951 Dec  8  2021 2909A69A
+-rw-r--r--    1 User  Group       31803 Dec  8  2021 292DCDE3
+-rw-r--r--    1 User  Group     5451720 Dec  8  2021 3654EE6B
+-rw-r--r--    1 User  Group     5151354 Dec  8  2021 4FFAA15A
+-rw-r--r--    1 User  Group       22055 Dec  8  2021 70A4ECBC
+-rw-r--r--    1 User  Group       19863 Dec  8  2021 70C630AD
+-rw-r--r--    1 User  Group       26303 Dec  8  2021 84CB54B3
+-rw-r--r--    1 User  Group       20933 Dec  8  2021 8543FDE3
+-rw-r--r--    1 User  Group       24145 Dec  8  2021 89FFD578
+-rw-r--r--    1 User  Group     4189375 Dec  8  2021 9119CAFF
+-rw-r--r--    1 User  Group       18793 Dec  8  2021 9409661F
+-rw-r--r--    1 User  Group       20984 Dec  8  2021 9AFE88D0
+-rw-r--r--    1 User  Group       27636 Dec  8  2021 A589ED15
+-rw-r--r--    1 User  Group     6178203 Dec  8  2021 A6DB6564
+-rw-r--r--    1 User  Group       93907 Dec  8  2021 AC87B78C
+-rw-r--r--    1 User  Group     5094903 Dec  8  2021 AD448B4F
+-rw-r--r--    1 User  Group     4906282 Dec  8  2021 B24A5D55
+-rw-r--r--    1 User  Group       16652 Dec  8  2021 B6C83AA0
+-rw-r--r--    1 User  Group       20223 Dec  8  2021 BBAC1A6D
+-rw-r--r--    1 User  Group     4324663 Dec  8  2021 C563F605
+-rw-r--r--    1 User  Group       38502 Dec  8  2021 DE4BFD36
+-rw-r--r--    1 User  Group       16370 Dec  8  2021 E5859D06
+-rw-r--r--    1 User  Group       25672 Dec  8  2021 E609AB7D
+-rw-r--r--    1 User  Group       26801 Dec  8  2021 E94777D8
+-rw-r--r--    1 User  Group       14333 Dec  8  2021 EA029D72
+-rw-r--r--    1 User  Group     4785842 Dec  8  2021 EE79970E
+-rw-r--r--    1 User  Group     5729799 Dec  8  2021 F11B308C
+-rw-r--r--    1 User  Group       19288 Dec  8  2021 F6833656
+./.content/8ECE8475
+total 80
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          12 Feb 19  2022 bt
+-rw-r--r--    1 User  Group           8 Feb 19  2022 li
+-rw-r--r--    1 User  Group         644 Feb 19  2022 ni
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 rf
+-rw-r--r--    1 User  Group          12 Feb 19  2022 ri
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 sf
+-rw-r--r--    1 User  Group          36 Feb 19  2022 si
+./.content/8ECE8475/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 000
+./.content/8ECE8475/rf/000
+total 16
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+-rw-r--r--    1 User  Group        3780 Feb 19  2022 QBR3LYNA
+./.content/8ECE8475/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 000
+./.content/8ECE8475/sf/000
+total 352
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+-rw-r--r--    1 User  Group         937 Feb 19  2022 02F7A714
+-rw-r--r--    1 User  Group       21814 Feb 19  2022 4BOZX2XQ
+-rw-r--r--    1 User  Group      626550 Feb 19  2022 FCRXODAE
+./.content/908EB595
+total 80
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          12 Feb 19  2022 bt
+-rw-r--r--    1 User  Group           8 Feb 19  2022 li
+-rw-r--r--    1 User  Group         644 Feb 19  2022 ni
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 rf
+-rw-r--r--    1 User  Group          12 Feb 19  2022 ri
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 sf
+-rw-r--r--    1 User  Group          36 Feb 19  2022 si
+./.content/908EB595/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 000
+./.content/908EB595/rf/000
+total 16
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+-rw-r--r--    1 User  Group        4600 Feb 19  2022 CGORS31A
+./.content/908EB595/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 000
+./.content/908EB595/sf/000
+total 432
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+-rw-r--r--    1 User  Group         937 Feb 19  2022 02F7A714
+-rw-r--r--    1 User  Group      787605 Feb 19  2022 XHPWHI48
+-rw-r--r--    1 User  Group       18878 Feb 19  2022 XOZ2M06N
+./.content/46DD33A2
+total 80
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          12 Feb 19  2022 bt
+-rw-r--r--    1 User  Group           8 Feb 19  2022 li
+-rw-r--r--    1 User  Group         644 Feb 19  2022 ni
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 rf
+-rw-r--r--    1 User  Group          12 Feb 19  2022 ri
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 sf
+-rw-r--r--    1 User  Group          36 Feb 19  2022 si
+./.content/46DD33A2/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 000
+./.content/46DD33A2/rf/000
+total 16
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+-rw-r--r--    1 User  Group        3294 Feb 19  2022 SLAHSH6D
+./.content/46DD33A2/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 000
+./.content/46DD33A2/sf/000
+total 512
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 .
+drwxr-xr-x    1 User  Group           0 Feb 19  2022 ..
+-rw-r--r--    1 User  Group         937 Feb 19  2022 02F7A714
+-rw-r--r--    1 User  Group       24957 Feb 19  2022 55G1VYPF
+-rw-r--r--    1 User  Group      981304 Feb 19  2022 JVIT6X1C
+./.content/58139FE6
+total 80
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Jul 10  2022 bt
+-rw-r--r--    1 User  Group         104 Jul 10  2022 li
+-rw-r--r--    1 User  Group        1700 Jul 10  2022 ni
+-rw-r--r--    1 User  Group           0 Jul 10  2022 nm
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 rf
+-rw-r--r--    1 User  Group         156 Jul 10  2022 ri
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 sf
+-rw-r--r--    1 User  Group         300 Jul 10  2022 si
+./.content/58139FE6/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 000
+./.content/58139FE6/rf/000
+total 208
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+-rw-r--r--    1 User  Group       13288 Jul 10  2022 116B30CC
+-rw-r--r--    1 User  Group       12362 Jul 10  2022 2DE88475
+-rw-r--r--    1 User  Group       14612 Jul 10  2022 347D7B1E
+-rw-r--r--    1 User  Group       10826 Jul 10  2022 45F991DF
+-rw-r--r--    1 User  Group       15642 Jul 10  2022 6DD07DBF
+-rw-r--r--    1 User  Group        8332 Jul 10  2022 81E1C6FF
+-rw-r--r--    1 User  Group       14034 Jul 10  2022 9A7579E4
+-rw-r--r--    1 User  Group        8308 Jul 10  2022 B68AF004
+-rw-r--r--    1 User  Group       13800 Jul 10  2022 BC9C6B74
+-rw-r--r--    1 User  Group       12728 Jul 10  2022 C07FE582
+-rw-r--r--    1 User  Group       10560 Jul 10  2022 CD3A18F6
+-rw-r--r--    1 User  Group       16582 Jul 10  2022 E17242A6
+-rw-r--r--    1 User  Group       10968 Jul 10  2022 EBCA01CF
+./.content/58139FE6/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 000
+./.content/58139FE6/sf/000
+total 35424
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+-rw-r--r--    1 User  Group     7726506 Jul 10  2022 001082B9
+-rw-r--r--    1 User  Group     8170634 Jul 10  2022 0409A3F5
+-rw-r--r--    1 User  Group       15222 Jul 10  2022 07EF0D26
+-rw-r--r--    1 User  Group       14253 Jul 10  2022 0AFC3A5F
+-rw-r--r--    1 User  Group     8534539 Jul 10  2022 10EB8DF4
+-rw-r--r--    1 User  Group       13004 Jul 10  2022 21952E1C
+-rw-r--r--    1 User  Group     7462002 Jul 10  2022 43F23E85
+-rw-r--r--    1 User  Group     7134820 Jul 10  2022 56BF2AAB
+-rw-r--r--    1 User  Group       17437 Jul 10  2022 636A8594
+-rw-r--r--    1 User  Group       10006 Jul 10  2022 6417657D
+-rw-r--r--    1 User  Group     8093957 Jul 10  2022 676FA23B
+-rw-r--r--    1 User  Group       11700 Jul 10  2022 7671679A
+-rw-r--r--    1 User  Group       37914 Jul 10  2022 790F36D2
+-rw-r--r--    1 User  Group       16057 Jul 10  2022 84AD5E81
+-rw-r--r--    1 User  Group       26354 Jul 10  2022 8CB812DA
+-rw-r--r--    1 User  Group       33088 Jul 10  2022 90FF56CE
+-rw-r--r--    1 User  Group     7827599 Jul 10  2022 A6840DA8
+-rw-r--r--    1 User  Group       13814 Jul 10  2022 B103FCEE
+-rw-r--r--    1 User  Group       17360 Jul 10  2022 D043BDAE
+-rw-r--r--    1 User  Group       32564 Jul 10  2022 D1ABF4BE
+-rw-r--r--    1 User  Group     8206936 Jul 10  2022 D89E6ECE
+-rw-r--r--    1 User  Group     8659158 Jul 10  2022 E1FBE77B
+-rw-r--r--    1 User  Group       11621 Jul 10  2022 E65C3DDC
+-rw-r--r--    1 User  Group       21215 Jul 10  2022 E81740EC
+-rw-r--r--    1 User  Group       19392 Jul 10  2022 F0E79A33
+./.content/1362862A
+total 80
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Jul 10  2022 bt
+-rw-r--r--    1 User  Group         168 Jul 10  2022 li
+-rw-r--r--    1 User  Group        2404 Jul 10  2022 ni
+-rw-r--r--    1 User  Group           0 Jul 10  2022 nm
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 rf
+-rw-r--r--    1 User  Group         252 Jul 10  2022 ri
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 sf
+-rw-r--r--    1 User  Group         444 Jul 10  2022 si
+./.content/1362862A/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 000
+./.content/1362862A/rf/000
+total 336
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+-rw-r--r--    1 User  Group        6334 Jul 10  2022 08666A55
+-rw-r--r--    1 User  Group        6484 Jul 10  2022 0A65678A
+-rw-r--r--    1 User  Group        7748 Jul 10  2022 0ACBC5FB
+-rw-r--r--    1 User  Group        4512 Jul 10  2022 1042F0FC
+-rw-r--r--    1 User  Group        8944 Jul 10  2022 24D22B5F
+-rw-r--r--    1 User  Group        6752 Jul 10  2022 27B4A249
+-rw-r--r--    1 User  Group        5536 Jul 10  2022 4ACF5DCC
+-rw-r--r--    1 User  Group        8606 Jul 10  2022 5E842470
+-rw-r--r--    1 User  Group        5068 Jul 10  2022 754953AD
+-rw-r--r--    1 User  Group        8592 Jul 10  2022 88FB66CA
+-rw-r--r--    1 User  Group        8304 Jul 10  2022 8EBAA221
+-rw-r--r--    1 User  Group        4596 Jul 10  2022 9AAFA0D6
+-rw-r--r--    1 User  Group        6960 Jul 10  2022 AE901881
+-rw-r--r--    1 User  Group        3530 Jul 10  2022 B26EA644
+-rw-r--r--    1 User  Group        6194 Jul 10  2022 C503FAAB
+-rw-r--r--    1 User  Group        5792 Jul 10  2022 C567E394
+-rw-r--r--    1 User  Group        6026 Jul 10  2022 CDA358C0
+-rw-r--r--    1 User  Group        4346 Jul 10  2022 E1324661
+-rw-r--r--    1 User  Group        5816 Jul 10  2022 EA30F6E7
+-rw-r--r--    1 User  Group        5250 Jul 10  2022 ECBBFB77
+-rw-r--r--    1 User  Group        5480 Jul 10  2022 FC3C7C4B
+./.content/1362862A/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 000
+./.content/1362862A/sf/000
+total 36976
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 .
+drwxr-xr-x    1 User  Group           0 Jul 10  2022 ..
+-rw-r--r--    1 User  Group     6446747 Jul 10  2022 0211749B
+-rw-r--r--    1 User  Group       19865 Jul 10  2022 11B586CC
+-rw-r--r--    1 User  Group     6352499 Jul 10  2022 11F7A7A7
+-rw-r--r--    1 User  Group     6146221 Jul 10  2022 139E4417
+-rw-r--r--    1 User  Group     5320049 Jul 10  2022 13DE430F
+-rw-r--r--    1 User  Group     5519336 Jul 10  2022 16385163
+-rw-r--r--    1 User  Group       17566 Jul 10  2022 16B4B0DA
+-rw-r--r--    1 User  Group     6101342 Jul 10  2022 2959C7D2
+-rw-r--r--    1 User  Group       76429 Jul 10  2022 42BE3CC8
+-rw-r--r--    1 User  Group       19422 Jul 10  2022 4C6608D7
+-rw-r--r--    1 User  Group       17542 Jul 10  2022 51BC8C01
+-rw-r--r--    1 User  Group       23853 Jul 10  2022 594CAAED
+-rw-r--r--    1 User  Group       20486 Jul 10  2022 5B0449F4
+-rw-r--r--    1 User  Group     6644836 Jul 10  2022 612AF426
+-rw-r--r--    1 User  Group       24380 Jul 10  2022 657B7DEB
+-rw-r--r--    1 User  Group       21428 Jul 10  2022 6DE10B74
+-rw-r--r--    1 User  Group      180826 Jul 10  2022 70A6E2A0
+-rw-r--r--    1 User  Group       24299 Jul 10  2022 7D245B98
+-rw-r--r--    1 User  Group       32979 Jul 10  2022 873FD80D
+-rw-r--r--    1 User  Group       27739 Jul 10  2022 87B187F1
+-rw-r--r--    1 User  Group       21373 Jul 10  2022 8ADF5037
+-rw-r--r--    1 User  Group       23908 Jul 10  2022 9348589B
+-rw-r--r--    1 User  Group       25759 Jul 10  2022 A8AA5D7A
+-rw-r--r--    1 User  Group     5956445 Jul 10  2022 B1FCB39E
+-rw-r--r--    1 User  Group       34075 Jul 10  2022 B745FD56
+-rw-r--r--    1 User  Group     6765328 Jul 10  2022 B9018263
+-rw-r--r--    1 User  Group     5895081 Jul 10  2022 C301D28E
+-rw-r--r--    1 User  Group       24553 Jul 10  2022 C5E06343
+-rw-r--r--    1 User  Group       17702 Jul 10  2022 C85ABC97
+-rw-r--r--    1 User  Group       27817 Jul 10  2022 CCF468B6
+-rw-r--r--    1 User  Group     6508874 Jul 10  2022 D332D6EC
+-rw-r--r--    1 User  Group     6783290 Jul 10  2022 DFCEF20F
+-rw-r--r--    1 User  Group       25709 Jul 10  2022 E00C1991
+-rw-r--r--    1 User  Group       20254 Jul 10  2022 E49A6D2C
+-rw-r--r--    1 User  Group       19211 Jul 10  2022 EE91009F
+-rw-r--r--    1 User  Group       24506 Jul 10  2022 F0E9A450
+-rw-r--r--    1 User  Group       18921 Jul 10  2022 F7BE80B9
+./.content/DA75B9D7
+total 80
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 .
+drwxr-xr-x    1 User  Group           0 Nov 27  2020 ..
+-rw-r--r--    1 User  Group          64 Aug 28 20:27 bt
+-rw-r--r--    1 User  Group         172 Aug 28 20:27 li
+-rw-r--r--    1 User  Group        2448 Aug 28 20:27 ni
+-rw-r--r--    1 User  Group           0 Aug 28 20:27 nm
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 rf
+-rw-r--r--    1 User  Group         252 Aug 28 20:27 ri
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 sf
+-rw-r--r--    1 User  Group         456 Aug 28 20:27 si
+./.content/DA75B9D7/rf
+total 0
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 .
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 ..
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 000
+./.content/DA75B9D7/rf/000
+total 336
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 .
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 ..
+-rw-r--r--    1 User  Group        5568 Aug 28 20:27 19C54B2B
+-rw-r--r--    1 User  Group        3162 Aug 28 20:27 1BF5CA9D
+-rw-r--r--    1 User  Group       13838 Aug 28 20:27 3499D610
+-rw-r--r--    1 User  Group        4868 Aug 28 20:27 35FE2C44
+-rw-r--r--    1 User  Group        7906 Aug 28 20:27 3D5813F1
+-rw-r--r--    1 User  Group        4874 Aug 28 20:27 4B4B9C4B
+-rw-r--r--    1 User  Group        9016 Aug 28 20:27 5D81001C
+-rw-r--r--    1 User  Group        5298 Aug 28 20:27 62135066
+-rw-r--r--    1 User  Group        6164 Aug 28 20:27 6D430A5E
+-rw-r--r--    1 User  Group        6418 Aug 28 20:27 7838EEB8
+-rw-r--r--    1 User  Group        9068 Aug 28 20:27 8031E21D
+-rw-r--r--    1 User  Group        6282 Aug 28 20:27 87AFC998
+-rw-r--r--    1 User  Group        7078 Aug 28 20:27 8B00F89E
+-rw-r--r--    1 User  Group        5292 Aug 28 20:27 94D45B71
+-rw-r--r--    1 User  Group        5570 Aug 28 20:27 A103284F
+-rw-r--r--    1 User  Group        8926 Aug 28 20:27 AD827280
+-rw-r--r--    1 User  Group        3826 Aug 28 20:27 B43AD1EF
+-rw-r--r--    1 User  Group        6036 Aug 28 20:27 C23DA0F0
+-rw-r--r--    1 User  Group        6860 Aug 28 20:27 DB808F96
+-rw-r--r--    1 User  Group        4346 Aug 28 20:27 F92B5A5B
+-rw-r--r--    1 User  Group        7730 Aug 28 20:27 FBC4E7CB
+./.content/DA75B9D7/sf
+total 0
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 .
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 ..
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 000
+./.content/DA75B9D7/sf/000
+total 34400
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 .
+drwxr-xr-x    1 User  Group           0 Aug 28 20:27 ..
+-rw-r--r--    1 User  Group     4797148 Aug 28 20:27 028A1C1F
+-rw-r--r--    1 User  Group       22419 Aug 28 20:27 08747415
+-rw-r--r--    1 User  Group       16707 Aug 28 20:27 11115C2E
+-rw-r--r--    1 User  Group       25730 Aug 28 20:27 172F334F
+-rw-r--r--    1 User  Group       14910 Aug 28 20:27 1A234AFC
+-rw-r--r--    1 User  Group       17907 Aug 28 20:27 1CCB9F97
+-rw-r--r--    1 User  Group       19133 Aug 28 20:27 24DE8BD4
+-rw-r--r--    1 User  Group     5694754 Aug 28 20:27 260ECF29
+-rw-r--r--    1 User  Group     4973727 Aug 28 20:27 273C9E54
+-rw-r--r--    1 User  Group       18611 Aug 28 20:27 4C0A5BB6
+-rw-r--r--    1 User  Group       20410 Aug 28 20:27 59E0FBC2
+-rw-r--r--    1 User  Group     4596801 Aug 28 20:27 5D52291D
+-rw-r--r--    1 User  Group       15296 Aug 28 20:27 5E9C43D5
+-rw-r--r--    1 User  Group     5433023 Aug 28 20:27 62048B1E
+-rw-r--r--    1 User  Group       16915 Aug 28 20:27 6F98F1E0
+-rw-r--r--    1 User  Group     5209565 Aug 28 20:27 6FA6A7B8
+-rw-r--r--    1 User  Group     5260349 Aug 28 20:27 77E9C9F8
+-rw-r--r--    1 User  Group       31758 Aug 28 20:27 7BB82289
+-rw-r--r--    1 User  Group       19291 Aug 28 20:27 82EC3D96
+-rw-r--r--    1 User  Group       25678 Aug 28 20:27 883B95B4
+-rw-r--r--    1 User  Group       15660 Aug 28 20:27 8ED991B9
+-rw-r--r--    1 User  Group     5878011 Aug 28 20:27 8F8596CA
+-rw-r--r--    1 User  Group       28393 Aug 28 20:27 937B5825
+-rw-r--r--    1 User  Group     4961980 Aug 28 20:27 943884BA
+-rw-r--r--    1 User  Group       17204 Aug 28 20:27 99A46212
+-rw-r--r--    1 User  Group       19883 Aug 28 20:27 A3289709
+-rw-r--r--    1 User  Group     5464531 Aug 28 20:27 B9D91954
+-rw-r--r--    1 User  Group       20591 Aug 28 20:27 BE6A8EEF
+-rw-r--r--    1 User  Group       23932 Aug 28 20:27 C0CACA9D
+-rw-r--r--    1 User  Group       19680 Aug 28 20:27 C69CC597
+-rw-r--r--    1 User  Group       17178 Aug 28 20:27 CEADB017
+-rw-r--r--    1 User  Group       18796 Aug 28 20:27 D3BF8E84
+-rw-r--r--    1 User  Group     5725489 Aug 28 20:27 D9ABFD41
+-rw-r--r--    1 User  Group       21583 Aug 28 20:27 E238E4B7
+-rw-r--r--    1 User  Group     5988473 Aug 28 20:27 EBE4B8E6
+-rw-r--r--    1 User  Group     5482546 Aug 28 20:27 ED3462D3
+-rw-r--r--    1 User  Group       16345 Aug 28 20:27 F45F1BA5
+-rw-r--r--    1 User  Group       16916 Aug 28 20:27 F8921790
+./System Volume Information
+total 32
+drwxr-xr-x    1 User  Group           0 Sep 10  2021 .
+drwxr-xr-x    1 User  Group           0 Jan  1  1980 ..
+-rw-r--r--    1 User  Group          76 Sep 10  2021 IndexerVolumeGuid
+-rw-r--r--    1 User  Group          12 Sep 10  2021 WPSettings.dat
