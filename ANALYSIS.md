@@ -1,6 +1,5 @@
 # Summary
 - [Summary](#summary)
-  - [Mapping](#mapping)
 - [Memory layout](#memory-layout)
   - [Bootloader Firmware](#bootloader-firmware)
   - [Main Firmware](#main-firmware)
@@ -23,10 +22,6 @@
 - [Links](#links)
 
 
-## Mapping
-* GPIOE - display ?
-* GPIOB - audio chip ?
-
 # Memory layout
 <img src="resources/mem_map.png" width="400">
 
@@ -43,6 +38,8 @@ TBD : boot process & steps + jump to main at `0x9000 0000`
 2. in case firmware is corrupted, copy backup firmware to main
 3. boot main firmware
 
+This FW contains FatFs (different config) for SD access and performs read/write to QSPI flash though commands
+
 ## Main Firmware
 The full firmware ! might be located at `0x9000 0000`   
 **Version =** 2.22
@@ -50,6 +47,7 @@ The full firmware ! might be located at `0x9000 0000`
 ## Backup firmware
 A short mini firmware ! might be located at `0x8000 0000`   
 **Version =** 2.16
+**Objective =** make sure that an USB mass storage is accessible for MainFW reload
 
 ## SNU location
 
