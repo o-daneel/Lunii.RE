@@ -2,8 +2,12 @@
 - [Summary](#summary)
   - [Mapping](#mapping)
 - [Memory layout](#memory-layout)
+  - [Bootloader Firmware](#bootloader-firmware)
+  - [Main Firmware](#main-firmware)
+  - [Backup firmware](#backup-firmware)
   - [SNU location](#snu-location)
 - [Security study](#security-study)
+  - [Firmware CRC](#firmware-crc)
   - [Ghidra Project](#ghidra-project)
     - [How to import](#how-to-import)
   - [Thoughts](#thoughts)
@@ -15,7 +19,7 @@
     - [NFC](#nfc)
     - [Others](#others)
   - [Core](#core)
-    - [Vector Table](#vector-table)
+    - [Vector Tables](#vector-tables)
     - [Low-Level](#low-level)
     - [OS \& Lib C](#os--lib-c)
     - [Others](#others-1)
@@ -33,16 +37,36 @@
 # Memory layout
 <img src="resources/mem_map.png" width="400">
 
-Two of them are of interest:
-1. QuadSPI external flash from `0x8000 0000 - 0x9FFF FFFF`
-2. Internal flash from `0x0800 0000 - 0x080? ????`
+Three of them are of interest:
+1. QuadSPI external flash from `0x8000 0000 - 0x9FFF FFFF`   
+   512KB are split in two 256KB parts. One for current firmware, and another for backup.
+2. Internal flash from `0x0800 0000 - 0x0800 FFFF`
 3. Internal RAM from `0x2000 0000 - 0x2003 FFFF`
+
+## Bootloader Firmware
+TBD : boot process & steps + jump to main at `0x9000 0000`
+
+1. checks CRC of main firmware
+2. in case firmware is corrupted, copy backup firmware to main
+3. boot main firmware
+
+## Main Firmware
+The full firmware ! might be located at `0x9000 0000`   
+**Version =** 2.22
+
+## Backup firmware
+A short mini firmware ! might be located at `0x8000 0000`   
+**Version =** 2.16
 
 ## SNU location
 
 8 bytes for SNU located at : `0x0800 C000 - 0x0800 C007` (internal flash)
 
 # Security study
+
+## Firmware CRC
+1. compute fw size by looking for FFFF partern
+2. computes CRC32 on size - 4 (reference CRC included at the end)
 
 ## Ghidra Project
 
@@ -115,104 +139,50 @@ To be updated with new symbols from ghidra
 ### FatFs
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| HAL_FS_fileCreate | `0x9000f448` | Function | Global | User Defined | 1 |
-| HAL_FS_fileOpen | `0x9000f4d8` | Function | Global | User Defined | 5 |
-| HAL_FS_fileDelete? | `0x9000f5e8` | Function | Global | User Defined | 2 |
-| HAL_FS_fileClose | `0x9000f634` | Function | Global | User Defined | 17 |
 
 ### Audio
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
 | HAL_AUDIO_pause | `0x9000f370` | Function | Global | User Defined | 2 |
-| HAL_AUDIO_pause | `0x90010538` | Function | Global | User Defined | 1 |
-| HAL_AUDIO_play | `0x9000f6bc` | Function | Global | User Defined | 1 |
-| HAL_AUDIO_resume | `0x9000f394` | Function | Global | User Defined | 1 |
 
 ### Screen
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| HAL_SCR_activate | `0x9000f218` | Function | Global | User Defined | 4 |
-| HAL_SCR_displayPicture_fromBuffer | `0x9000f294` | Function | Global | User Defined | 15 |
-| HAL_SCR_displayPicture_fromFile | `0x9000f664` | Function | Global | User Defined | 1 |
 
 ### NFC
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| HAL_NFC_update | `0x9001161c` | Function | Global | User Defined | 1 |
-| HAL_NFC_write | `0x9001166c` | Function | Global | User Defined | 1 |
 
 ### Others
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| HAL_enterSleep | `0x9000f188` | Function | Global | User Defined | 11 |
-| HAL_reset | `0x9000f170` | Function | Global | User Defined | 5 |
 
 ## Core
 
 VectorTable
 
-### Vector Table
-Location `0x9000 0000` ? seems to be more relevant @ `0x0000 0000`
+### Vector Tables
+One for each firmware:
+* boot - `0x0800 0000`
+* main - `0x9000 0000`
+* backup - `0x8000 0000`
 
 See chapter [9.1.2 Interrupt and exception vectors ](docs/rm0431-stm32f72xxx-and-stm32f73xxx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf)
 
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| Reset_Handler | `0x9001702c` | Function | Global | User Defined | 1 |
-| OTG_HS_Handler | `0x90015b4c` | Function | Global | User Defined | 0 |
-| EXTI2_Handler | `0x90015ada` | Function | Global | User Defined | 0 |
-| EXTI1_Handler | `0x90015ad4` | Function | Global | User Defined | 0 |
-| TIM6_DAC_Handler | `0x90015b18` | Function | Global | User Defined | 0 |
-| DMA1_Stream5_Handler | `0x90015ae0` | Function | Global | User Defined | 0 |
-| EXTI9_5_Handler | `0x90015aec` | Function | Global | User Defined | 0 |
-| TIM3_Handler | `0x90015af4` | Function | Global | User Defined | 0 |
-| EXTI15_10_Handler | `0x90015b00` | Function | Global | User Defined | 0 |
-| DMA2_Stream0_Handler | `0x90015b34` | Function | Global | User Defined | 0 |
-| DMA2_Stream5_Handler | `0x90015b40` | Function | Global | User Defined | 0 |
-| SDMMC2_Handler | `0x90015b58` | Function | Global | User Defined | 0 |
-| SysTick_Handler | `0x9000a3f4` | Function | Global | User Defined | 0 |
-| PendSV_Handler | `0x9000a390` | Function | Global | User Defined | 0 |
-| DebugMonitor_Handler | `0x90015ad2` | Function | Global | User Defined | 0 |
-| SVCall_Handler | `0x9000a2f0` | Function | Global | User Defined | 0 |
-| UsageFault_Handler | `0x90015ad0` | Function | Global | User Defined | 2 |
-| BusFault_Handler | `0x90015ace` | Function | Global | User Defined | 1 |
-| Undefined_Handler | `0x9001707c` | Function | Global | User Defined | 1 |
-| MemManage_Handler | `0x90015acc` | Function | Global | User Defined | 1 |
-| HardFault_Handler | `0x90015aca` | Function | Global | User Defined | 1 |
-| HardFault_Handler | `0x90015acb` | Label | Global | User Defined | 1 |
 | NMI_Handler | `0x90015ac8` | Function | Global | User Defined | 0 |
 
 
 ### Low-Level
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| ADC3_init | `0x900144c0` | Function | Global | User Defined | 1 |
-| DAC_init | `0x90013f9c` | Function | Global | User Defined | 1 |
-| DMA_init | `0x900145b8` | Function | Global | User Defined | 1 |
-| I2C3_init | `0x900143bc` | Function | Global | User Defined | 1 |
-| IDWG_init | `0x900147b0` | Function | Global | User Defined | 1 |
-| PERIPHERALS_init | `0x900126a8` | Function | Global | User Defined | 1 |
-| SDMMC2_init | `0x900148a8` | Function | Global | User Defined | 1 |
-| SPI4_init | `0x90014d88` | Function | Global | User Defined | 1 |
-| TIM1_init | `0x90014f3c` | Function | Global | User Defined | 1 |
 | TIM6_init | `0x90015d30` | Function | Global | User Defined | 1 |
 
 ### OS & Lib C
 
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| file_exist | `0x9000f568` | Function | Global | User Defined | 2 |
-| file_open | `0x900077e8` | Function | Global | User Defined | 10 |
-| file_close | `0x90007d84` | Function | Global | User Defined | 10 |
-| file_delete? | `0x900080d8` | Function | Global | User Defined | 3 |
-| file_read? | `0x900079c0` | Function | Global | User Defined | 5 |
-| file_write | `0x90007b38` | Function | Global | User Defined | 3 |
-| sleep_1s | `0x9000f204` | Function | Global | User Defined | 1 |
-| sleep_ms | `0x90014194` | Function | Global | User Defined | 6 |
-| strcpy | `0x900172ae` | Function | Global | User Defined | 10 |
-| strcat | `0x90017290` | Function | Global | User Defined | 24 |
-| strcmp | `0x90000450` | Function | Global | User Defined | 10 |
-| printf_level | `0x9000e534` | Function | Global | User Defined | 152 |
 | printf_vararg | `0x90016ffc` | Function | Global | User Defined | 33 |
 | sprintf | `0x90017214` | Function | Global | User Defined | 3 |
 
@@ -221,31 +191,6 @@ See chapter [9.1.2 Interrupt and exception vectors ](docs/rm0431-stm32f72xxx-and
 
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| main | `0x90014990` | Function | Global | User Defined | 1 |
-| event_loop | `0x9001291c` | Function | Global | User Defined | 1 |
-| nfc_write | `0x900114c8` | Function | Global | User Defined | 2 |
-| TASK_eventHandler | `0x90014544` | Function | Global | User Defined | 2 |
-| MP3_DECODER_requestPlay | `0x90010f2c` | Function | Global | User Defined | 2 |
-| | | | | | | |
-| | | | | | | |
-| cur_audio_handler | `0x20011f78` | Data Label | Global | User Defined | 7 | 0 |
-| audio_play_state | `0x2001202c` | Data Label | Global | User Defined | 19 | 0 |
-| audio_resume | `0x9001117c` | Function | Global | User Defined | 3 |
-| audio_pause | `0x9001115c` | Function | Global | User Defined | 3 |
-| audio_getState | `0x90011150` | Function | Global | User Defined | 3 |
-| | | | | | | |
-| | | | | | | |
-| story_play_picture | `0x9000fd34` | Function | Global | User Defined | 1 |
-| story_display_picture | `0x9000fb10` | Function | Global | User Defined | 2 |
-| story_display_error | `0x9000fa9c` | Function | Global | User Defined | 13 |
-| | | | | | | |
-| | | | | | | |
-| get_battery_level | `0x9000f1e4` | Function | Global | User Defined | 3 |
-| get_battery_voltage | `0x9000e230` | Function | Global | User Defined | 7 |
-| get_gpio_state | `0x90001a9c` | Function | Global | User Defined | 48 |
-| get_version | `0x90013340` | Function | Global | User Defined | 2 |
-| get_sd_mounted_state | `0x9001275c` | Function | Global | User Defined | 1 |
-| get_PropValue | `0x900115e0` | Function | Global | User Defined | 5 |
 
 
 
@@ -253,29 +198,6 @@ See chapter [9.1.2 Interrupt and exception vectors ](docs/rm0431-stm32f72xxx-and
 
 | Name | Location | Type | Namespace | Source | Ref count |
 | --- | --- | --- | :---: | --- | ---: |
-| lunii_shell | `0x90013d50` | Function | Global | User Defined | 1 |
-| | | | | | | |
-| | | | | | | |
-| CMD_jack_presence | `0x900133b4` | Function | Global | User | 0 |
-| CMD_bouton_selection | `0x900133e4` | Function | Global | User Defined | 0 |
-| CMD_boutons_poussoirs | `0x90013458` | Function | Global | User Defined | 0 |
-| CMD_mcu_uuid | `0x900134c4` | Function | Global | User Defined | 0 |
-| CMD_nfc_uuid | `0x900134f8` | Function | Global | User Defined | 0 |
-| CMD_vbat | `0x90013538` | Function | Global | User Defined | 0 |
-| CMD_audio_off | `0x9001355c` | Function | Global | User Defined | 0 |
-| CMD_sd_version | `0x900135c0` | Function | Global | User Defined | 0 |
-| CMD_sd_checksum | `0x90013628` | Function | Global | User Defined | 0 |
-| CMD_autotest | `0x900136c8` | Function | Global | User Defined | 0 |
-| CMD_softVersion | `0x9001383c` | Function | Global | User Defined | 1 |
-| CMD_audio_jack | `0x900138f8` | Function | Global | User Defined | 0 |
-| CMD_reboot | `0x90013914` | Function | Global | User Defined | 0 |
-| CMD_sd_mounted | `0x9001392c` | Function | Global | User Defined | 0 |
-| CMD_ecran_blanc | `0x90013954` | Function | Global | User Defined | 0 |
-| CMD_ecran_off | `0x90013970` | Function | Global | User Defined | 0 |
-| CMD_ecran_logo | `0x90013988` | Function | Global | User Defined | 0 |
-| CMD_nfc_write | `0x900139a4` | Function | Global | User Defined | 0 |
-| CMD_nfc_read | `0x900139d0` | Function | Global | User Defined | 0 |
-| CMD_hw_version | `0x90013a20` | Function | Global | User Defined | 0 |
 | CMD_write_key_uuid | `0x90013aa8` | Function | Global | User Defined | 0 |
 
 
