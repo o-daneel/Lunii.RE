@@ -1,1 +1,6 @@
+ghidra/Lunii.rep
+ghidra/Lunii.gpr
+ghidra/Lunii.lock*
 resources/pictures/*.jpg
+dump/*
+ida
