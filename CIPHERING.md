@@ -1,4 +1,5 @@
 - [TL;DR](#tldr)
+- [Keys initialization](#keys-initialization)
 - [Target function](#target-function)
   - [Ghidra decompiled](#ghidra-decompiled)
   - [IDA Pro decompiled](#ida-pro-decompiled)
@@ -22,7 +23,7 @@ A first one is hardcoded in binary
   ```
   This code is available in event_loop at 0x90013200
 
-* Key B is make of deciphering .md file from 0x08 to 0x18.   
+* <s>Key B is make of deciphering .md file from 0x08 to 0x18.   
   Those four **UINT** make Key_B[0] Key_B[1] Key_B[2] Key_B[3]
 
   The section from 0x08 to 0x18 is made of
@@ -31,22 +32,43 @@ A first one is hardcoded in binary
   * 4 Bytes : 83 04 41 A3 (static)
   * 2 Bytes : NS (static)
   
-  Thus Key_B is made of SNU & Key_A
+  Thus Key_B is made of SNU & Key_A</s>
+* Key B is made from reading internal flash @SNU location, and deciphering SNU+0x08 to SNU+0x18 
 
+# Keys initialization
+Here is the chunk of code that initialize the Keys   
+``` C
+// Located @900131f4
+    FUN_9001245c();
+    read_.md();
+    CRYPTO_TEA_KEY_A[0] = 0x91bd7a0a;
+    CRYPTO_TEA_KEY_A[1] = 0xa75440a9;
+    CRYPTO_TEA_KEY_A[2] = 0xbbd49d6c;
+    CRYPTO_TEA_KEY_A[3] = 0xe0dcc0e3;
+    HAL_snu_to_buffer(fread_buffer,0x200);
+    crypto_tea_deciph_enable(true);
+    crypto_tea_load_key(CRYPTO_TEA_KEY_A);
+    to_exit = false;
+    crypto_tea_decipher(fread_buffer + 8,0x80);
+    CRYPTO_TEA_KEY_B[0] = fread_buffer._16_4_;
+    CRYPTO_TEA_KEY_B[1] = fread_buffer._20_4_;
+    CRYPTO_TEA_KEY_B[2] = fread_buffer._8_4_;
+    CRYPTO_TEA_KEY_B[3] = fread_buffer._12_4_;
+```
 
 # Target function
 ```
-crypto_tea_config	                  0x9000f788    Function    Global  User Defined    13	0
-HAL_FS_decipher                     0x9000efe4    Function    Global  User Defined    3   0
-crypto_decipher?                    0x9000eb34    Function    Global  User Defined    2   0
+crypto_decipher                       0x9000eb34    Function    Global  User Defined    2   0
 ```
 
 ## Ghidra decompiled
 ``` C
-byte * crypto_decipher?(byte *buffer,uint offset)
+// Located @9000eb34
+byte * crypto_tea_decipher(byte *buffer,uint key_offset)
 {
-  int iVar1;
-  uint *puVar2;
+  uint uVar1;
+  int iVar2;
+  uint *key;
   uint uVar3;
   uint uVar4;
   uint uVar5;
@@ -55,29 +77,31 @@ byte * crypto_decipher?(byte *buffer,uint offset)
   uint uVar8;
   int local_38;
   
-  if (*DAT_9000eb40 != 0) {
-    local_38 = 0x34 / (offset >> 1) + 1;
-    uVar4 = local_38 * Crypto_KEY?;
+  if (CRYPTO_TEA_ENABLE != 0) {
+    local_38 = 0x34 / (key_offset >> 1) + 1;
+    uVar4 = local_38 * 0x9e3779b9;
     uVar8 = *(uint *)buffer;
-    iVar1 = (offset + 0x7fffffff) * 2;
+    iVar2 = (key_offset + 0x7fffffff) * 2;
     do {
-      iVar7 = offset - 1;
-      puVar2 = (uint *)(buffer + offset * 2);
+      uVar6 = uVar4 >> 2;
+      iVar7 = key_offset - 1;
+      key = (uint *)(buffer + key_offset * 2);
       while( true ) {
+        uVar1 = iVar7 >> 1;
         uVar5 = uVar8 ^ uVar4;
-        uVar6 = *(uint *)(DAT_9000eb00 + ((uVar4 >> 2 ^ iVar7 >> 1) & 3) * 4);
         if (iVar7 < 2) break;
         iVar7 = iVar7 + -2;
-        uVar3 = puVar2[-2];
-        uVar8 = puVar2[-1] -
-                ((uVar8 << 2 ^ uVar3 >> 5) + (uVar8 >> 3 ^ uVar3 << 4) ^ (uVar3 ^ uVar6) + uVar5);
-        puVar2 = puVar2 + -1;
-        *puVar2 = uVar8;
+        uVar3 = key[-2];
+        uVar8 = key[-1] - ((uVar8 << 2 ^ uVar3 >> 5) + (uVar8 >> 3 ^ uVar3 << 4) ^
+                          (uVar3 ^ CRYPTO_TEA_KEY_loaded[(uVar6 ^ uVar1) & 3]) + uVar5);
+        key = key + -1;
+        *key = uVar8;
       }
       uVar4 = uVar4 + 0x61c88647;
-      uVar3 = CONCAT22(*(undefined2 *)(buffer + iVar1),*(undefined2 *)(buffer + iVar1 + -2));
+      uVar3 = CONCAT22(*(undefined2 *)(buffer + iVar2),*(undefined2 *)(buffer + iVar2 + -2));
       uVar8 = *(int *)buffer -
-              ((uVar8 << 2 ^ uVar3 >> 5) + (uVar8 >> 3 ^ uVar3 << 4) ^ uVar5 + (uVar3 ^ uVar6));
+              ((uVar8 << 2 ^ uVar3 >> 5) + (uVar8 >> 3 ^ uVar3 << 4) ^
+              uVar5 + (uVar3 ^ CRYPTO_TEA_KEY_loaded[(uVar6 ^ uVar1) & 3]));
       *(uint *)buffer = uVar8;
       local_38 = local_38 + -1;
     } while (local_38 != 0);
@@ -183,26 +207,3 @@ void decrypt (uint32_t v[2], const uint32_t k[4]) {
 }
 ```
 
-TODO : where is located the key ?
-
-cipher/decipher functions are checking a boolean to perform or not.
-Check where this var is set.
-
-```
-dans event_loop
-    *tea_key = CRYPTO_KEY;
-    puVar4 = PTR_s_[HP]HP_DETECT_ON_9001333c;
-    puVar2 = PTR_s_[HP]HP_DETECT_OFF_90013330;
-    puVar3 = DAT_9001332c;
-    tea_key[1] = _res + 0x1596c69f;
-    tea_key[2] = _res + 0x2a172362;
-    tea_key[3] = DAT_90013334;
-
-
-K[0]    91BD7A0A
-K[1]    91BD7A0A + 0x1596c69f = A75440A9
-K[2]    91BD7A0A + 0x2a172362 = BBD49D6C
-K[3]    E0DCC0E3
-```
-
-**Secret Key A** = ``91BD7A0A A75440A9 BBD49D6C E0DCC0E3``

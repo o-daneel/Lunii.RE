@@ -6,6 +6,12 @@
     - [Mapping](#mapping)
   - [Backup Firmware](#backup-firmware)
   - [SNU location](#snu-location)
+- [Test Mode](#test-mode)
+  - [How to enable ?](#how-to-enable-)
+  - [Behavior](#behavior)
+  - [Debug commands](#debug-commands)
+    - [Handlers](#handlers)
+    - [List](#list)
 - [Security study](#security-study)
   - [Ghidra Project](#ghidra-project)
     - [How to import](#how-to-import)
@@ -18,11 +24,13 @@
 - [Crypt-Analysis](#crypt-analysis)
 - [Symbols](#symbols)
 - [Resources](#resources)
+  - [Internal res](#internal-res)
+    - [Bitmaps](#bitmaps)
+    - [MP3](#mp3)
   - [SD structure \& Files](#sd-structure--files)
   - [Files Format](#files-format)
     - [.pi](#pi)
     - [.cfg](#cfg)
-  - [Bitmaps](#bitmaps)
 - [Links](#links)
 
 
@@ -63,7 +71,7 @@ It also contains storyteller identification data :
 * `0x0800C008_0x0800C088` - Extra data ciphered ? (including second Key)  
 
 **TODO** : 
-- <s>review addresses for Backup & Main FW around checks and restore<s>
+- <s>review addresses for Backup & Main FW around checks and restore</s>
 
 ## Main Firmware
 The full firmware ! might be located at `0x90000000`  
@@ -86,6 +94,55 @@ A short mini firmware ! might be located at `0x90040000`
 All around .md file that is recreated if not there.
 How and when is it inserted into firmware ?   
 Updates push to storyteller might be generic, for all boxes. Lunii store might be injecting SNU + recomputing CRC (To be confirmed)
+
+# Test Mode
+
+## How to enable ?
+update of NFC chip
+## Behavior
+
+## Debug commands
+
+Handled by a shell function here
+```
+lunii_shell	90013d50	Function	Global	User Defined	1	0
+```
+
+This function compares text read (from UART ? TBC), against a table of handlers.
+
+### Handlers
+The handlers are located at `90036854  CMD_LIST[0x18]`
+
+Each CMD_LIST is made of :
+* `char * COMMAND`
+* `void (* fn)(void)`
+
+9003684c
+### List
+- SOFTWARE_VERSION
+- HARDWARE_VERSION
+- VBAT?
+- NFC_READ?
+- NFC_WRITE
+- NFC_UUID?
+- MCU_UUID?
+- BOUTONS_POUSSOIR
+- BOUTON_SELECTION
+- ECRAN_LOGO
+- ECRAN_DAMIER
+- ECRAN_DAMIER_IN
+- ECRAN_OFF
+- WHITE_SCREEN
+- SDCARD_MOUNTED?
+- WRITE_KEY_UUID
+- REBOOT
+- AUDIO_JACK
+- AUDIO_SPEAKER
+- AUDIO_OFF
+- JACK_PRESENCE?
+- AUTOTEST?
+- SDCARD_CHECKSUM
+- SDCARD_VERSION
 
 # Security study
 
@@ -195,6 +252,29 @@ To check with root files, like .md
 
 # Resources
 
+## Internal res
+
+### Bitmaps
+
+| Address | Label | Image |
+|-|-|-|
+| 0x9001C04E | BITMAP_WAKEUP | ![](dump/bitmaps/wakeup.bmp) |
+| 0x9001D37E | BITMAP_LUNII_ERROR | ![](dump/bitmaps/LuniiError.bmp) |
+| 0x9001EB94 | BITMAP_LUNII | ![](dump/bitmaps/Lunii.bmp) |
+| 0x9001FF32 | BITMAP_LOW_BATTERY | ![](dump/bitmaps/LowBattery.bmp) |
+| 0x900215F4 | BITMAP_MODE_TEST | ![](dump/bitmaps/ModeTest.bmp) |
+| 0x90023C3A | BITMAP_SLEEP | ![](dump/bitmaps/Sleep.bmp) |
+| 0x90024C18 | BITMAP_NOSDCARD | ![](dump/bitmaps/NoSD.bmp) |
+| 0x900262A4 | BITMAP_SDERROR | ![](dump/bitmaps/SDError.bmp) |
+| 0x90027B80 | BITMAP_LUNII_APP | ![](dump/bitmaps/LuniiApp.bmp) |
+| 0x90028F12 | BITMAP_USB | ![](dump/bitmaps/USB.bmp) |
+
+### MP3 
+| Address | Size | Label | 
+|-|-|-|
+| 0x9002bdf8 | 0x5028 (20520) | [BEEP_1KHz](dump/mp3/beep_1khz.mp3) |
+| 0x900313e4 | 0x55ec (21996) | [BEEP_10KHz](dump/mp3/beep_10khz.mp3) |
+
 ## SD structure & Files 
 | File | Key | Contents|
 |-|-|-|
@@ -236,21 +316,6 @@ File is made of 8 tags :
 | 6 | WORD | WORD | Boolean related to 05<br>If True => (uint)CFG_TAG_04) / (CFG_TAG_05 - 1) |
 | 7 | WORD | WORD | TBD |
 | 8 | WORD | WORD | Request to recreate `.nm` file |
-
-## Bitmaps
-
-| Address | Label | Image |
-|-|-|-|
-| 0x9001C04E | BITMAP_WAKEUP | ![](dump/bitmaps/wakeup.bmp) |
-| 0x9001D37E | BITMAP_LUNII_ERROR | ![](dump/bitmaps/LuniiError.bmp) |
-| 0x9001EB94 | BITMAP_LUNII | ![](dump/bitmaps/Lunii.bmp) |
-| 0x9001FF32 | BITMAP_LOW_BATTERY | ![](dump/bitmaps/LowBattery.bmp) |
-| 0x900215F4 | BITMAP_MODE_TEST | ![](dump/bitmaps/ModeTest.bmp) |
-| 0x90023C3A | BITMAP_SLEEP | ![](dump/bitmaps/Sleep.bmp) |
-| 0x90024C18 | BITMAP_NOSDCARD | ![](dump/bitmaps/NoSD.bmp) |
-| 0x900262A4 | BITMAP_SDERROR | ![](dump/bitmaps/SDError.bmp) |
-| 0x90027B80 | BITMAP_LUNII_APP | ![](dump/bitmaps/LuniiApp.bmp) |
-| 0x90028F12 | BITMAP_USB | ![](dump/bitmaps/USB.bmp) |
 
 # Links
 

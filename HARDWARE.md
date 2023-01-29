@@ -18,6 +18,17 @@
 * Audio ampli : PAM8019
 
 ## Peripherals Mapping
+(recovered from `TM_dump_sate`)
+* GPIOA
+  - Audio Jack inserted
+  - USB Connected
+  - Bouton 1
+* GPIOC
+  - Bouton 2
+  - Bouton 3
+* GPIOD
+  - Molette
+  - Hardware Verion on 0x0F
 * GPIOF - battery level
 * GPIOE - display ?
 * GPIOB - audio chip ?
