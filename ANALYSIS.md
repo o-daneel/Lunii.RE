@@ -5,6 +5,7 @@
   - [SNU location](#snu-location)
 - [Security study](#security-study)
   - [Ghidra Project](#ghidra-project)
+    - [How to import](#how-to-import)
   - [Thoughts](#thoughts)
 - [Symbols](#symbols)
   - [HALs](#hals)
@@ -44,7 +45,17 @@ Two of them are of interest:
 # Security study
 
 ## Ghidra Project
-TBFilled
+
+You will find Ghidra archive in this repo. These archives contains all the work performed on understanding, renaming, decompiling the Lunii Firmware.
+
+### How to import
+1. Open Ghidra
+2. Ensure that there is no active project
+3. File / Restore Project
+4. Pick `...something.../Lunii.RE/ghidra/Lunii_2023_MM_DD.gar` in Archive File
+5. **Restore Directory** & **Project Name** must be filled automatically with
+   * `...something.../Lunii.RE/ghidra`
+   * `Lunii`
 
 ## Thoughts
 There are two functions that performs the same action but from different source :
