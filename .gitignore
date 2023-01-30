@@ -4,3 +4,4 @@ ghidra/Lunii.lock*
 resources/pictures/*.jpg
 dump/*
 ida
+tools/
