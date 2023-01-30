@@ -13,9 +13,15 @@ Even if you don't, children will 😁**
 # TODO
 * Undelete on storyteller ?
 * Describe test mode
+* NFC chip
+  * write NDEF using a dummy card (to test) with Android NXP Write
+  * update storyteller to switch to "test"
+  * back to production
+  * investigate test mode
 * Deep dive in file section to understand format
   * .cfg : **DONE**
   * .ni...
+  * .nm : written to resume story after sleep ?
 * Decompile 
   * Boot FW : **DONE**       > [Bootloader Firmware](ANALYSIS.md#bootloader-firmware) 
   * Main FW : in progress > [Main Firmware](ANALYSIS.md#main-firmware) 

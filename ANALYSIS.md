@@ -169,12 +169,10 @@ Thanks to the following tools:
 ## Thoughts
 
 ### Firmware CRC
-1. compute fw size by looking for FFFF partern
-2. computes CRC32 on size - 4 (reference CRC included at the end)
+refer to [MainFW Mapping](#mapping)
 
 ### Custom firmware
 * build the firmware archive
-  * when is the SNU inserted ?
 * to output internal values ?
 * to decipher files on uart ?
 
@@ -195,6 +193,15 @@ You can retrieve this execution flow in ghidra here :   `boot.bin @08005f04`
 
 ### NFC chip
 * Match TBD dump against frame build in Main FW
+
+NFC chip is a simple tag using NDEF standard. A basic 512 byte memory.  
+**insert image**  
+Android app to update + tuto
+
+Acces level are Read & Write. With a simple smartphone, you should be able to update contents, and eventually switch to test mode.   
+
+SNU and Version are restored at each boot on Production mode.
+Just writing `Mode=test` or `Mode=Production` should be enough.
 
 ### Finding SD Ciphering
 There are two functions that performs the same action but from different source :
@@ -272,6 +279,8 @@ To check with root files, like .md
 ### MP3 
 | Address | Size | Label | 
 |-|-|-|
+| 0x9002aba2 | 0x0C60 (3168) | [Howl](dump/mp3/howl.mp3) |
+| 0x90029a76 | 0x1128 (4392) | [Birds](dump/mp3/birds.mp3) |
 | 0x9002bdf8 | 0x5028 (20520) | [BEEP_1KHz](dump/mp3/beep_1khz.mp3) |
 | 0x900313e4 | 0x55ec (21996) | [BEEP_10KHz](dump/mp3/beep_10khz.mp3) |
 
@@ -307,7 +316,7 @@ File is made of 8 tags :
 ```
 | ID | Tag Len | Value Len | Role |
 |-|-|-|-|
-| 0 | WORD | WORD | Read time before sleep mode ? |
+| 0 | WORD | WORD | idle time before sleep mode |
 | 1 | WORD | WORD | Current story time position ? |
 | 2 | WORD | WORD | Time to display Low battery message |
 | 3 | WORD | WORD | TBD |

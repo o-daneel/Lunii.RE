@@ -29,9 +29,9 @@
 * GPIOD
   - Molette
   - Hardware Verion on 0x0F
-* GPIOF - battery level
+* GPIOF - battery level (linked to DAC)
+* GPIOB - audio chip / HP
 * GPIOE - display ?
-* GPIOB - audio chip ?
 
 Check for pin mapping (UART4)
 
