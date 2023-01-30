@@ -17,6 +17,12 @@
   * [AN5439 - Application note](docs/an5439-augmented-ndef-with-st25dvi2c-series-dynamic-nfc-tags-stmicroelectronics.pdf)
 * Audio ampli : PAM8019
 
+## Peripherals Mapping
+* GPIOF - battery level
+* GPIOE - display ?
+* GPIOB - audio chip ?
+
+
 # Pictures
 
 ## Main Board
