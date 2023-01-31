@@ -11,19 +11,20 @@ Even if you don't, children will 😁**
 3. [Ciphering reverse](CIPHERING.md)
 
 # TODO
-* Undelete on storyteller ?
-* Describe test mode
+* Undelete on storyteller ? **DONE** > only 50 mp3 files, none french stories removed.
 * NFC chip
   * write NDEF using a dummy card (to test) with Android NXP Write
   * update storyteller to switch to "test"
   * back to production
   * investigate test mode
+* Describe test mode
 * Deep dive in file section to understand format
   * .cfg : **DONE**
+  * .pi : ??? injected from NFC chip (for first init ?)
   * .ni...
   * .nm : written to resume story after sleep ?
 * Decompile 
-  * Boot FW : **DONE**       > [Bootloader Firmware](ANALYSIS.md#bootloader-firmware) 
+  * Boot FW : **DONE** > [Bootloader Firmware](ANALYSIS.md#bootloader-firmware) 
   * Main FW : in progress > [Main Firmware](ANALYSIS.md#main-firmware) 
   * Backup FW : partial but **CLOSED**, no worth > [Backup Firmware](ANALYSIS.md#backup-firmware) 
 * Firmware management
@@ -37,8 +38,9 @@ Even if you don't, children will 😁**
     2.  File with SNU + DATA
     3.  File with KeyA & KeyB in plain
 * sample code to process TEA cipher/decipher
-  * in C or python ?
-  * Try it on Key_A ciphered files
+  * in C or python ? **FAILURE**
+  * Try it on Key_A ciphered files : **FAILURE**
+  * Reuse decompiled code as a PoC function
 * How to extract Key_B ?
   
 # Similar repos

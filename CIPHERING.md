@@ -8,8 +8,11 @@
 
 
 # TL;DR
+**Ciphering is still undefeated... Work In Progress (not a simple TEA implementation)**  
+Reusing TEA default implementation does not work. I have to reuse decompiled code.
+
 My bad, I was expecting only one key, however during decompiling process, I realized that two keys are used.   
-A first one is hardcoded in binary
+The first one is hardcoded in binary.
 
 .md file might be the one that contains everything about the box. Key B and SNU ?
 
@@ -177,7 +180,15 @@ It is referenced in Symbol Table as : **Crypt constant TEA_DELTA - 4 bytes**
 A quick search on Google lead to :  
 https://en.wikipedia.org/wiki/Tiny_Encryption_Algorithm
 
-Et voilà !
+Et voilà !   
+
+After many testings, TEA algorithm is not the one used.    
+They might have modified somehow the processing.    
+
+In order to verify if decipher is ok, I had to check against a file with a known plain text. I picked a resource file from a story, which is a BMP file, and I tried to decipher until I can find `BM....` as the first bytes.   
+
+**So far no success at all**
+
 
 ## Official version 
 
