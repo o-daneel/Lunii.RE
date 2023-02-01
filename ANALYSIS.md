@@ -84,16 +84,15 @@ Few interesting offsets :
 * `0x90000400` - 4 Bytes : Firmware CRC offset
 
 ## Backup Firmware
-A short mini firmware ! might be located at `0x90040000`     
-**Version =** 2.16
+A short mini firmware ! might be located at `0x90040000`   
+**Version =** 2.16   
 **Objective =** make sure that an USB mass storage is accessible for MainFW reload
 
 ## SNU location
 
 8 bytes for SNU located at : `0x0800C000_0x0800C007` (internal flash)   
 All around .md file that is recreated if not there.
-How and when is it inserted into firmware ?   
-Updates push to storyteller might be generic, for all boxes. Lunii store might be injecting SNU + recomputing CRC (To be confirmed)
+How and when is it inserted into bootloader firmware ?   
 
 # Test Mode
 
@@ -194,14 +193,25 @@ You can retrieve this execution flow in ghidra here :   `boot.bin @08005f04`
 ### NFC chip
 * Match TBD dump against frame build in Main FW
 
-NFC chip is a simple tag using NDEF standard. A basic 512 byte memory.  
-**insert image**  
-Android app to update + tuto
+NFC chip is a simple tag using NDEF standard. A basic 512 byte memory.   
 
 Acces level are Read & Write. With a simple smartphone, you should be able to update contents, and eventually switch to test mode.   
 
 SNU and Version are restored at each boot on Production mode.
-Just writing `Mode=test` or `Mode=Production` should be enough.
+Just writing `Mode=test` or `Mode=Production` should be enough.   
+
+Using an android application like [NFC Tools](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc), you can dump contents :
+  
+![](resources/ndef/full_dump.jpg)
+
+
+To reprogram it in test mode or production mode, just configure data like   
+![](resources/ndef/mode_test.jpg)
+![](resources/ndef/mode_prod.jpg)
+
+
+If `pi` tag is available, it is copied to SD to `.pi` file. File is overwritten.
+
 
 ### Finding SD Ciphering
 There are two functions that performs the same action but from different source :
@@ -285,22 +295,24 @@ To check with root files, like .md
 | 0x900313e4 | 0x55ec (21996) | [BEEP_10KHz](dump/mp3/beep_10khz.mp3) |
 
 ## SD structure & Files 
+NOTE : **Ciphered files are only protected on first 0x200 block !**
+
 | File | Key | Contents|
 |-|-|-|
 |`sd:0:\.pi` | None || recreated by main FW
 |`sd:0:\.cfg` | None ||
-|`sd:0:\.md` | ?? | MetaData<br> (contents from internal flash ? including SNU)
+|`sd:0:\.md` | Key_A | MetaData<br>(contents from internal flash, two block of 512B, 1st with SNU, 2nd with ciphered data and Key_B)
 |`sd:0:\version` | None | contains a simple date      
-|`sd:0:\.content\XXXXXXXX\bt` | Key_B ||
-|`sd:0:\.content\XXXXXXXX\li` | Key_A ||
-|`sd:0:\.content\XXXXXXXX\ni` | None ||
-|`sd:0:\.content\XXXXXXXX\nm` | Key_A ||
-|`sd:0:\.content\XXXXXXXX\ri` | Key_A | Resource Index ?   
-|`sd:0:\.content\XXXXXXXX\si` | Key_A | Song Index ?   
-|`sd:0:\.content\XXXXXXXX\rf\` | N/A | Resource ? Folder 
-|`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` || Resources (BMP, others ?)  
-|`sd:0:\.content\XXXXXXXX\sf\` | N/A | Song ? Folder
-|`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY` || Songs, story part (MP3 ?)
+|`sd:0:\.content\XXXXXXXX\bt` | Key_B ? ||
+|`sd:0:\.content\XXXXXXXX\li` | Key_A ? ||
+|`sd:0:\.content\XXXXXXXX\ni` | None | metadata for story selection / navigation |
+|`sd:0:\.content\XXXXXXXX\nm` | Key_A | metadata to resume ? |
+|`sd:0:\.content\XXXXXXXX\ri` | Key_A | Resource Index : Ciphered text file that contains resource list   
+|`sd:0:\.content\XXXXXXXX\si` | Key_A | Song Index : Ciphered text file that contains song list   
+|`sd:0:\.content\XXXXXXXX\rf\` | N/A | Resource Folder 
+|`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` | Key_A | 1 block ciphered + BMP plain<br>Resources (BMP)  
+|`sd:0:\.content\XXXXXXXX\sf\` | N/A | Song Folder
+|`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY` | Key_A | 1 block ciphered + MP3 plain<br>Songs, story part and heros names (MP3)
 
 ## Files Format
 ### .pi

@@ -23,6 +23,10 @@ Even if you don't, children will 😁**
   * .pi : ??? injected from NFC chip (for first init ?)
   * .ni...
   * .nm : written to resume story after sleep ?
+  * /rf/ & .ri  : **DONE**
+  * /sf/ & .si : **DONE**
+  * .bt ????
+  * .li ????
 * Decompile 
   * Boot FW : **DONE** > [Bootloader Firmware](ANALYSIS.md#bootloader-firmware) 
   * Main FW : in progress > [Main Firmware](ANALYSIS.md#main-firmware) 
@@ -38,10 +42,9 @@ Even if you don't, children will 😁**
     2.  File with SNU + DATA
     3.  File with KeyA & KeyB in plain
 * sample code to process TEA cipher/decipher
-  * in C or python ? **FAILURE**
-  * Try it on Key_A ciphered files : **FAILURE**
-  * Reuse decompiled code as a PoC function
-* How to extract Key_B ?
+  * in C or python ? : **DONE**
+  * Try it on Key_A ciphered files : **DONE**
+* How to extract Key_B ? **DONE**
   
 # Similar repos
 * [(Hackday) Tsukuyomi Hacking Lunii](https://hackaday.io/project/167629-tsukuyomi)

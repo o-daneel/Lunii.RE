@@ -1,21 +1,28 @@
 - [TL;DR](#tldr)
+  - [Wrong algorithm](#wrong-algorithm)
+  - [Key vs Keys ?](#key-vs-keys-)
 - [Keys initialization](#keys-initialization)
 - [Target function](#target-function)
   - [Ghidra decompiled](#ghidra-decompiled)
   - [IDA Pro decompiled](#ida-pro-decompiled)
 - [How to reverse](#how-to-reverse)
-  - [Official version](#official-version)
+  - [Official version : XXTEA](#official-version--xxtea)
 
 
 # TL;DR
-**Ciphering is still undefeated... Work In Progress (not a simple TEA implementation)**  
-Reusing TEA default implementation does not work. I have to reuse decompiled code.
+**Ciphering is finally DEFEATED...**  
 
-My bad, I was expecting only one key, however during decompiling process, I realized that two keys are used.   
+My bad assumptions 
+## Wrong algorithm
+I was hoping that TEA algorithm will be easy to reuse. But it does not work.    I finally found the reason. It exists two variants, XTEA and TEAB.
+   * [XTEA](https://en.wikipedia.org/wiki/XTEA) stands for Extended TEA
+   * [XXTEA or TEAB](https://en.wikipedia.org/wiki/XXTEA) stands for Corrected Block  TEA
+
+Lunii relies on `XXTEA` algorithm, and I guess that for performances reasons (I can"t figure any other rationale for the following choices), they decided to limit ciphering to first 0x200 Bytes (512B, one sector maybe), and fine tune the algo to only **one** round. That makes the algorithm weaker to attacks, but faster..
+
+## Key vs Keys ?
+I was expecting only one key, however during decompiling process, I realized that two keys are used.   
 The first one is hardcoded in binary.
-
-.md file might be the one that contains everything about the box. Key B and SNU ?
-
 * Key A is made from 0x90013324 value   
   ```
   K[0]    91BD7A0A
@@ -26,17 +33,8 @@ The first one is hardcoded in binary.
   ```
   This code is available in event_loop at 0x90013200
 
-* <s>Key B is make of deciphering .md file from 0x08 to 0x18.   
-  Those four **UINT** make Key_B[0] Key_B[1] Key_B[2] Key_B[3]
 
-  The section from 0x08 to 0x18 is made of
-  * 2 Bytes : 0x1600
-  * 8 Bytes : SNU
-  * 4 Bytes : 83 04 41 A3 (static)
-  * 2 Bytes : NS (static)
-  
-  Thus Key_B is made of SNU & Key_A</s>
-* Key B is made from reading internal flash @SNU location, and deciphering SNU+0x08 to SNU+0x18 
+* Key B is made from reading internal flash @SNU location, and deciphering SNU+0x08 to SNU+0x88. Key B is the first ten Bytes of this unciphered buffer
 
 # Keys initialization
 Here is the chunk of code that initialize the Keys   
@@ -116,59 +114,58 @@ byte * crypto_tea_decipher(byte *buffer,uint key_offset)
 
 ## IDA Pro decompiled
 ``` C
-char *__cdecl crypto_decipher(char *buffer, int offset)
+void __cdecl crypto_tea_decipher(int *buffer, int size)
 {
-  unsigned int v2; // r5@2
+  unsigned int sum; // r5@2
   unsigned int cur_block; // lr@2
-  int v4; // r3@2
-  signed int v5; // r12@3
-  char *i; // r4@3
+  int nb_pairs; // r3@2
+  signed int pairs_left; // r12@3
+  unsigned int current_pair; // r4@3
   int v7; // r6@4
   unsigned int v8; // r7@4
   int v9; // r8@4
   int v10; // r9@4
   unsigned int v11; // r4@5
   unsigned int v12; // r3@7
-  int nb_block; // [sp+0h] [bp-38h]@2
-  char *v14; // [sp+4h] [bp-34h]@2
-  char *v15; // [sp+8h] [bp-30h]@2
+  int nb_rounds; // [sp+0h] [bp-38h]@2
+  unsigned int k2; // [sp+4h] [bp-34h]@2
+  unsigned int k1; // [sp+8h] [bp-30h]@2
 
-  if ( word_200115A0 )
+  if ( CRYPTO_TEA_ENABLE )
   {
-    nb_block = 52 / (signed int)((unsigned int)offset >> 1) + 1;
-    v2 = 0x9E3779B9 * nb_block;
-    cur_block = *(_DWORD *)buffer;
-    v4 = 2 * (offset + 0x7FFFFFFF);
-    v14 = &buffer[v4];
-    v15 = &buffer[v4 - 2];
+    nb_rounds = 52 / (signed int)((unsigned int)size >> 1) + 1;
+    sum = 0x9E3779B9 * nb_rounds;
+    cur_block = *buffer;
+    nb_pairs = 2 * (size - 0x80000001);
+    k2 = (unsigned int)buffer + nb_pairs;
+    k1 = (unsigned int)buffer + nb_pairs - 2;
     do
     {
-      v5 = offset - 1;
-      for ( i = &buffer[2 * offset]; ; i -= 4 )
+      pairs_left = size - 1;
+      for ( current_pair = (unsigned int)buffer + 2 * size; ; current_pair -= 4 )
       {
         v7 = 4 * cur_block;
         v8 = cur_block >> 3;
-        v9 = cur_block ^ v2;
-        v10 = dword_200115A4[((unsigned __int8)(v2 >> 2) ^ (unsigned __int8)(v5 >> 1)) & 3];
-        if ( v5 <= 1 )
+        v9 = cur_block ^ sum;
+        v10 = CRYPTO_TEA_KEY_loaded[((unsigned __int8)(sum >> 2) ^ (unsigned __int8)(pairs_left >> 1)) & 3];
+        if ( pairs_left <= 1 )
           break;
-        v5 -= 2;
-        v12 = *((_WORD *)i - 4) | (*((_WORD *)i - 3) << 16);
-        cur_block = (*((_WORD *)i - 2) | (*((_WORD *)i - 1) << 16))
+        pairs_left -= 2;
+        v12 = *(_WORD *)(current_pair - 8) | (*(_WORD *)(current_pair - 6) << 16);
+        cur_block = (*(_WORD *)(current_pair - 4) | (*(_WORD *)(current_pair - 2) << 16))
                   - (((v7 ^ (v12 >> 5)) + (v8 ^ 16 * v12)) ^ ((v12 ^ v10) + v9));
-        *((_WORD *)i - 1) = HIWORD(cur_block);
-        *((_WORD *)i - 2) = cur_block;
+        *(_WORD *)(current_pair - 2) = HIWORD(cur_block);
+        *(_WORD *)(current_pair - 4) = cur_block;
       }
-      v2 += 0x61C88647;
-      v11 = *(_WORD *)v15 | (*(_WORD *)v14 << 16);
-      cur_block = *(_DWORD *)buffer - (((v7 ^ (v11 >> 5)) + (v8 ^ 16 * v11)) ^ (v9 + (v11 ^ v10)));
+      sum += -0x9E3779B9;
+      v11 = *(_WORD *)k1 | (*(_WORD *)k2 << 16);
+      cur_block = *buffer - (((v7 ^ (v11 >> 5)) + (v8 ^ 16 * v11)) ^ (v9 + (v11 ^ v10)));
       *(_WORD *)buffer = cur_block;
       *((_WORD *)buffer + 1) = HIWORD(cur_block);
-      --nb_block;
+      --nb_rounds;
     }
-    while ( nb_block );
+    while ( nb_rounds );
   }
-  return buffer;
 }
 ```
 
@@ -180,41 +177,71 @@ It is referenced in Symbol Table as : **Crypt constant TEA_DELTA - 4 bytes**
 A quick search on Google lead to :  
 https://en.wikipedia.org/wiki/Tiny_Encryption_Algorithm
 
-Et voilà !   
+**Et voilà !**   
 
 After many testings, TEA algorithm is not the one used.    
-They might have modified somehow the processing.    
-
-In order to verify if decipher is ok, I had to check against a file with a known plain text. I picked a resource file from a story, which is a BMP file, and I tried to decipher until I can find `BM....` as the first bytes.   
-
-**So far no success at all**
+They might have modified somehow the processing --> NOOOOO    
+It is just a different variant of TEA, like   
+https://en.wikipedia.org/wiki/XXTEA
 
 
-## Official version 
+**Et voilà !** This time XXTEA sample code from Wikipedia look very close to decompiled version from Ghidra/IDA.
+
+
+In order to verify if decipher is ok, I had to check against a file. I picked a randon resource from `sd:0:\.content\XXXXXXXX\rf\000` (supposely a ciphered BITMAP).
+After few tries, I have been able to get a BITMAP header after deciphering.
+``` 
+PS C:\Work\reverse\Lunii.RE\tools\tea-c> .\lunii.exe
+
+> 00000000 : 42 4D FA 10 00 00 00 00 00 00 76 00 00 00 28 00 00 00 40 01 00 00 F0 00 00 00 01 00 04 00 02 00
+> 00000020 : 00 00 84 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 FF FF FF FF FF 10 10
+```
+
+## Official version : XXTEA
 
 ```C
-void encrypt (uint32_t v[2], const uint32_t k[4]) {
-    uint32_t v0=v[0], v1=v[1], sum=0, i;           /* set up */
-    uint32_t delta=0x9E3779B9;                     /* a key schedule constant */
-    uint32_t k0=k[0], k1=k[1], k2=k[2], k3=k[3];   /* cache key */
-    for (i=0; i<32; i++) {                         /* basic cycle start */
-        sum += delta;
-        v0 += ((v1<<4) + k0) ^ (v1 + sum) ^ ((v1>>5) + k1);
-        v1 += ((v0<<4) + k2) ^ (v0 + sum) ^ ((v0>>5) + k3);
-    }                                              /* end cycle */
-    v[0]=v0; v[1]=v1;
-}
+#include <stdint.h>
+#define DELTA 0x9e3779b9
+#define MX (((z>>5^y<<2) + (y>>3^z<<4)) ^ ((sum^y) + (key[(p&3)^e] ^ z)))
 
-void decrypt (uint32_t v[2], const uint32_t k[4]) {
-    uint32_t v0=v[0], v1=v[1], sum=0xC6EF3720, i;  /* set up; sum is (delta << 5) & 0xFFFFFFFF */
-    uint32_t delta=0x9E3779B9;                     /* a key schedule constant */
-    uint32_t k0=k[0], k1=k[1], k2=k[2], k3=k[3];   /* cache key */
-    for (i=0; i<32; i++) {                         /* basic cycle start */
-        v1 -= ((v0<<4) + k2) ^ (v0 + sum) ^ ((v0>>5) + k3);
-        v0 -= ((v1<<4) + k0) ^ (v1 + sum) ^ ((v1>>5) + k1);
-        sum -= delta;
-    }                                              /* end cycle */
-    v[0]=v0; v[1]=v1;
+void btea(uint32_t *v, int n, uint32_t const key[4]) {
+	uint32_t y, z, sum;
+	unsigned p, rounds, e;
+    
+    /* Coding Part */
+    if (n > 1) {
+        rounds = 6 + 52/n;
+        sum = 0;
+        z = v[n-1];
+        do {
+            sum += DELTA;
+            e = (sum >> 2) & 3;
+            for (p=0; p<n-1; p++) {
+                y = v[p+1]; 
+                z = v[p] += MX;
+            }
+            y = v[0];
+            z = v[n-1] += MX;
+        } while (--rounds);
+    }
+ 
+    /* Decoding Part */
+    else if (n < -1) {
+        n = -n;
+        rounds = 6 + 52/n;
+        sum = rounds*DELTA;
+        y = v[0];
+        do {
+            e = (sum >> 2) & 3;
+            for (p=n-1; p>0; p--) {
+                z = v[p-1];
+                y = v[p] -= MX;
+            }
+            z = v[n-1];
+            y = v[0] -= MX;
+            sum -= DELTA;
+        } while (--rounds);
+    }
 }
 ```
 
