@@ -23,7 +23,7 @@ Lunii relies on `XXTEA` algorithm, and I guess that for performances reasons (I 
 ## Key vs Keys ?
 I was expecting only one key, however during decompiling process, I realized that two keys are used.   
 The first one is hardcoded in binary.
-* Key A is made from 0x90013324 value   
+* Key A (**Generic Key**) is made from 0x90013324 value   
   ```
   K[0]    91BD7A0A
   K[1]    91BD7A0A + 0x1596c69f = A75440A9
@@ -34,7 +34,13 @@ The first one is hardcoded in binary.
   This code is available in event_loop at 0x90013200
 
 
-* Key B is made from reading internal flash @SNU location, and deciphering SNU+0x08 to SNU+0x88. Key B is the first ten Bytes of this unciphered buffer
+* Key B (**Device specific**) is made from reading internal flash @SNU location, and deciphering SNU+0x08 to SNU+0x88. Key B is the first 0x10 Bytes of this unciphered buffer, and reordered 
+  ```
+  K[0] = fread_buffer[16];
+  K[1] = fread_buffer[20];
+  K[2] = fread_buffer[8]
+  K[3] = fread_buffer[12];
+  ```
 
 # Keys initialization
 Here is the chunk of code that initialize the Keys   

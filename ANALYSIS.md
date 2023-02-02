@@ -29,8 +29,13 @@
     - [MP3](#mp3)
   - [SD structure \& Files](#sd-structure--files)
   - [Files Format](#files-format)
+    - [.md](#md)
     - [.pi](#pi)
     - [.cfg](#cfg)
+    - [.content/XXXXYYYY](#contentxxxxyyyy)
+    - [.content/nm](#contentnm)
+    - [.content/XXXXYYYY/ri](#contentxxxxyyyyri)
+    - [.content/XXXXYYYY/si](#contentxxxxyyyysi)
 - [Links](#links)
 
 
@@ -247,7 +252,6 @@ Outgoing References - HAL_SCR_displayPicture_fromFile
 ```
 
 Same stack.  `bmp_decoder_ReadDataBuff` might adapt based on global variables, and skip f_read part if using flash pointer.    
-Other function to analyze : `CMD_sd_checksum`
 
 ```
 If ciphered, it has to be unciphered.
@@ -297,25 +301,75 @@ To check with root files, like .md
 ## SD structure & Files 
 NOTE : **Ciphered files are only protected on first 0x200 block !**
 
+Keys :
+* <u>Generic</u> : stands for Generic Key (common to all sotrytellers)
+* <u>Device</u> : stands for Device Key (specific to one specific device)
+
 | File | Key | Contents|
 |-|-|-|
-|`sd:0:\.pi` | None || recreated by main FW
-|`sd:0:\.cfg` | None ||
-|`sd:0:\.md` | Key_A | MetaData<br>(contents from internal flash, two block of 512B, 1st with SNU, 2nd with ciphered data and Key_B)
+|`sd:0:\.pi` | None | Pack Index<br>recreated by main FW |
+|`sd:0:\.cfg` | None | Configuration file |
+|`sd:0:\.md` | Generic | Metadata<br>(contents from internal flash, two block of 512B, 1st with SNU, 2nd with ciphered data and Key_B)
 |`sd:0:\version` | None | contains a simple date      
-|`sd:0:\.content\XXXXXXXX\bt` | Key_B ? ||
-|`sd:0:\.content\XXXXXXXX\li` | Key_A ? ||
-|`sd:0:\.content\XXXXXXXX\ni` | None | metadata for story selection / navigation |
-|`sd:0:\.content\XXXXXXXX\nm` | Key_A | metadata to resume ? |
-|`sd:0:\.content\XXXXXXXX\ri` | Key_A | Resource Index : Ciphered text file that contains resource list   
-|`sd:0:\.content\XXXXXXXX\si` | Key_A | Song Index : Ciphered text file that contains song list   
+|`sd:0:\.content\XXXXXXXX\bt` | Device ? | To validate that this device is authorized to play this story ??? |
+|`sd:0:\.content\XXXXXXXX\li` | Generic ? | ??? |
+|`sd:0:\.content\XXXXXXXX\ni` | None | metadata for story selection / navigation ? |
+|`sd:0:\.content\XXXXXXXX\nm` | Generic | metadata to resume ? |
+|`sd:0:\.content\XXXXXXXX\ri` | Generic | Resource Index : Ciphered text file that contains resource list   
+|`sd:0:\.content\XXXXXXXX\si` | Generic | Song Index : Ciphered text file that contains song list   
 |`sd:0:\.content\XXXXXXXX\rf\` | N/A | Resource Folder 
-|`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` | Key_A | 1 block ciphered + BMP plain<br>Resources (BMP)  
+|`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` | Generic | Resources (BMP)  
 |`sd:0:\.content\XXXXXXXX\sf\` | N/A | Song Folder
-|`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY` | Key_A | 1 block ciphered + MP3 plain<br>Songs, story part and heros names (MP3)
+|`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY` | Generic | Songs, story part and heros names (MP3)
 
 ## Files Format
+### .md
+``` 
+--- First 256B Block --- PLAIN ---
+0300 FFFFFFFF (Static)
+0200 : Version Major (2)
+1600 : Version Minor (22)
+       > v2.22
+0020121111223344 : SNU - Storyteller Unique ID       
+830441A34E5350454349414C0000 (Static)
+00...00 : 0xE0 Bytes of padding with 00 
+
+--- Second 256B Block --- CIPHERED ---
+31333934313151 0700 2600 3EF0112233 : 7Bytes of Unique Dev ID + 2 WORDS + 5 static Bytes
+0000XXYY 60 times (0xF0) : TBD
+```
 ### .pi
+This file is the root files that stores all stories available in device. It contains a simple list of UUID (16 Bytes).
+```
+C4139D59-872A-4D15-8CF1-76D34CDF38C6
+....
+123e4567-e89b-12d3-a456-426652340000
+```
+
+End of UUIDs (last 8 Bytes) are used to sort stories in subdirectories.
+
+Known UUID stories :
+| UUID | Story name |
+|-|-|
+| C4139D59-872A-4D15-8CF1-76D34CDF38C6 | Suzanne et Gaston |
+| 03933BA4-4FBF-475F-9ECC-35EFB4D11DC9 | TBD |
+| 22137B29-8646-4335-8069-4A4C9A2D7E89 | TBD |
+| 29264ADF-5A9F-451A-B1EC-2AE21BBA473C | TBD |
+| 2F0F3109-BFAE-4E09-91D7-CA0C2643948D | TBD |
+| 3712AF6D-CF9D-4154-8E98-56821362862A | TBD |
+| 4C40E9EA-B116-4126-85B6-EFC28ECE8475 | TBD |
+| 59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7 | TBD |
+| 6795F69B-6B7C-4543-AED9-41C946DD33A2 | TBD |
+| 9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1 | TBD |
+| 9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A | TBD |
+| AA0BC5DD-16FA-4362-859C-0DB158139FE6 | TBD |
+| BF573171-5E5D-4A50-BA89-403277175114 | TBD |
+| C19C99FA-7069-44A1-8F3A-C299908EB595 | TBD |
+| D56A4975-417E-4D04-AEB3-21254058B612 | TBD |
+| FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7 | TBD |
+| ... | ... |
+
+
 ### .cfg
 This is a config file. Fixed size of 38 Bytes, no ciphering applied on it.   
 File is made of 8 tags :   
@@ -337,6 +391,26 @@ File is made of 8 tags :
 | 6 | WORD | WORD | Boolean related to 05<br>If True => (uint)CFG_TAG_04) / (CFG_TAG_05 - 1) |
 | 7 | WORD | WORD | TBD |
 | 8 | WORD | WORD | Request to recreate `.nm` file |
+
+### .content/XXXXYYYY
+This is the root directory for a specific story. The name `XXXXYYYY` is based on the lower part of the UUID.
+
+For example, the "Suzanne et Gaston" story :
+* UUID : C4139D59-872A-4D15-8CF1-76D3`4CDF38C6`
+* root diretory : `.content/4CDF38C6`
+### .content/nm 
+### .content/XXXXYYYY/ri
+This file is the Resource Index that stores all resources available for the `XXXXYYYY` story. It is a text plain file (not ciphered).   
+The file is organized as a list of 12 Bytes strings
+```
+000\AABBCCDD000\BBCCDDEE...000\CCDDEEFF 
+```
+### .content/XXXXYYYY/si
+This file is the Song Index that stores all resources available for the `XXXXYYYY` story. It is a text plain file (not ciphered).   
+The file is organized as a list of 12 Bytes strings
+```
+000\AABBCCDD000\BBCCDDEE...000\CCDDEEFF 
+```
 
 # Links
 

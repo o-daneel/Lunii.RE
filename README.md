@@ -37,10 +37,10 @@ Even if you don't, children will 😁**
   * Restore original FW
   * Insert dummy patch (just back and forth) + try it (using custom picture)
   * Make less dummy patch with printf call (can't be read without UART acces)
-  * Make patch to write to SD :
+  * <s>Make patch to write to SD :
     1.  A dummy file
     2.  File with SNU + DATA
-    3.  File with KeyA & KeyB in plain
+    3.  File with KeyA & KeyB in plain</s>
 * sample code to process TEA cipher/decipher
   * in C or python ? : **DONE**
   * Try it on Key_A ciphered files : **DONE**
