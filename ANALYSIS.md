@@ -196,23 +196,15 @@ You can retrieve this execution flow in ghidra here :   `boot.bin @08005f04`
 
 
 ### NFC chip
-* Match TBD dump against frame build in Main FW
-
 NFC chip is a simple tag using NDEF standard. A basic 512 byte memory.   
 
-Acces level are Read & Write. With a simple smartphone, you should be able to update contents, and eventually switch to test mode.   
+RF Acces level are Read Only. Writting require to present a password that can't be reset nor dumped. Changing values through RF is thus impossible.   
 
-SNU and Version are restored at each boot on Production mode.
-Just writing `Mode=test` or `Mode=Production` should be enough.   
+Based on FW analysis, SNU and Version are restored at each boot on Production mode. It means that memory contents a Read&Write allowed through I2C interface.
 
 Using an android application like [NFC Tools](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc), you can dump contents :
   
 ![](resources/ndef/full_dump.jpg)
-
-
-To reprogram it in test mode or production mode, just configure data like   
-![](resources/ndef/mode_test.jpg)
-![](resources/ndef/mode_prod.jpg)
 
 
 If `pi` tag is available, it is copied to SD to `.pi` file. File is overwritten.
@@ -262,7 +254,6 @@ HAL_FS_fileRead -> reads & decipher
 HAL_FS_decipher
 
 No opposite operation with write. Most of writtings might be performed by host computer, already ciphered. 
-To check with root files, like .md
 ```
 
 # Crypt-Analysis 
@@ -311,9 +302,9 @@ Keys :
 |`sd:0:\.cfg` | None | Configuration file |
 |`sd:0:\.md` | Generic | Metadata<br>(contents from internal flash, two block of 512B, 1st with SNU, 2nd with ciphered data and Key_B)
 |`sd:0:\version` | None | contains a simple date      
-|`sd:0:\.content\XXXXXXXX\bt` | Device ? | To validate that this device is authorized to play this story ??? |
-|`sd:0:\.content\XXXXXXXX\li` | Generic ? | ??? |
-|`sd:0:\.content\XXXXXXXX\ni` | None | metadata for story selection / navigation ? |
+|`sd:0:\.content\XXXXXXXX\bt` | Device ? | Boot file ? To validate that this device is authorized to play this story ??? |
+|`sd:0:\.content\XXXXXXXX\li` | Generic | Action Nodes index |
+|`sd:0:\.content\XXXXXXXX\ni` | None | Stage Nodes index |
 |`sd:0:\.content\XXXXXXXX\nm` | Generic | metadata to resume ? |
 |`sd:0:\.content\XXXXXXXX\ri` | Generic | Resource Index : Ciphered text file that contains resource list   
 |`sd:0:\.content\XXXXXXXX\si` | Generic | Song Index : Ciphered text file that contains song list   

@@ -11,12 +11,6 @@ Even if you don't, children will 😁**
 3. [Ciphering reverse](CIPHERING.md)
 
 # TODO
-* Undelete on storyteller ? **DONE** > only 50 mp3 files, none french stories removed.
-* NFC chip
-  * write NDEF using a dummy card (to test) with Android NXP Write
-  * update storyteller to switch to "test"
-  * back to production
-  * investigate test mode
 * Describe test mode
 * Deep dive in file section to understand format
   * .cfg : **DONE**
@@ -28,25 +22,39 @@ Even if you don't, children will 😁**
   * .bt ????
   * .li ????
 * Decompile 
-  * Boot FW : **DONE** > [Bootloader Firmware](ANALYSIS.md#bootloader-firmware) 
   * Main FW : in progress > [Main Firmware](ANALYSIS.md#main-firmware) 
-  * Backup FW : partial but **CLOSED**, no worth > [Backup Firmware](ANALYSIS.md#backup-firmware) 
 * Firmware management
   * Try loading firmware update
   * Create custom firmware (simple internal picture update)
   * Restore original FW
   * Insert dummy patch (just back and forth) + try it (using custom picture)
   * Make less dummy patch with printf call (can't be read without UART acces)
-  * <s>Make patch to write to SD :
-    1.  A dummy file
-    2.  File with SNU + DATA
-    3.  File with KeyA & KeyB in plain</s>
+
+# DONE
+* Undelete on storyteller ? **DONE** > only 50 mp3 files, none french stories removed.
 * sample code to process TEA cipher/decipher
   * in C or python ? : **DONE**
   * Try it on Key_A ciphered files : **DONE**
 * How to extract Key_B ? **DONE**
+* Decompile 
+  * Boot FW : **DONE** > [Bootloader Firmware](ANALYSIS.md#bootloader-firmware) 
+  * Backup FW : partial but **CLOSED**, no worth > [Backup Firmware](ANALYSIS.md#backup-firmware) 
+
+# FAILED / ABORTED
+* NFC chip
+  * write NDEF using a dummy card (to test) with Android NXP Write
+  * update storyteller to switch to "test"
+  * back to production
+  * investigate test mode
+* Firmware management
+  * Make patch to write to SD :
+    1.  A dummy file
+    2.  File with SNU + DATA
+    3.  File with KeyA & KeyB in plain
   
-# Similar repos
+# Links / Similar repos
+* [TBD Lunii 1/2](https://www.youtube.com/watch?v=ZeYKieOIsC8&t=9s) - [TBD Lunii 2/2](https://www.youtube.com/watch?v=GItJg34bOk0)
+* [linux-cli](https://github.com/Wameuh/lunii-cli) (Did the same reverse analysis 😥 in July 2022, i'm late)
 * [(Hackday) Tsukuyomi Hacking Lunii](https://hackaday.io/project/167629-tsukuyomi)
 * [(GitHub) Tsukuyomi](https://github.com/danksz/tsukuyomi)
 * [STUdio - Story Teller Unleashed](https://marian-m12l.github.io/studio-website/)
