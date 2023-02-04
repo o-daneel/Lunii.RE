@@ -270,16 +270,16 @@ No opposite operation with write. Most of writtings might be performed by host c
 
 | Address | Label | Image |
 |-|-|-|
-| 0x9001C04E | BITMAP_WAKEUP | ![](dump/bitmaps/wakeup.bmp) |
-| 0x9001D37E | BITMAP_LUNII_ERROR | ![](dump/bitmaps/LuniiError.bmp) |
-| 0x9001EB94 | BITMAP_LUNII | ![](dump/bitmaps/Lunii.bmp) |
-| 0x9001FF32 | BITMAP_LOW_BATTERY | ![](dump/bitmaps/LowBattery.bmp) |
-| 0x900215F4 | BITMAP_MODE_TEST | ![](dump/bitmaps/ModeTest.bmp) |
-| 0x90023C3A | BITMAP_SLEEP | ![](dump/bitmaps/Sleep.bmp) |
-| 0x90024C18 | BITMAP_NOSDCARD | ![](dump/bitmaps/NoSD.bmp) |
-| 0x900262A4 | BITMAP_SDERROR | ![](dump/bitmaps/SDError.bmp) |
-| 0x90027B80 | BITMAP_LUNII_APP | ![](dump/bitmaps/LuniiApp.bmp) |
-| 0x90028F12 | BITMAP_USB | ![](dump/bitmaps/USB.bmp) |
+| 0x9001C04E | BITMAP_WAKEUP | <img src="dump/bitmaps/wakeup.bmp" width="100"> |
+| 0x9001D37E | BITMAP_LUNII_ERROR | <img src="dump/bitmaps/LuniiError.bmp" width="100"> |
+| 0x9001EB94 | BITMAP_LUNII | <img src="dump/bitmaps/Lunii.bmp" width="100"> |
+| 0x9001FF32 | BITMAP_LOW_BATTERY | <img src="dump/bitmaps/LowBattery.bmp" width="100"> |
+| 0x900215F4 | BITMAP_MODE_TEST | <img src="dump/bitmaps/ModeTest.bmp" width="100"> |
+| 0x90023C3A | BITMAP_SLEEP | <img src="dump/bitmaps/Sleep.bmp" width="100"> |
+| 0x90024C18 | BITMAP_NOSDCARD | <img src="dump/bitmaps/NoSD.bmp" width="100"> |
+| 0x900262A4 | BITMAP_SDERROR | <img src="dump/bitmaps/SDError.bmp" width="100"> |
+| 0x90027B80 | BITMAP_LUNII_APP | <img src="dump/bitmaps/LuniiApp.bmp" width="100"> |
+| 0x90028F12 | BITMAP_USB | <img src="dump/bitmaps/USB.bmp" width="100"> |
 
 ### MP3 
 | Address | Size | Label | 
@@ -340,24 +340,21 @@ C4139D59-872A-4D15-8CF1-76D34CDF38C6
 End of UUIDs (last 8 Bytes) are used to sort stories in subdirectories.
 
 Known UUID stories :
-| UUID | Story name |
-|-|-|
-| C4139D59-872A-4D15-8CF1-76D34CDF38C6 | Suzanne et Gaston |
-| 03933BA4-4FBF-475F-9ECC-35EFB4D11DC9 | TBD |
-| 22137B29-8646-4335-8069-4A4C9A2D7E89 | TBD |
-| 29264ADF-5A9F-451A-B1EC-2AE21BBA473C | TBD |
-| 2F0F3109-BFAE-4E09-91D7-CA0C2643948D | TBD |
-| 3712AF6D-CF9D-4154-8E98-56821362862A | TBD |
-| 4C40E9EA-B116-4126-85B6-EFC28ECE8475 | TBD |
-| 59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7 | TBD |
-| 6795F69B-6B7C-4543-AED9-41C946DD33A2 | TBD |
-| 9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1 | TBD |
-| 9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A | TBD |
-| AA0BC5DD-16FA-4362-859C-0DB158139FE6 | TBD |
-| BF573171-5E5D-4A50-BA89-403277175114 | TBD |
-| C19C99FA-7069-44A1-8F3A-C299908EB595 | TBD |
-| D56A4975-417E-4D04-AEB3-21254058B612 | TBD |
-| FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7 | TBD |
+| UUID | Story name | Picture |
+|-|-|-|
+| C4139D59-872A-4D15-8CF1-76D34CDF38C6 | Suzanne et Gaston | <img src="resources/stories/C4139D59-872A-4D15-8CF1-76D34CDF38C6.bmp" width="100">
+| 03933BA4-4FBF-475F-9ECC-35EFB4D11DC9 | Panique aux 6 Royaumes | <img src="resources/stories/03933BA4-4FBF-475F-9ECC-35EFB4D11DC9.bmp" width="100">
+| 22137B29-8646-4335-8069-4A4C9A2D7E89 | Au Pays des Loups | <img src="resources/stories/22137B29-8646-4335-8069-4A4C9A2D7E89.bmp" width="100">
+| 29264ADF-5A9F-451A-B1EC-2AE21BBA473C | Sur les bancs de l'école | <img src="resources/stories/29264ADF-5A9F-451A-B1EC-2AE21BBA473C.bmp" width="100">
+| 2F0F3109-BFAE-4E09-91D7-CA0C2643948D | Le loup dans tous ses états | <img src="resources/stories/2F0F3109-BFAE-4E09-91D7-CA0C2643948D.bmp" width="100">
+| 3712AF6D-CF9D-4154-8E98-56821362862A | Pandaroux et les Turbo-Héros | <img src="resources/stories/3712AF6D-CF9D-4154-8E98-56821362862A.bmp" width="100">
+| 59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7 | Pandaroux | <img src="resources/stories/59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7.bmp" width="100">
+| 9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1 | Les Aventures de Zoé -<br> Les 6 Royaumes | <img src="resources/stories/9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1.bmp" width="100">
+| 9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A | Suzanne et Gaston fêtent Pâques | <img src="resources/stories/9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A.bmp" width="100">
+| AA0BC5DD-16FA-4362-859C-0DB158139FE6 | Les bandes a écouter de Yakari | <img src="resources/stories/AA0BC5DD-16FA-4362-859C-0DB158139FE6.bmp" width="100">
+| BF573171-5E5D-4A50-BA89-403277175114 | En attendant Noël | <img src="resources/stories/BF573171-5E5D-4A50-BA89-403277175114.bmp" width="100">
+| D56A4975-417E-4D04-AEB3-21254058B612 | Oh les pirates ! | <img src="resources/stories/D56A4975-417E-4D04-AEB3-21254058B612.bmp" width="100">
+| FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7 | A la poursuite des 12 joyaux | <img src="resources/stories/FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7.bmp" width="100">
 | ... | ... |
 
 
