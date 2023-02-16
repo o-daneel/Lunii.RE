@@ -7,5 +7,6 @@ resources/pictures/*.jpg
 dump/*
 ida
 # tools/
+tools/lunii-packs
 tools/lunii-cli
 tools/SVD*

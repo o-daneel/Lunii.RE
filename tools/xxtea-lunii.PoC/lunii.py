@@ -46,6 +46,10 @@ def sample_code():
     print(hexdec)
 
 
+def lunii_tea_rounds(buffer):
+    return int(1 + 52 / (len(buffer)/4))
+
+
 def sample_file():
     print("hello")
 
@@ -56,7 +60,7 @@ def sample_file():
         ciph_hex = binascii.hexlify(ciphered)
 
         print(ciph_hex)
-        dec = xxtea.decrypt(ciphered, lunii_generic_key, padding=False, rounds=1)
+        dec = xxtea.decrypt(ciphered, lunii_generic_key, padding=False, rounds=lunii_tea_rounds(ciphered))
         hexdec = binascii.hexlify(dec)
         print(dec)
         print(hexdec)
@@ -74,13 +78,13 @@ def untea_file(key, filename, extension):
 
         print(f"Processing {filename}", end="")
 
-        with open(fp.name + extension, "wb") as bmp_file:
-            dec = xxtea.decrypt(ciphered, key, padding=False, rounds=1)
-            bmp_file.write(dec)
+        with open(fp.name + extension, "wb") as plain_file:
+            dec = xxtea.decrypt(ciphered, key, padding=False, rounds=lunii_tea_rounds(ciphered))
+            plain_file.write(dec)
 
             # if anything left, copy
             plain = fp.read()
-            bmp_file.write(plain)
+            plain_file.write(plain)
     print(f" as {filename}{extension}")
 
 

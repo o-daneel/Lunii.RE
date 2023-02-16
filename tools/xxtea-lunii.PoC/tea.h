@@ -12,6 +12,7 @@
 #ifndef __TEA__
 #define __TEA__
 
+	#include "stdio.h"    // For standard int types
 	#include "stdint.h"    // For standard int types
 	#include "stdbool.h"    // for bool, true, false
 

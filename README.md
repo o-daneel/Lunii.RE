@@ -10,16 +10,23 @@ Even if you don't, children will 😁**
 2. [Firmware analysis](ANALYSIS.md)
 3. [Ciphering reverse](CIPHERING.md)
 
-# TODO
-* Describe test mode
+
+# TL;DR
+Too long, didn't read ?    
+Many people doesn't care about about software security. There Lunii's company failed in many ways:
+1. JTAG is still enabled on the PCB (allows internal flash dump)
+2. External Flash is not ciphered (allows dump)
+3. UART is enabled, then provides a lot of debug
+4. Firmware embeds too many debug strings helping decompiling
+5. Firmwares are verified/validated through a dumb CRC (Hash would have been better)
+
+# Work in Progress
+
+### TODO
+* Describe test mode / Try it
 * Deep dive in file section to understand format
-  * .cfg : **DONE**
-  * .pi : ??? injected from NFC chip (for first init ?)
   * .ni...
   * .nm : written to resume story after sleep ?
-  * /rf/ & .ri  : **DONE**
-  * /sf/ & .si : **DONE**
-  * .bt ????
   * .li ????
 * Decompile 
   * Main FW : in progress > [Main Firmware](ANALYSIS.md#main-firmware) 
@@ -30,7 +37,13 @@ Even if you don't, children will 😁**
   * Insert dummy patch (just back and forth) + try it (using custom picture)
   * Make less dummy patch with printf call (can't be read without UART acces)
 
-# DONE
+### DONE
+* Deep dive in file section to understand format
+  * .cfg : **DONE**
+  * .pi : **DONE**
+  * /rf/ & .ri  : **DONE**
+  * /sf/ & .si : **DONE**
+  * .bt **DONE**
 * Undelete on storyteller ? **DONE** > only 50 mp3 files, none french stories removed.
 * sample code to process TEA cipher/decipher
   * in C or python ? : **DONE**
@@ -40,7 +53,7 @@ Even if you don't, children will 😁**
   * Boot FW : **DONE** > [Bootloader Firmware](ANALYSIS.md#bootloader-firmware) 
   * Backup FW : partial but **CLOSED**, no worth > [Backup Firmware](ANALYSIS.md#backup-firmware) 
 
-# FAILED / ABORTED
+### FAILED / ABORTED
 * NFC chip
   * write NDEF using a dummy card (to test) with Android NXP Write
   * update storyteller to switch to "test"
@@ -53,6 +66,7 @@ Even if you don't, children will 😁**
     3.  File with KeyA & KeyB in plain
   
 # Links / Similar repos
+* [Lunii - Pack Manager CLI](https://github.com/o-daneel/Lunii.PACKS)
 * [TBD Lunii 1/2](https://www.youtube.com/watch?v=ZeYKieOIsC8&t=9s) - [TBD Lunii 2/2](https://www.youtube.com/watch?v=GItJg34bOk0)
 * [linux-cli](https://github.com/Wameuh/lunii-cli) (Did the same reverse analysis 😥 in July 2022, i'm late)
 * [(Hackday) Tsukuyomi Hacking Lunii](https://hackaday.io/project/167629-tsukuyomi)

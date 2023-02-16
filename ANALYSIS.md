@@ -36,6 +36,7 @@
     - [.content/nm](#contentnm)
     - [.content/XXXXYYYY/ri](#contentxxxxyyyyri)
     - [.content/XXXXYYYY/si](#contentxxxxyyyysi)
+    - [.content/XXXXYYYY/bt](#contentxxxxyyyybt)
 - [Links](#links)
 
 
@@ -75,12 +76,11 @@ It also contains storyteller identification data :
 * `0x0800C000_0x0800C007` - SNU  
 * `0x0800C008_0x0800C088` - Extra data ciphered ? (including second Key)  
 
-**TODO** : 
-- <s>review addresses for Backup & Main FW around checks and restore</s>
 
 ## Main Firmware
 The full firmware ! might be located at `0x90000000`  
-**Version =** 2.22
+**Version :** 2.22   
+**Note :** This firmware can be updated
 
 ### Mapping
 
@@ -90,9 +90,9 @@ Few interesting offsets :
 
 ## Backup Firmware
 A short mini firmware ! might be located at `0x90040000`   
-**Version =** 2.16   
-**Objective =** make sure that an USB mass storage is accessible for MainFW reload
-
+**Version :** 2.16   
+**Objective :** make sure that an USB mass storage is accessible for MainFW reload   
+**Note :** This firmware in not expected to be updated, nor updatable
 ## SNU location
 
 8 bytes for SNU located at : `0x0800C000_0x0800C007` (internal flash)   
@@ -260,7 +260,8 @@ No opposite operation with write. Most of writtings might be performed by host c
 [Here](CIPHERING.md)
 
 # Symbols
-[Here](SYMBOLS.md.md)
+TODO
+<!-- [Here](SYMBOLS.md.md) -->
 
 # Resources
 
@@ -298,16 +299,16 @@ Keys :
 
 | File | Key | Contents|
 |-|-|-|
-|`sd:0:\.pi` | None | Pack Index<br>recreated by main FW |
-|`sd:0:\.cfg` | None | Configuration file |
-|`sd:0:\.md` | Generic | Metadata<br>(contents from internal flash, two block of 512B, 1st with SNU, 2nd with ciphered data and Key_B)
+|[`sd:0:\.pi`](#pi) | None | Pack Index<br>recreated by main FW |
+|[`sd:0:\.cfg`](#cfg) | None | Configuration file |
+|[`sd:0:\.md`](#md) | Generic | Metadata<br>(contents from internal flash, two block of 512B, 1st with SNU, 2nd with ciphered data and Key_B)
 |`sd:0:\version` | None | contains a simple date      
-|`sd:0:\.content\XXXXXXXX\bt` | Device ? | Boot file ? To validate that this device is authorized to play this story ??? |
+|[`sd:0:\.content\XXXXXXXX\bt`](#contentxxxxyyyybt) | Device | Authoriaztion file. To validate that this device is authorized to play this story  |
 |`sd:0:\.content\XXXXXXXX\li` | Generic | Action Nodes index |
 |`sd:0:\.content\XXXXXXXX\ni` | None | Stage Nodes index |
 |`sd:0:\.content\XXXXXXXX\nm` | Generic | metadata to resume ? |
-|`sd:0:\.content\XXXXXXXX\ri` | Generic | Resource Index : Ciphered text file that contains resource list   
-|`sd:0:\.content\XXXXXXXX\si` | Generic | Song Index : Ciphered text file that contains song list   
+|[`sd:0:\.content\XXXXXXXX\ri`](#contentxxxxyyyyri) | Generic | Resource Index : Ciphered text file that contains resource list   
+|[`sd:0:\.content\XXXXXXXX\si`](#contentxxxxyyyysi) | Generic | Song Index : Ciphered text file that contains song list   
 |`sd:0:\.content\XXXXXXXX\rf\` | N/A | Resource Folder 
 |`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` | Generic | Resources (BMP)  
 |`sd:0:\.content\XXXXXXXX\sf\` | N/A | Song Folder
@@ -315,8 +316,13 @@ Keys :
 
 ## Files Format
 ### .md
+* **Length** : 0x200
+* **Key** : plain / generic
+
+Structure:
+
+  `--- First 256B Block --- PLAIN ---`
 ``` 
---- First 256B Block --- PLAIN ---
 0300 FFFFFFFF (Static)
 0200 : Version Major (2)
 1600 : Version Minor (22)
@@ -324,12 +330,18 @@ Keys :
 0020121111223344 : SNU - Storyteller Unique ID       
 830441A34E5350454349414C0000 (Static)
 00...00 : 0xE0 Bytes of padding with 00 
+``` 
 
---- Second 256B Block --- CIPHERED ---
-31333934313151 0700 2600 3EF0112233 : 7Bytes of Unique Dev ID + 2 WORDS + 5 static Bytes
+  `--- Second 256B Block --- CIPHERED ---`
+
+``` 
+31333934XXYYZZ 0700 2600 3EF0112233 : 7Bytes of Unique Dev ID + 2 WORDS + 5 static Bytes
 0000XXYY 60 times (0xF0) : TBD
 ```
 ### .pi
+* **Length** : variable
+* **Key** : None
+
 This file is the root files that stores all stories available in device. It contains a simple list of UUID (16 Bytes).
 ```
 C4139D59-872A-4D15-8CF1-76D34CDF38C6
@@ -359,6 +371,10 @@ Known UUID stories :
 
 
 ### .cfg
+* **Length** : 0x26
+* **Key** : None
+
+
 This is a config file. Fixed size of 38 Bytes, no ciphering applied on it.   
 File is made of 8 tags :   
 ```
@@ -388,17 +404,31 @@ For example, the "Suzanne et Gaston" story :
 * root diretory : `.content/4CDF38C6`
 ### .content/nm 
 ### .content/XXXXYYYY/ri
+* **Length** : variable
+* **Key** : generic
+
 This file is the Resource Index that stores all resources available for the `XXXXYYYY` story. It is a text plain file (not ciphered).   
 The file is organized as a list of 12 Bytes strings
 ```
 000\AABBCCDD000\BBCCDDEE...000\CCDDEEFF 
 ```
 ### .content/XXXXYYYY/si
+* **Length** : variable
+* **Key** : generic
+ 
 This file is the Song Index that stores all resources available for the `XXXXYYYY` story. It is a text plain file (not ciphered).   
 The file is organized as a list of 12 Bytes strings
 ```
 000\AABBCCDD000\BBCCDDEE...000\CCDDEEFF 
 ```
+
+### .content/XXXXYYYY/bt
+* **Length** : 0x40
+* **Key** : device specific
+
+This file seems to be the authorization file that is checked to avoid illegal stories copy.
+
+It is made by ciphering the 0x40 first bytes for .ri file with device specific key.
 
 # Links
 

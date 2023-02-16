@@ -11,14 +11,14 @@ void btea(uint32_t *v, int n, uint32_t const key[4]) {
     
     /* Coding Part */
     if (n > 1) {
-        rounds = 6 + 52/n;
+        rounds = 1 + 52/n;
         sum = 0;
         z = v[n-1];
         do {
             sum += DELTA;
             e = (sum >> 2) & 3;
             for (p=0; p<n-1; p++) {
-                y = v[p+1]; 
+                y = v[p+1];
                 z = v[p] += MX;
             }
             y = v[0];

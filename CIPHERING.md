@@ -7,6 +7,7 @@
   - [IDA Pro decompiled](#ida-pro-decompiled)
 - [How to reverse](#how-to-reverse)
   - [Official version : XXTEA](#official-version--xxtea)
+  - [Lunii version : faster XXTEA](#lunii-version--faster-xxtea)
 
 
 # TL;DR
@@ -251,3 +252,14 @@ void btea(uint32_t *v, int n, uint32_t const key[4]) {
 }
 ```
 
+## Lunii version : faster XXTEA 
+
+Lunii is using a modified version of XXTEA. My assumptions is that they wanted a very basic ciphering solution, with less impact as possible on performances. To do so, they decided not to follow the recommendations of **6 rounds at least**. Only **one** round is performed for large enough blocks (on both cases, for vey short blocks, some more rounds are added)
+
+Rounds are computed as follow:
+* Default version :  
+  `rounds = 6 + 52/n;`   
+  
+* Lunii version :  
+  `rounds = 1 + 52/n;`   
+  
