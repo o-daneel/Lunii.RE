@@ -26,7 +26,7 @@ Many people doesn't care about about software security. There Lunii's company fa
 * Describe test mode / Try it
 * Deep dive in file section to understand format
   * .ni...
-  * .nm : written to resume story after sleep ?
+  * .nm : Night mode (to be tested)
   * .li ????
 * Decompile 
   * Main FW : in progress > [Main Firmware](ANALYSIS.md#main-firmware) 

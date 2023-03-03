@@ -32,11 +32,13 @@
     - [.md](#md)
     - [.pi](#pi)
     - [.cfg](#cfg)
+    - [.nm](#nm)
     - [.content/XXXXYYYY](#contentxxxxyyyy)
-    - [.content/nm](#contentnm)
+    - [.content/XXXXYYYY/bt](#contentxxxxyyyybt)
     - [.content/XXXXYYYY/ri](#contentxxxxyyyyri)
     - [.content/XXXXYYYY/si](#contentxxxxyyyysi)
-    - [.content/XXXXYYYY/bt](#contentxxxxyyyybt)
+    - [.content/XXXXYYYY/rf/000/YYYYYYYY](#contentxxxxyyyyrf000yyyyyyyy)
+    - [.content/XXXXYYYY/sf/000/YYYYYYYY](#contentxxxxyyyysf000yyyyyyyy)
 - [Links](#links)
 
 
@@ -300,19 +302,20 @@ Keys :
 | File | Key | Contents|
 |-|-|-|
 |[`sd:0:\.pi`](#pi) | None | Pack Index<br>recreated by main FW |
-|[`sd:0:\.cfg`](#cfg) | None | Configuration file |
 |[`sd:0:\.md`](#md) | Generic | Metadata<br>(contents from internal flash, two block of 512B, 1st with SNU, 2nd with ciphered data and Key_B)
+|[`sd:0:\.cfg`](#cfg) | None | Configuration file |
+|[`sd:0:\.nm`](#nm) | None | Night mode enabled if file exists (paramters are loaded from [config file](#cfg))
 |`sd:0:\version` | None | contains a simple date      
 |[`sd:0:\.content\XXXXXXXX\bt`](#contentxxxxyyyybt) | Device | Authoriaztion file. To validate that this device is authorized to play this story  |
 |`sd:0:\.content\XXXXXXXX\li` | Generic | Action Nodes index |
 |`sd:0:\.content\XXXXXXXX\ni` | None | Stage Nodes index |
-|`sd:0:\.content\XXXXXXXX\nm` | Generic | metadata to resume ? |
+|`sd:0:\.content\XXXXXXXX\nm` | None | Night Mode related |
 |[`sd:0:\.content\XXXXXXXX\ri`](#contentxxxxyyyyri) | Generic | Resource Index : Ciphered text file that contains resource list   
 |[`sd:0:\.content\XXXXXXXX\si`](#contentxxxxyyyysi) | Generic | Song Index : Ciphered text file that contains song list   
 |`sd:0:\.content\XXXXXXXX\rf\` | N/A | Resource Folder 
-|`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY` | Generic | Resources (BMP)  
-|`sd:0:\.content\XXXXXXXX\sf\` | N/A | Song Folder
-|`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY` | Generic | Songs, story part and heros names (MP3)
+|[`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY`](#contentxxxxyyyyrf000yyyyyyyy) | Generic | Resources (BMP)  
+|`sd:0:\.content\XXXXXXXX\sf\` | N/A | Story Folder
+|[`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY`](#contentxxxxyyyysf000yyyyyyyy) | Generic | Story, audio part and heros names (MP3)
 
 ## Files Format
 ### .md
@@ -384,25 +387,40 @@ File is made of 8 tags :
   ...
   XXXX YYYY (TAG_08 VALUE_08)
 ```
-| ID | Tag Len | Value Len | Role |
-|-|-|-|-|
-| 0 | WORD | WORD | idle time before sleep mode |
-| 1 | WORD | WORD | Current story time position ? |
-| 2 | WORD | WORD | Time to display Low battery message |
-| 3 | WORD | WORD | TBD |
-| 4 | WORD | WORD | TBD |
-| 5 | WORD | WORD | TBD |
-| 6 | WORD | WORD | Boolean related to 05<br>If True => (uint)CFG_TAG_04) / (CFG_TAG_05 - 1) |
-| 7 | WORD | WORD | TBD |
-| 8 | WORD | WORD | Request to recreate `.nm` file |
+| ID | Tag Len | Value Len | Default Value | Max Value | Role |
+|-|-|-|-:|-:|-|
+| 0 | WORD | WORD | 300s | 3600s | idle time before sleep mode |
+| 1 | WORD | WORD | 60s | 600s | TBD |
+| 2 | WORD | WORD | 5s | 10s | Time to display Low battery message |
+| 3 | WORD | WORD | 0 | | TBD - Night mode related |
+| 4 | WORD | WORD | 0 | | TBD - Night mode related |
+| 5 | WORD | WORD | 3 | | TBD - Night mode related |
+| 6 | WORD | WORD | ? | | Boolean related to 05<br>If True => (uint)CFG_TAG_04) / (CFG_TAG_05 - 1) |
+| 7 | WORD | WORD | 1 | | TBD |
+| 8 | WORD | WORD | 1 | | Request to recreate `.nm` file |
+
+Constraints can be retreived in the function `LUNII_load_config()`
+
+### .nm
+* **Length** : 0
+* **Key** : None
+This file acts as a boolean to enable or disable Night Mode (more details [here](https://support.lunii.com/hc/fr/articles/4404835664145-Quelles-sont-les-fonctionnalit%C3%A9s-du-Mode-Nuit-))
+
+This mode helps your children to fall asleep by playing automatically many stories, with a decreasing volume, and a limited screen backlight. Three paramaters that might be retrieved in [configuration file](#cfg)
 
 ### .content/XXXXYYYY
 This is the root directory for a specific story. The name `XXXXYYYY` is based on the lower part of the UUID.
 
 For example, the "Suzanne et Gaston" story :
 * UUID : C4139D59-872A-4D15-8CF1-76D3`4CDF38C6`
-* root diretory : `.content/4CDF38C6`
-### .content/nm 
+
+### .content/XXXXYYYY/bt
+* **Length** : 0x40
+* **Key** : device specific
+
+This file seems to be the authorization file that is checked to avoid illegal stories copy.
+
+It is made by ciphering the 0x40 first bytes for .ri file with device specific key.
 ### .content/XXXXYYYY/ri
 * **Length** : variable
 * **Key** : generic
@@ -421,14 +439,23 @@ The file is organized as a list of 12 Bytes strings
 ```
 000\AABBCCDD000\BBCCDDEE...000\CCDDEEFF 
 ```
+### .content/XXXXYYYY/rf/000/YYYYYYYY
+* **Length** : variable
+* **Key** : generic
 
-### .content/XXXXYYYY/bt
-* **Length** : 0x40
-* **Key** : device specific
+These files store Resources, meaning images in a Bitmap format   
 
-This file seems to be the authorization file that is checked to avoid illegal stories copy.
+**FORMAT DETAILS** :
+* To be filled
 
-It is made by ciphering the 0x40 first bytes for .ri file with device specific key.
+### .content/XXXXYYYY/sf/000/YYYYYYYY
+* **Length** : variable
+* **Key** : generic
+
+These files store Stories, meaning audio in a MP3 format   
+
+**FORMAT DETAILS** :
+* To be filled
 
 # Links
 

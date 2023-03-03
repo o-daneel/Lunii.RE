@@ -10,3 +10,5 @@ ida
 tools/lunii-packs
 tools/lunii-cli
 tools/SVD*
+tools/studio*
+tools/venv*
