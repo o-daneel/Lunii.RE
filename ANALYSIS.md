@@ -39,6 +39,9 @@
     - [.content/XXXXYYYY/si](#contentxxxxyyyysi)
     - [.content/XXXXYYYY/rf/000/YYYYYYYY](#contentxxxxyyyyrf000yyyyyyyy)
     - [.content/XXXXYYYY/sf/000/YYYYYYYY](#contentxxxxyyyysf000yyyyyyyy)
+  - [Story UUIDs](#story-uuids)
+    - [Known stories](#known-stories)
+    - [Full story database](#full-story-database)
 - [Links](#links)
 
 
@@ -354,23 +357,7 @@ C4139D59-872A-4D15-8CF1-76D34CDF38C6
 
 End of UUIDs (last 8 Bytes) are used to sort stories in subdirectories.
 
-Known UUID stories :
-| UUID | Story name | Picture |
-|-|-|-|
-| C4139D59-872A-4D15-8CF1-76D34CDF38C6 | Suzanne et Gaston | <img src="resources/stories/C4139D59-872A-4D15-8CF1-76D34CDF38C6.bmp" width="100">
-| 03933BA4-4FBF-475F-9ECC-35EFB4D11DC9 | Panique aux 6 Royaumes | <img src="resources/stories/03933BA4-4FBF-475F-9ECC-35EFB4D11DC9.bmp" width="100">
-| 22137B29-8646-4335-8069-4A4C9A2D7E89 | Au Pays des Loups | <img src="resources/stories/22137B29-8646-4335-8069-4A4C9A2D7E89.bmp" width="100">
-| 29264ADF-5A9F-451A-B1EC-2AE21BBA473C | Sur les bancs de l'école | <img src="resources/stories/29264ADF-5A9F-451A-B1EC-2AE21BBA473C.bmp" width="100">
-| 2F0F3109-BFAE-4E09-91D7-CA0C2643948D | Le loup dans tous ses états | <img src="resources/stories/2F0F3109-BFAE-4E09-91D7-CA0C2643948D.bmp" width="100">
-| 3712AF6D-CF9D-4154-8E98-56821362862A | Pandaroux et les Turbo-Héros | <img src="resources/stories/3712AF6D-CF9D-4154-8E98-56821362862A.bmp" width="100">
-| 59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7 | Pandaroux | <img src="resources/stories/59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7.bmp" width="100">
-| 9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1 | Les Aventures de Zoé -<br> Les 6 Royaumes | <img src="resources/stories/9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1.bmp" width="100">
-| 9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A | Suzanne et Gaston fêtent Pâques | <img src="resources/stories/9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A.bmp" width="100">
-| AA0BC5DD-16FA-4362-859C-0DB158139FE6 | Les bandes a écouter de Yakari | <img src="resources/stories/AA0BC5DD-16FA-4362-859C-0DB158139FE6.bmp" width="100">
-| BF573171-5E5D-4A50-BA89-403277175114 | En attendant Noël | <img src="resources/stories/BF573171-5E5D-4A50-BA89-403277175114.bmp" width="100">
-| D56A4975-417E-4D04-AEB3-21254058B612 | Oh les pirates ! | <img src="resources/stories/D56A4975-417E-4D04-AEB3-21254058B612.bmp" width="100">
-| FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7 | A la poursuite des 12 joyaux | <img src="resources/stories/FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7.bmp" width="100">
-| ... | ... |
+You can retreive more details on existing UUIDs on the dedicated section : [Story UUIDs](#story-uuids)
 
 
 ### .cfg
@@ -457,6 +444,27 @@ These files store Stories, meaning audio in a MP3 format
 **FORMAT DETAILS** :
 * To be filled
 
+## Story UUIDs
+### Known stories
+| UUID | Story name | Picture |
+|-|-|-|
+| C4139D59-872A-4D15-8CF1-76D34CDF38C6 | Suzanne et Gaston | <img src="resources/stories/C4139D59-872A-4D15-8CF1-76D34CDF38C6.bmp" width="100">
+| 03933BA4-4FBF-475F-9ECC-35EFB4D11DC9 | Panique aux 6 Royaumes | <img src="resources/stories/03933BA4-4FBF-475F-9ECC-35EFB4D11DC9.bmp" width="100">
+| 22137B29-8646-4335-8069-4A4C9A2D7E89 | Au Pays des Loups | <img src="resources/stories/22137B29-8646-4335-8069-4A4C9A2D7E89.bmp" width="100">
+| 29264ADF-5A9F-451A-B1EC-2AE21BBA473C | Sur les bancs de l'école | <img src="resources/stories/29264ADF-5A9F-451A-B1EC-2AE21BBA473C.bmp" width="100">
+| 2F0F3109-BFAE-4E09-91D7-CA0C2643948D | Le loup dans tous ses états | <img src="resources/stories/2F0F3109-BFAE-4E09-91D7-CA0C2643948D.bmp" width="100">
+| 3712AF6D-CF9D-4154-8E98-56821362862A | Pandaroux et les Turbo-Héros | <img src="resources/stories/3712AF6D-CF9D-4154-8E98-56821362862A.bmp" width="100">
+| 59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7 | Pandaroux | <img src="resources/stories/59A710E9-2F7A-4D0C-AB2D-47E8DD2E29B7.bmp" width="100">
+| 9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1 | Les Aventures de Zoé -<br> Les 6 Royaumes | <img src="resources/stories/9C836C24-34C4-4CC1-B9E6-D8646C8D9CF1.bmp" width="100">
+| 9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A | Suzanne et Gaston fêtent Pâques | <img src="resources/stories/9D9521E5-84AC-4CC8-9B09-8D0AFFB5D68A.bmp" width="100">
+| AA0BC5DD-16FA-4362-859C-0DB158139FE6 | Les bandes a écouter de Yakari | <img src="resources/stories/AA0BC5DD-16FA-4362-859C-0DB158139FE6.bmp" width="100">
+| BF573171-5E5D-4A50-BA89-403277175114 | En attendant Noël | <img src="resources/stories/BF573171-5E5D-4A50-BA89-403277175114.bmp" width="100">
+| D56A4975-417E-4D04-AEB3-21254058B612 | Oh les pirates ! | <img src="resources/stories/D56A4975-417E-4D04-AEB3-21254058B612.bmp" width="100">
+| FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7 | A la poursuite des 12 joyaux | <img src="resources/stories/FB2B7DF4-BE3F-4998-83F0-BFBBDA75B9D7.bmp" width="100">
+| ... | ... |
+
+### Full story database
+The full list of all existing packs can be extracted from this file [packs.json](resources/packs.json)
 # Links
 
 - https://www.youtube.com/watch?v=ZeYKieOIsC8
