@@ -35,6 +35,7 @@
     - [.nm](#nm)
     - [.content/XXXXYYYY](#contentxxxxyyyy)
     - [.content/XXXXYYYY/bt](#contentxxxxyyyybt)
+    - [.content/XXXXYYYY/ni](#contentxxxxyyyyni)
     - [.content/XXXXYYYY/ri](#contentxxxxyyyyri)
     - [.content/XXXXYYYY/si](#contentxxxxyyyysi)
     - [.content/XXXXYYYY/rf/000/YYYYYYYY](#contentxxxxyyyyrf000yyyyyyyy)
@@ -311,7 +312,7 @@ Keys :
 |`sd:0:\version` | None | contains a simple date      
 |[`sd:0:\.content\XXXXXXXX\bt`](#contentxxxxyyyybt) | Device | Authoriaztion file. To validate that this device is authorized to play this story  |
 |`sd:0:\.content\XXXXXXXX\li` | Generic | Action Nodes index |
-|`sd:0:\.content\XXXXXXXX\ni` | None | Stage Nodes index |
+|[`sd:0:\.content\XXXXXXXX\ni`](#contentxxxxyyyyni) | None | Stage Nodes index |
 |`sd:0:\.content\XXXXXXXX\nm` | None | Night Mode related |
 |[`sd:0:\.content\XXXXXXXX\ri`](#contentxxxxyyyyri) | Generic | Resource Index : Ciphered text file that contains resource list   
 |[`sd:0:\.content\XXXXXXXX\si`](#contentxxxxyyyysi) | Generic | Song Index : Ciphered text file that contains song list   
@@ -408,6 +409,35 @@ For example, the "Suzanne et Gaston" story :
 This file seems to be the authorization file that is checked to avoid illegal stories copy.
 
 It is made by ciphering the 0x40 first bytes for .ri file with device specific key.
+
+### .content/XXXXYYYY/ni
+* **Length** : 0x200 + N*0x16
+* **Key** : generic
+
+This file has the following structure:
+
+``` C
+// Header is 0x200 long (512 Bytes)
+typedef struct {
+    int rfu_a[3];
+    int index_count;
+    int rfu_b[124];
+} ni_header;
+
+// Node list is 0x2C * index_count long
+typedef struct {
+    int ri_subi;
+    int si_subi;
+    int li_subi;
+    int data[8];
+} node;
+
+// Node Index file parsing
+ni_header header;
+node nodes[header.index_count];
+```
+
+
 ### .content/XXXXYYYY/ri
 * **Length** : variable
 * **Key** : generic
