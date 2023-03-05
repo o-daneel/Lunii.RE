@@ -28,6 +28,10 @@
     - [Bitmaps](#bitmaps)
     - [MP3](#mp3)
   - [SD structure \& Files](#sd-structure--files)
+  - [Stories Format](#stories-format)
+    - [Resources : BMP](#resources--bmp)
+    - [Audio : MP3](#audio--mp3)
+    - [Indexes](#indexes)
   - [Files Format](#files-format)
     - [.md](#md)
     - [.pi](#pi)
@@ -36,6 +40,7 @@
     - [.content/XXXXYYYY](#contentxxxxyyyy)
     - [.content/XXXXYYYY/bt](#contentxxxxyyyybt)
     - [.content/XXXXYYYY/ni](#contentxxxxyyyyni)
+    - [.content/XXXXYYYY/li](#contentxxxxyyyyli)
     - [.content/XXXXYYYY/ri](#contentxxxxyyyyri)
     - [.content/XXXXYYYY/si](#contentxxxxyyyysi)
     - [.content/XXXXYYYY/rf/000/YYYYYYYY](#contentxxxxyyyyrf000yyyyyyyy)
@@ -315,11 +320,70 @@ Keys :
 |[`sd:0:\.content\XXXXXXXX\ni`](#contentxxxxyyyyni) | None | Stage Nodes index |
 |`sd:0:\.content\XXXXXXXX\nm` | None | Night Mode related |
 |[`sd:0:\.content\XXXXXXXX\ri`](#contentxxxxyyyyri) | Generic | Resource Index : Ciphered text file that contains resource list   
-|[`sd:0:\.content\XXXXXXXX\si`](#contentxxxxyyyysi) | Generic | Song Index : Ciphered text file that contains song list   
+|[`sd:0:\.content\XXXXXXXX\si`](#contentxxxxyyyysi) | Generic | Story Index : Ciphered text file that contains story list   
 |`sd:0:\.content\XXXXXXXX\rf\` | N/A | Resource Folder 
 |[`sd:0:\.content\XXXXXXXX\rf\000\YYYYYYYY`](#contentxxxxyyyyrf000yyyyyyyy) | Generic | Resources (BMP)  
 |`sd:0:\.content\XXXXXXXX\sf\` | N/A | Story Folder
 |[`sd:0:\.content\XXXXXXXX\sf\000\YYYYYYYY`](#contentxxxxyyyysf000yyyyyyyy) | Generic | Story, audio part and heros names (MP3)
+
+## Stories Format
+### Resources : BMP
+```
+> mediainfo 2C3123BB.bmp
+General
+Complete name                            : 2C3123BB.bmp
+Format                                   : Bitmap
+File size                                : 6.52 KiB
+
+Image
+Format                                   : RLE4
+Width                                    : 320 pixels
+Height                                   : 240 pixels
+Color space                              : RGB
+Bit depth                                : 4 bits
+```
+### Audio : MP3
+```
+> mediainfo 0835BAD5.mp3
+General
+Complete name                            : 0835BAD5.mp3
+Format                                   : MPEG Audio
+File size                                : 14.6 KiB
+Duration                                 : 1 s 880 ms
+Overall bit rate mode                    : Variable
+Overall bit rate                         : 61.8 kb/s
+Writing library                          : LAME3.100
+
+Audio
+Format                                   : MPEG Audio
+Format version                           : Version 1
+Format profile                           : Layer 3
+Duration                                 : 1 s 881 ms
+Bit rate mode                            : Variable
+Bit rate                                 : 61.8 kb/s
+Minimum bit rate                         : 32.0 kb/s
+Channel(s)                               : 1 channel
+Sampling rate                            : 44.1 kHz
+Frame rate                               : 38.281 FPS (1152 SPF)
+Compression mode                         : Lossy
+Stream size                              : 14.2 KiB (97%)
+Writing library                          : LAME3.100
+Encoding settings                        : -m m -V 4 -q 0 -lowpass 17.5 --vbr-new -b 32
+```
+
+### Indexes
+Stories are built against index files that allow to create a navigation path through choices, building a custom story.
+
+Indexes can be seen as a table of content.
+
+Indexes files :
+1) **ni** : [Node index](#contentxxxxyyyyni)   
+   This one is the main story file that list all nodes for the story.   
+   Each choice is named a node and is defined by a bitmap, an audio, and a next node.
+   A story starts at the first node.
+2) **li** : [Jump index](#contentxxxxyyyyli)
+3) **ri** : [Resource index](#contentxxxxyyyyri)
+4) **si** : [Story index](#contentxxxxyyyysi)
 
 ## Files Format
 ### .md
@@ -411,30 +475,55 @@ This file seems to be the authorization file that is checked to avoid illegal st
 It is made by ciphering the 0x40 first bytes for .ri file with device specific key.
 
 ### .content/XXXXYYYY/ni
-* **Length** : 0x200 + N*0x16
-* **Key** : generic
-
+* **Length** : 0x200 + N*0x2C
+* **Key** : None
+* **Purpose** : Nodes to navigate in story choices. 
+ 
 This file has the following structure:
 
 ``` C
+typedef enum <int> { 
+    NODE_CHOICE    = 0x10001,
+    NODE_INTER     = 0x10000,
+} NODETYPE;
+
 // Header is 0x200 long (512 Bytes)
 typedef struct {
-    int rfu_a[3];
+    int tbd_a[3];
     int index_count;
-    int rfu_b[124];
+    int tbd_b[124];
 } ni_header;
 
 // Node list is 0x2C * index_count long
 typedef struct {
-    int ri_subi;
-    int si_subi;
-    int li_subi;
-    int data[8];
+    int image_ri_idx;         // index in ri file
+    int audio_si_idx;         // index in si file
+    int next_node;            // index loaded from li for next in ni
+    int next_node_cnt;        // how many choices for next_node
+                              // choices indexes are in range (li(next_node), li(next_node)+next_cnt )
+    int tbd_a[4];             //
+    NODETYPE type;            // type of node
+    NODETYPE tbd;             //
+    int tbd_b[1];
 } node;
 
 // Node Index file parsing
 ni_header header;
 node nodes[header.index_count];
+```
+
+Story starts at ``nodes[0]``
+
+### .content/XXXXYYYY/li
+* **Length** : N*4
+* **Key** : None
+* **Purpose** : Looks to be an indirection table to jump to next node
+ 
+This file is a simple ``int`` table has the following structure:
+
+``` C
+// L Index file parsing
+int indexes[FileSize()/4];
 ```
 
 
@@ -443,7 +532,7 @@ node nodes[header.index_count];
 * **Key** : generic
 
 This file is the Resource Index that stores all resources available for the `XXXXYYYY` story. It is a text plain file (not ciphered).   
-The file is organized as a list of 12 Bytes strings
+The file is organized as a list of ``12 char strings``
 ```
 000\AABBCCDD000\BBCCDDEE...000\CCDDEEFF 
 ```
@@ -451,8 +540,8 @@ The file is organized as a list of 12 Bytes strings
 * **Length** : variable
 * **Key** : generic
  
-This file is the Song Index that stores all resources available for the `XXXXYYYY` story. It is a text plain file (not ciphered).   
-The file is organized as a list of 12 Bytes strings
+This file is the Story Index that stores all resources available for the `XXXXYYYY` story. It is a text plain file (not ciphered).   
+The file is organized as a list of ``12 char strings``
 ```
 000\AABBCCDD000\BBCCDDEE...000\CCDDEEFF 
 ```
@@ -462,8 +551,7 @@ The file is organized as a list of 12 Bytes strings
 
 These files store Resources, meaning images in a Bitmap format   
 
-**FORMAT DETAILS** :
-* To be filled
+**FORMAT DETAILS** : [here](#resources--bmp)
 
 ### .content/XXXXYYYY/sf/000/YYYYYYYY
 * **Length** : variable
@@ -471,8 +559,7 @@ These files store Resources, meaning images in a Bitmap format
 
 These files store Stories, meaning audio in a MP3 format   
 
-**FORMAT DETAILS** :
-* To be filled
+**FORMAT DETAILS** : [here](#audio--mp3)
 
 ## Story UUIDs
 ### Known stories

@@ -25,9 +25,7 @@ Many people doesn't care about about software security. There Lunii's company fa
 ### TODO
 * Describe test mode / Try it
 * Deep dive in file section to understand format
-  * .ni...
   * .nm : Night mode (to be tested)
-  * .li ????
 * Decompile 
   * Main FW : in progress > [Main Firmware](ANALYSIS.md#main-firmware) 
 * Firmware management
@@ -43,6 +41,8 @@ Many people doesn't care about about software security. There Lunii's company fa
   * .pi : **DONE**
   * /rf/ & .ri  : **DONE**
   * /sf/ & .si : **DONE**
+  * .ni : **DONE**
+  * .li : **DONE**
   * .bt **DONE**
 * Undelete on storyteller ? **DONE** > only 50 mp3 files, none french stories removed.
 * sample code to process TEA cipher/decipher
