@@ -282,12 +282,12 @@ TODO
 
 | Address | Label | Image |
 |-|-|-|
-| 0x9001C04E | BITMAP_WAKEUP | <img src="dump/bitmaps/wakeup.bmp" width="100"> |
+| 0x9001C04E | BITMAP_DAY_MODE | <img src="dump/bitmaps/DayMode.bmp" width="100"> |
 | 0x9001D37E | BITMAP_LUNII_ERROR | <img src="dump/bitmaps/LuniiError.bmp" width="100"> |
 | 0x9001EB94 | BITMAP_LUNII | <img src="dump/bitmaps/Lunii.bmp" width="100"> |
 | 0x9001FF32 | BITMAP_LOW_BATTERY | <img src="dump/bitmaps/LowBattery.bmp" width="100"> |
 | 0x900215F4 | BITMAP_MODE_TEST | <img src="dump/bitmaps/ModeTest.bmp" width="100"> |
-| 0x90023C3A | BITMAP_SLEEP | <img src="dump/bitmaps/Sleep.bmp" width="100"> |
+| 0x90023C3A | BITMAP_NIGHT_MODE | <img src="dump/bitmaps/NightMode.bmp" width="100"> |
 | 0x90024C18 | BITMAP_NOSDCARD | <img src="dump/bitmaps/NoSD.bmp" width="100"> |
 | 0x900262A4 | BITMAP_SDERROR | <img src="dump/bitmaps/SDError.bmp" width="100"> |
 | 0x90027B80 | BITMAP_LUNII_APP | <img src="dump/bitmaps/LuniiApp.bmp" width="100"> |
@@ -444,9 +444,9 @@ File is made of 8 tags :
 | 0 | WORD | WORD | 300s | 3600s | idle time before sleep mode |
 | 1 | WORD | WORD | 60s | 600s | TBD |
 | 2 | WORD | WORD | 5s | 10s | Time to display Low battery message |
-| 3 | WORD | WORD | 0 | | TBD - Night mode related |
-| 4 | WORD | WORD | 0 | | TBD - Night mode related |
-| 5 | WORD | WORD | 3 | | TBD - Night mode related |
+| 3 | WORD | WORD | 0 | | Night mode - Enable |
+| 4 | WORD | WORD | 0 | | Night mode - Volume level |
+| 5 | WORD | WORD | 3 | | Night mode - Stories to play before auto sleep mode |
 | 6 | WORD | WORD | ? | | Boolean related to 05<br>If True => (uint)CFG_TAG_04) / (CFG_TAG_05 - 1) |
 | 7 | WORD | WORD | 1 | | TBD |
 | 8 | WORD | WORD | 1 | | Request to recreate `.nm` file |
@@ -512,11 +512,14 @@ ni_header header;
 node nodes[header.index_count];
 ```
 
-Story starts at ``nodes[0]``
+Story starts at ``nodes[0]``   
+You can retreive this management in Ghidra archive
+* `story_selection()` @90010004
+* `story_node_selection` @9000fda8
 
 ### .content/XXXXYYYY/li
 * **Length** : N*4
-* **Key** : None
+* **Key** : generic
 * **Purpose** : Looks to be an indirection table to jump to next node
  
 This file is a simple ``int`` table has the following structure:
