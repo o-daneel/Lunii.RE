@@ -4,6 +4,10 @@ Lunii is a French company that made an interactive box for kids to customize sto
  **If you like it, BUY IT !!!  
 Even if you don't, children will 😁**
 
+> Lunii has released a new version of their storyteller. I hope they learned from their mistakes.  
+> Maybe, we will know 🫣 soon...
+
+
 # Sections
 
 1. [Hardware](HARDWARE.md)
@@ -69,6 +73,7 @@ Many people doesn't care about about software security. There Lunii's company fa
 * [Lunii - Pack Manager CLI](https://github.com/o-daneel/Lunii.PACKS)
 * [TBD Lunii 1/2](https://www.youtube.com/watch?v=ZeYKieOIsC8&t=9s) - [TBD Lunii 2/2](https://www.youtube.com/watch?v=GItJg34bOk0)
 * [linux-cli](https://github.com/Wameuh/lunii-cli) (Did the same reverse analysis 😥 in July 2022, i'm late)
+* [Lunii_v3.RE](https://github.com/o-daneel/Lunii.RE)
 * [(Hackday) Tsukuyomi Hacking Lunii](https://hackaday.io/project/167629-tsukuyomi)
 * [(GitHub) Tsukuyomi](https://github.com/danksz/tsukuyomi)
 * [STUdio - Story Teller Unleashed](https://marian-m12l.github.io/studio-website/)
